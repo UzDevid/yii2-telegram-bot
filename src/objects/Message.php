@@ -7,7 +7,7 @@ namespace uzdevid\telegram\bot\objects;
  * @package uzdevid\telegram\bot\handler
  *
  * @property int $messageId
- * @property User $user
+ * @property User $from
  * @property Chat $chat
  * @property int $date
  * @property string $text
