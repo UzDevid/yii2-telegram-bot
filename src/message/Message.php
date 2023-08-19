@@ -23,14 +23,15 @@ class Message extends BaseBot {
     }
 
     /**
-     * @param MessageInterface $source
+     * @param MessageInterface $message
      */
     public function setMessage(MessageInterface $message): void {
         $this->_message = $message;
     }
 
     /**
-     * @param MessageInterface $source
+     * @param MessageInterface $message
+     * @return Message
      */
     public function message(MessageInterface $message): static {
         $this->_message = $message;
