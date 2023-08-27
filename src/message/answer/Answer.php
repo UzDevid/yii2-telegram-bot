@@ -38,6 +38,10 @@ class Answer extends BaseBot implements MessageInterface {
     }
 
     public function getPayload(): array {
+        $results = json_encode($this->getAttribute('results'), JSON_UNESCAPED_UNICODE);
+
+        $this->setAttribute('results', $results);
+
         return $this->attributes;
     }
 }
