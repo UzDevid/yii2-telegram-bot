@@ -19,7 +19,12 @@ class Sender extends Message implements SenderInterface {
         $responseBody = json_decode($response->getBody()->getContents(), true);
 
         $data['ok'] = $responseBody['ok'];
-        $data = array_merge($data, $responseBody['result']);
+
+        if (is_array($responseBody['result'])) {
+            $data = array_merge($data, $responseBody['result']);
+        } else {
+            $data['result'] = $responseBody['result'];
+        }
 
         return new Response($data);
     }
