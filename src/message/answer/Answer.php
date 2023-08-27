@@ -23,24 +23,24 @@ class Answer extends BaseBot implements MessageInterface {
     }
 
     public function setCacheTime(int $cacheTime): static {
-        $this->setAttribute('cache_time', $cacheTime);
+        $this->addAttribute('cache_time', $cacheTime);
         return $this;
     }
 
     public function setIsPersonal(bool $personal = true): static {
-        $this->setAttribute('is_personal', $personal);
+        $this->addAttribute('is_personal', $personal);
         return $this;
     }
 
     public function setNextOffset(string $offset): static {
-        $this->setAttribute('next_offset', $offset);
+        $this->addAttribute('next_offset', $offset);
         return $this;
     }
 
     public function getPayload(): array {
         $results = json_encode($this->getAttribute('results'), JSON_UNESCAPED_UNICODE);
 
-        $this->setAttribute('results', $results);
+        $this->addAttribute('results', $results);
 
         return $this->attributes;
     }
