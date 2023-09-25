@@ -15,6 +15,9 @@ namespace uzdevid\telegram\bot\objects;
 class CallbackQuery {
     use ObjectTrait;
 
+    /**
+     * @return array
+     */
     public static function attributeObjects(): array {
         return [
             'from' => User::class,

@@ -2,37 +2,65 @@
 
 namespace uzdevid\telegram\bot\message;
 
+use uzdevid\telegram\bot\objects\Response;
+use uzdevid\telegram\bot\Service;
+
+/**
+ *
+ * @property int $messageId
+ */
 class Editor extends Message implements EditorInterface {
     private int|null $_messageId = null;
 
+    /**
+     * @param string|null $method
+     * @return string
+     */
     public function methodUrl(string|null $method = null): string {
         return self::$apiUrl . $this->token . '/' . $method ?? $this->message->methodName();
     }
 
-    public function getMessageId() {
+    /**
+     * @return int|null
+     */
+    public function getMessageId(): ?int {
         return $this->_messageId;
     }
 
-    public function setMessageId(int $messageId) {
+    /**
+     * @param int $messageId
+     * @return void
+     */
+    public function setMessageId(int $messageId): void {
         $this->_messageId = $messageId;
     }
 
-    public function messageId(int $messageId) {
+    /**
+     * @param int $messageId
+     * @return $this
+     */
+    public function messageId(int $messageId): static {
         $this->messageId = $messageId;
         return $this;
     }
 
-    public function edit() {
+    /**
+     * @return void
+     */
+    public function edit() { }
 
-    }
-
-    public function delete() {
+    /**
+     * @return Response
+     */
+    public function delete(): Response {
         $query = ['chat_id' => $this->chatIdOrUsername(), 'message_id' => $this->messageId];
 
         $options = ['query' => $query];
 
-        print_r($options);
-
         $response = $this->httpClient->get($this->methodUrl('deleteMessage'), $options);
+
+        $responseBody = json_decode($response->getBody()->getContents(), true);
+
+        return Service::buildResponse($responseBody);
     }
 }

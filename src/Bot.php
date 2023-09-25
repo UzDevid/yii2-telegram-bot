@@ -3,8 +3,6 @@
 namespace uzdevid\telegram\bot;
 
 use uzdevid\telegram\bot\handler\Handler;
-use uzdevid\telegram\bot\inline\Inliner;
-use uzdevid\telegram\bot\inline\InlinerInterface;
 use uzdevid\telegram\bot\message\Editor;
 use uzdevid\telegram\bot\message\EditorInterface;
 use uzdevid\telegram\bot\message\Sender;
@@ -17,6 +15,7 @@ use yii\base\InvalidCallException;
  */
 class Bot extends BaseBot {
     /**
+     * @param SenderInterface|null $sender
      * @return Sender
      */
     public function sender(SenderInterface|null $sender = null): Sender {
@@ -41,6 +40,10 @@ class Bot extends BaseBot {
         return $sender;
     }
 
+    /**
+     * @param EditorInterface|null $editor
+     * @return Editor
+     */
     public function editor(EditorInterface|null $editor = null): Editor {
         if ($editor === null) {
             $editor = new Editor();
@@ -63,14 +66,10 @@ class Bot extends BaseBot {
         return $editor;
     }
 
-    public function inliner(InlinerInterface|null $inliner = null): Inliner {
-        if ($inliner === null) {
-            $inliner = new Inliner();
-        }
-
-        return $inliner;
-    }
-
+    /**
+     * @param array $data
+     * @return Handler
+     */
     public function handler(array $data): Handler {
         return new Handler($this, $data);
     }

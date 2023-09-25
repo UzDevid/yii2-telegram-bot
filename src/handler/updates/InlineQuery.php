@@ -8,6 +8,6 @@ class InlineQuery extends \uzdevid\telegram\bot\objects\InlineQuery implements U
     use UpdateTrait;
 
     public static function objectName(): string {
-        return Service::camelToSnake(basename(static::class));
+        return 'inline_query';
     }
 }

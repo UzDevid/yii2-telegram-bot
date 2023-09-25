@@ -8,6 +8,6 @@ class CallbackQuery extends \uzdevid\telegram\bot\objects\CallbackQuery implemen
     use UpdateTrait;
 
     public static function objectName(): string {
-        return Service::camelToSnake(basename(static::class));
+        return 'callback_query';
     }
 }

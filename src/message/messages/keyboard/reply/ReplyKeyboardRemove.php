@@ -12,6 +12,10 @@ class ReplyKeyboardRemove implements ReplyMarkupInterface {
         $this->addAttribute('remove_keyboard', true);
     }
 
+    /**
+     * @param bool $selective
+     * @return $this
+     */
     public function selective(bool $selective): self {
         $this->addAttribute('selective', $selective);
         return $this;

@@ -38,6 +38,9 @@ namespace uzdevid\telegram\bot\objects;
 class Chat {
     use ObjectTrait;
 
+    /**
+     * @return array
+     */
     public static function attributeObjects(): array {
         return [];
     }

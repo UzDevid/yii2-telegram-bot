@@ -10,6 +10,9 @@ use uzdevid\telegram\bot\AttributeComponentTrait;
 class MessageType extends BaseBot {
     use AttributeComponentTrait;
 
+    /**
+     * @return array
+     */
     public function getPayload(): array {
         return $this->attributes;
     }

@@ -8,6 +8,6 @@ class Message extends \uzdevid\telegram\bot\objects\Message implements UpdateInt
     use UpdateTrait;
 
     public static function objectName(): string {
-        return Service::camelToSnake(basename(static::class));
+        return 'message';
     }
 }

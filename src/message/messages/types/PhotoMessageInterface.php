@@ -2,6 +2,4 @@
 
 namespace uzdevid\telegram\bot\message\messages\types;
 
-interface PhotoMessageInterface {
-
-}
+interface PhotoMessageInterface { }

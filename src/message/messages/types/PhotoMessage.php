@@ -18,15 +18,26 @@ class PhotoMessage extends MessageType implements MessageInterface, PhotoMessage
         $this->addAttribute(self::$__photo, $photo);
     }
 
+    /**
+     * @return string
+     */
     public function methodName(): string {
         return "sendPhoto";
     }
 
+    /**
+     * @param string $caption
+     * @return $this
+     */
     public function caption(string $caption): static {
         $this->addAttribute(self::$__caption, $caption);
         return $this;
     }
 
+    /**
+     * @param bool $hasSpoiler
+     * @return $this
+     */
     public function hasSpoiler(bool $hasSpoiler = true): static {
         $this->addAttribute(self::$__hasSpoiler, $hasSpoiler);
         return $this;

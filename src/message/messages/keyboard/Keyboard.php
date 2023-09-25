@@ -9,6 +9,10 @@ abstract class Keyboard {
 
     protected string $name;
 
+    /**
+     * @param RowInterface $row
+     * @return $this
+     */
     public function addRow(RowInterface $row): self {
         $this->pushAttribute($this->name, $row->getButtons());
         return $this;

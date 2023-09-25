@@ -2,6 +2,4 @@
 
 namespace uzdevid\telegram\bot\message\messages\types;
 
-interface TextMessageInterface {
-
-}
+interface TextMessageInterface { }

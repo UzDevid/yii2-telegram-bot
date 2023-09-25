@@ -2,7 +2,7 @@
 
 namespace uzdevid\telegram\bot\message\messages\entity;
 
-use uzdevid\telegram\bot\User;
+use uzdevid\telegram\bot\objects\User;
 
 /**
  * Class MessageEntity
@@ -53,7 +53,7 @@ class MessageEntity implements MessageEntityInterface {
         $this->_params = $params;
     }
 
-    public function addParams(string $name, mixed $value) {
+    public function addParams(string $name, mixed $value): void {
         $this->_params[$name] = $value;
     }
 
@@ -83,7 +83,7 @@ class MessageEntity implements MessageEntityInterface {
      * @return static
      */
     public function offset(int $offset): static {
-        $this->addParams(self::$offset, $type);
+        $this->addParams(self::$offset, $offset);
         return $this;
     }
 
@@ -94,7 +94,7 @@ class MessageEntity implements MessageEntityInterface {
      * @return static
      */
     public function length(int $length): static {
-        $this->addParams(self::$length, $type);
+        $this->addParams(self::$length, $length);
         return $this;
     }
 
@@ -105,7 +105,7 @@ class MessageEntity implements MessageEntityInterface {
      * @return static
      */
     public function url(string $url): static {
-        $this->addParams(self::$url, $type);
+        $this->addParams(self::$url, $url);
         return $this;
     }
 
@@ -116,7 +116,7 @@ class MessageEntity implements MessageEntityInterface {
      * @return static
      */
     public function user(User $user): static {
-        $this->addParams(self::$user, $type);
+        $this->addParams(self::$user, $user);
         return $this;
     }
 
@@ -127,7 +127,7 @@ class MessageEntity implements MessageEntityInterface {
      * @return static
      */
     public function language(string $language): static {
-        $this->addParams(self::$language, $type);
+        $this->addParams(self::$language, $language);
         return $this;
     }
 
@@ -138,7 +138,7 @@ class MessageEntity implements MessageEntityInterface {
      * @return static
      */
     public function customEmojiId(string $customEmoji): static {
-        $this->addParams(self::$customEmoji, $type);
+        $this->addParams(self::$customEmojiId, $customEmoji);
         return $this;
     }
 }
