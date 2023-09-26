@@ -11,6 +11,7 @@ class InlineRow implements RowInterface {
 
     /**
      * @param ButtonInterface $button
+     *
      * @return $this
      */
     public function addButton(ButtonInterface $button): static {

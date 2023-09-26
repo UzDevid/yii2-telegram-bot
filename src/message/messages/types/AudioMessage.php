@@ -6,7 +6,7 @@ use uzdevid\telegram\bot\message\messages\MessageInterface;
 use uzdevid\telegram\bot\message\messages\MessageTrait;
 use uzdevid\telegram\bot\message\messages\MessageType;
 
-class AudioMessage extends MessageType implements MessageInterface, AudioMessageInterface {
+class AudioMessage extends MessageType implements MessageInterface {
     use MessageTrait;
 
     protected static string $__audio = 'audio';
@@ -30,6 +30,7 @@ class AudioMessage extends MessageType implements MessageInterface, AudioMessage
 
     /**
      * @param string $caption
+     *
      * @return $this
      */
     public function caption(string $caption): static {
@@ -39,6 +40,7 @@ class AudioMessage extends MessageType implements MessageInterface, AudioMessage
 
     /**
      * @param int $duration
+     *
      * @return $this
      */
     public function duration(int $duration): static {
@@ -48,6 +50,7 @@ class AudioMessage extends MessageType implements MessageInterface, AudioMessage
 
     /**
      * @param string $performer
+     *
      * @return $this
      */
     public function performer(string $performer): static {
@@ -57,6 +60,7 @@ class AudioMessage extends MessageType implements MessageInterface, AudioMessage
 
     /**
      * @param string $title
+     *
      * @return $this
      */
     public function title(string $title): static {
@@ -66,6 +70,7 @@ class AudioMessage extends MessageType implements MessageInterface, AudioMessage
 
     /**
      * @param string $thumbnail
+     *
      * @return $this
      */
     public function thumbnail(string $thumbnail): static {

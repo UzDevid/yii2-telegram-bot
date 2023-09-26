@@ -11,6 +11,7 @@ abstract class Keyboard {
 
     /**
      * @param RowInterface $row
+     *
      * @return $this
      */
     public function addRow(RowInterface $row): self {

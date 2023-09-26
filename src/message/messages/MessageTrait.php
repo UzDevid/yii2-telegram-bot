@@ -13,6 +13,7 @@ trait MessageTrait {
      * Unique identifier for the target message thread (topic) of the forum; for forum supergroups only
      *
      * @param string $messageThreadId
+     *
      * @return static
      */
     public function messageThreadId(string $messageThreadId): static {
@@ -24,6 +25,7 @@ trait MessageTrait {
      * Sends the message silently. Users will receive a notification with no sound.
      *
      * @param bool $disableNotification
+     *
      * @return static
      */
     public function disableNotification(bool $disableNotification = true): static {
@@ -36,6 +38,7 @@ trait MessageTrait {
      *
      * @param string $name
      * @param MessageEntityInterface $entity
+     *
      * @return static
      */
     public function addMessageEntity(string $name, MessageEntityInterface $entity): static {
@@ -47,6 +50,7 @@ trait MessageTrait {
      * If the message is a reply, ID of the original message
      *
      * @param int $replyToMessageId
+     *
      * @return static
      */
     public function replyToMessageId(int $replyToMessageId): static {
@@ -58,6 +62,7 @@ trait MessageTrait {
      * Pass True if the message should be sent even if the specified replied-to message is not found
      *
      * @param bool $allowSendingWithoutReply
+     *
      * @return static
      */
     public function allowSendingWithoutReply(bool $allowSendingWithoutReply = true): static {
@@ -69,6 +74,7 @@ trait MessageTrait {
      * Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove reply keyboard or to force a reply from the user.
      *
      * @param string $replyMarkup
+     *
      * @return static
      */
     public function addReplyMarkup(ReplyMarkupInterface $replyMarkup): static {

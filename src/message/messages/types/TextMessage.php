@@ -30,6 +30,7 @@ class TextMessage extends MessageType implements MessageInterface, TextMessageIn
 
     /**
      * @param string $mode
+     *
      * @return $this
      */
     public function parseMode(string $mode): static {
@@ -39,6 +40,7 @@ class TextMessage extends MessageType implements MessageInterface, TextMessageIn
 
     /**
      * @param MessageEntityInterface $entity
+     *
      * @return $this
      */
     public function addEntity(MessageEntityInterface $entity): static {
@@ -48,6 +50,7 @@ class TextMessage extends MessageType implements MessageInterface, TextMessageIn
 
     /**
      * @param bool $disableWebPagePreview
+     *
      * @return $this
      */
     public function disableWebPagePreview(bool $disableWebPagePreview): static {
@@ -57,6 +60,7 @@ class TextMessage extends MessageType implements MessageInterface, TextMessageIn
 
     /**
      * @param bool $protectContent
+     *
      * @return $this
      */
     public function protectContent(bool $protectContent): static {

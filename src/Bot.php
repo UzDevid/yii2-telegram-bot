@@ -11,11 +11,13 @@ use yii\base\InvalidCallException;
 
 /**
  * Class Bot
+ *
  * @package uzdevid\telegram\bot
  */
 class Bot extends BaseBot {
     /**
      * @param SenderInterface|null $sender
+     *
      * @return Sender
      */
     public function sender(SenderInterface|null $sender = null): Sender {
@@ -42,6 +44,7 @@ class Bot extends BaseBot {
 
     /**
      * @param EditorInterface|null $editor
+     *
      * @return Editor
      */
     public function editor(EditorInterface|null $editor = null): Editor {
@@ -68,6 +71,7 @@ class Bot extends BaseBot {
 
     /**
      * @param array $data
+     *
      * @return Handler
      */
     public function handler(array $data): Handler {

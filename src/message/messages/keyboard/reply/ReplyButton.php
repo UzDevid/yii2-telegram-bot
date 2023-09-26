@@ -10,6 +10,7 @@ class ReplyButton implements ButtonInterface {
 
     /**
      * @param string $text
+     *
      * @return $this
      */
     public function text(string $text): static {
@@ -19,6 +20,7 @@ class ReplyButton implements ButtonInterface {
 
     /**
      * @param bool $requestContact
+     *
      * @return $this
      */
     public function requestContact(bool $requestContact = true): static {
@@ -28,6 +30,7 @@ class ReplyButton implements ButtonInterface {
 
     /**
      * @param bool $requestLocation
+     *
      * @return $this
      */
     public function requestLocation(bool $requestLocation = true): static {

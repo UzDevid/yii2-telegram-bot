@@ -6,6 +6,7 @@ use uzdevid\telegram\bot\objects\User;
 
 /**
  * Class MessageEntity
+ *
  * @package uzdevid\telegram\bot\message\messages\entity
  * @see https://core.telegram.org/bots/api#messageentity
  *
@@ -69,6 +70,7 @@ class MessageEntity implements MessageEntityInterface {
      * “custom_emoji” (for inline custom emoji stickers)
      *
      * @param string $type
+     *
      * @return static
      */
     public function type(string $type): static {
@@ -80,6 +82,7 @@ class MessageEntity implements MessageEntityInterface {
      * Offset in UTF-16 code units to the start of the entity
      *
      * @param int $offset
+     *
      * @return static
      */
     public function offset(int $offset): static {
@@ -91,6 +94,7 @@ class MessageEntity implements MessageEntityInterface {
      * Length of the entity in UTF-16 code units
      *
      * @param int $length
+     *
      * @return static
      */
     public function length(int $length): static {
@@ -102,6 +106,7 @@ class MessageEntity implements MessageEntityInterface {
      * Length of the entity in UTF-16 code units
      *
      * @param string $url
+     *
      * @return static
      */
     public function url(string $url): static {
@@ -113,6 +118,7 @@ class MessageEntity implements MessageEntityInterface {
      * Length of the entity in UTF-16 code units
      *
      * @param User $user
+     *
      * @return static
      */
     public function user(User $user): static {
@@ -124,6 +130,7 @@ class MessageEntity implements MessageEntityInterface {
      * Length of the entity in UTF-16 code units
      *
      * @param string $language
+     *
      * @return static
      */
     public function language(string $language): static {
@@ -135,6 +142,7 @@ class MessageEntity implements MessageEntityInterface {
      * Length of the entity in UTF-16 code units
      *
      * @param string $customEmoji
+     *
      * @return static
      */
     public function customEmojiId(string $customEmoji): static {

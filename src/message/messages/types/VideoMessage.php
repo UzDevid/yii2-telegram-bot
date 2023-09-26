@@ -32,6 +32,7 @@ class VideoMessage extends MessageType implements MessageInterface, VideoMessage
 
     /**
      * @param int $duration
+     *
      * @return $this
      */
     public function duration(int $duration): static {
@@ -41,6 +42,7 @@ class VideoMessage extends MessageType implements MessageInterface, VideoMessage
 
     /**
      * @param int $width
+     *
      * @return $this
      */
     public function width(int $width): static {
@@ -50,6 +52,7 @@ class VideoMessage extends MessageType implements MessageInterface, VideoMessage
 
     /**
      * @param int $height
+     *
      * @return $this
      */
     public function height(int $height): static {
@@ -59,6 +62,7 @@ class VideoMessage extends MessageType implements MessageInterface, VideoMessage
 
     /**
      * @param string $thumbnail
+     *
      * @return $this
      */
     public function thumbnail(string $thumbnail): static {
@@ -68,6 +72,7 @@ class VideoMessage extends MessageType implements MessageInterface, VideoMessage
 
     /**
      * @param string $caption
+     *
      * @return $this
      */
     public function caption(string $caption): static {
@@ -77,6 +82,7 @@ class VideoMessage extends MessageType implements MessageInterface, VideoMessage
 
     /**
      * @param bool $hasSpoiler
+     *
      * @return $this
      */
     public function hasSpoiler(bool $hasSpoiler): static {

@@ -4,6 +4,7 @@ namespace uzdevid\telegram\bot\objects;
 
 /**
  * Class User
+ *
  * @package uzdevid\telegram\bot
  *
  * @property int $id

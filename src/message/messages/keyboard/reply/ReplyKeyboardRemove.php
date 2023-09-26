@@ -14,6 +14,7 @@ class ReplyKeyboardRemove implements ReplyMarkupInterface {
 
     /**
      * @param bool $selective
+     *
      * @return $this
      */
     public function selective(bool $selective): self {

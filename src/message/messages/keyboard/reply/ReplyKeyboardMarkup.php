@@ -2,7 +2,6 @@
 
 namespace uzdevid\telegram\bot\message\messages\keyboard\reply;
 
-use uzdevid\telegram\bot\AttributeComponentTrait;
 use uzdevid\telegram\bot\message\messages\keyboard\Keyboard;
 use uzdevid\telegram\bot\message\messages\keyboard\ReplyMarkupInterface;
 
@@ -11,6 +10,7 @@ class ReplyKeyboardMarkup extends Keyboard implements ReplyMarkupInterface {
 
     /**
      * @param bool $isPersistent
+     *
      * @return bool
      */
     public function isPersistent(bool $isPersistent): bool {
@@ -20,6 +20,7 @@ class ReplyKeyboardMarkup extends Keyboard implements ReplyMarkupInterface {
 
     /**
      * @param bool $resizeKeyboard
+     *
      * @return $this
      */
     public function resizeKeyboard(bool $resizeKeyboard = true): self {
@@ -29,6 +30,7 @@ class ReplyKeyboardMarkup extends Keyboard implements ReplyMarkupInterface {
 
     /**
      * @param bool $oneTimeKeyboard
+     *
      * @return $this
      */
     public function oneTimeKeyboard(bool $oneTimeKeyboard): self {
@@ -38,6 +40,7 @@ class ReplyKeyboardMarkup extends Keyboard implements ReplyMarkupInterface {
 
     /**
      * @param string $inputFieldPlaceholder
+     *
      * @return $this
      */
     public function inputFieldPlaceholder(string $inputFieldPlaceholder): self {
@@ -47,6 +50,7 @@ class ReplyKeyboardMarkup extends Keyboard implements ReplyMarkupInterface {
 
     /**
      * @param bool $selective
+     *
      * @return $this
      */
     public function setSelective(bool $selective): self {

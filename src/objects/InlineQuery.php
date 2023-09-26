@@ -4,6 +4,7 @@ namespace uzdevid\telegram\bot\objects;
 
 /**
  * Class InlineQuery
+ *
  * @package uzdevid\telegram\bot\objects
  *
  * @property int $updateId

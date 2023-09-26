@@ -7,6 +7,7 @@ use yii\base\Component;
 
 /**
  * Class BaseBot
+ *
  * @package uzdevid\telegram\bot
  *
  * @property string $token
@@ -73,6 +74,7 @@ class BaseBot extends Component {
 
     /**
      * @param int $chatId
+     *
      * @return static
      */
     public function chatId(int $chatId): static {
@@ -103,6 +105,7 @@ class BaseBot extends Component {
 
     /**
      * @param string $username
+     *
      * @return static
      */
     public function username(string $username): static {

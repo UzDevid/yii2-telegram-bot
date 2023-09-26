@@ -4,6 +4,7 @@ namespace uzdevid\telegram\bot\objects;
 
 /**
  * Class Response
+ *
  * @package uzdevid\telegram\bot\objects
  *
  * @property bool $ok

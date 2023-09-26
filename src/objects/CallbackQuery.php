@@ -4,6 +4,7 @@ namespace uzdevid\telegram\bot\objects;
 
 /**
  * Class CallbackQuery
+ *
  * @package uzdevid\telegram\bot\objects
  *
  * @property int $updateId

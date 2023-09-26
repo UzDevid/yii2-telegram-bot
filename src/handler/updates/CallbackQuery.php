@@ -2,8 +2,6 @@
 
 namespace uzdevid\telegram\bot\handler\updates;
 
-use uzdevid\telegram\bot\Service;
-
 class CallbackQuery extends \uzdevid\telegram\bot\objects\CallbackQuery implements UpdateInterface {
     use UpdateTrait;
 

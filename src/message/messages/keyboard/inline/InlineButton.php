@@ -10,6 +10,7 @@ class InlineButton implements ButtonInterface {
 
     /**
      * @param string $text
+     *
      * @return $this
      */
     public function text(string $text): static {
@@ -19,6 +20,7 @@ class InlineButton implements ButtonInterface {
 
     /**
      * @param string $callbackData
+     *
      * @return $this
      */
     public function callbackData(string $callbackData): static {
@@ -28,6 +30,7 @@ class InlineButton implements ButtonInterface {
 
     /**
      * @param string $url
+     *
      * @return $this
      */
     public function url(string $url): static {

@@ -14,6 +14,7 @@ class ForceReply implements ReplyMarkupInterface {
 
     /**
      * @param string $inputFieldPlaceholder
+     *
      * @return $this
      */
     public function inputFieldPlaceholder(string $inputFieldPlaceholder): self {
@@ -23,6 +24,7 @@ class ForceReply implements ReplyMarkupInterface {
 
     /**
      * @param bool $selective
+     *
      * @return $this
      */
     public function selective(bool $selective = true): self {

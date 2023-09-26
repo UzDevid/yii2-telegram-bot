@@ -22,6 +22,7 @@ class Answer extends BaseBot implements MessageInterface {
 
     /**
      * @param AnswerInterface $result
+     *
      * @return $this
      */
     public function addResult(AnswerInterface $result): static {
@@ -31,6 +32,7 @@ class Answer extends BaseBot implements MessageInterface {
 
     /**
      * @param int $cacheTime
+     *
      * @return $this
      */
     public function setCacheTime(int $cacheTime): static {
@@ -40,6 +42,7 @@ class Answer extends BaseBot implements MessageInterface {
 
     /**
      * @param bool $personal
+     *
      * @return $this
      */
     public function setIsPersonal(bool $personal = true): static {
@@ -49,6 +52,7 @@ class Answer extends BaseBot implements MessageInterface {
 
     /**
      * @param string $offset
+     *
      * @return $this
      */
     public function setNextOffset(string $offset): static {

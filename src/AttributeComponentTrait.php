@@ -9,6 +9,7 @@ use yii\base\UnknownPropertyException;
 
 /**
  * Trait AttributeComponentTrait
+ *
  * @package uzdevid\telegram\bot
  *
  * @property array $attributes
