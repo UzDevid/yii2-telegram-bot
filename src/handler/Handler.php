@@ -3,7 +3,6 @@
 namespace uzdevid\telegram\bot\handler;
 
 use uzdevid\telegram\bot\Bot;
-use uzdevid\telegram\bot\handler\updates\UpdateInterface;
 use yii\base\InvalidCallException;
 
 class Handler {
