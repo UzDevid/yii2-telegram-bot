@@ -11,7 +11,7 @@ class GetChatMember extends Method implements MethodInterface {
 
     public function __construct(int $userId, array $attributes = []) {
         parent::__construct($attributes);
-        $this->addAttribute(self::$__chat_id, $this->chatId);
+        $this->addAttribute(self::$__chat_id, $this->chatIdOrUsername());
         $this->addAttribute(self::$__user_id, $userId);
     }
 
