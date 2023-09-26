@@ -24,7 +24,7 @@ interface MessageInterface {
      * @param mixed $value
      * @return mixed
      */
-    public function addAttribute(string $name, mixed $value): mixed;
+    public function addAttribute(string $name, mixed $value): void;
 
     /**
      * @param string $name
