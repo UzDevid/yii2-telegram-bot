@@ -7,7 +7,7 @@ use uzdevid\telegram\bot\message\messages\MethodInterface;
 use uzdevid\telegram\bot\message\messages\MessageTrait;
 use uzdevid\telegram\bot\message\messages\MessageType;
 
-class TextMethod extends MessageType implements MethodInterface {
+class TextMessage extends MessageType implements MethodInterface {
     use MessageTrait;
 
     protected static string $__text = 'text';

@@ -6,7 +6,7 @@ use uzdevid\telegram\bot\message\messages\MethodInterface;
 use uzdevid\telegram\bot\message\messages\MessageTrait;
 use uzdevid\telegram\bot\message\messages\MessageType;
 
-class AudioMethod extends MessageType implements MethodInterface {
+class AudioMessage extends MessageType implements MethodInterface {
     use MessageTrait;
 
     protected static string $__audio = 'audio';

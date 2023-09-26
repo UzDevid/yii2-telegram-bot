@@ -6,7 +6,7 @@ use uzdevid\telegram\bot\message\messages\MethodInterface;
 use uzdevid\telegram\bot\message\messages\MessageTrait;
 use uzdevid\telegram\bot\message\messages\MessageType;
 
-class PhotoMethod extends MessageType implements MethodInterface {
+class PhotoMessage extends MessageType implements MethodInterface {
     use MessageTrait;
 
     protected static string $__photo = 'photo';

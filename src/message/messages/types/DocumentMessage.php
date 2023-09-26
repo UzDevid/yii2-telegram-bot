@@ -6,7 +6,7 @@ use uzdevid\telegram\bot\message\messages\MethodInterface;
 use uzdevid\telegram\bot\message\messages\MessageTrait;
 use uzdevid\telegram\bot\message\messages\MessageType;
 
-class DocumentMethod extends MessageType implements MethodInterface {
+class DocumentMessage extends MessageType implements MethodInterface {
     use MessageTrait;
 
     protected static string $__document = 'document';

@@ -42,7 +42,7 @@ trait MessageTrait {
      * @return static
      */
     public function addMessageEntity(string $name, MessageEntityInterface $entity): static {
-        $this->pushAttribute($name, $entities);
+        $this->pushAttribute($name, $entity);
         return $this;
     }
 
@@ -73,7 +73,7 @@ trait MessageTrait {
     /**
      * Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove reply keyboard or to force a reply from the user.
      *
-     * @param string $replyMarkup
+     * @param ReplyMarkupInterface $replyMarkup
      *
      * @return static
      */

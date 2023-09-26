@@ -18,7 +18,7 @@ class Editor extends Manager {
      * @return string
      */
     public function methodUrl(string|null $method = null): string {
-        return self::$apiUrl . $this->token . '/' . $method ?? $this->message->methodName();
+        return self::$apiUrl . $this->token . '/' . $method ?? $this->method->methodName();
     }
 
     /**

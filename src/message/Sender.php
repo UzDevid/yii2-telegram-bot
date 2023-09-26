@@ -7,11 +7,11 @@ use uzdevid\telegram\bot\Service;
 
 class Sender extends Manager {
     public function methodUrl(): string {
-        return self::$apiUrl . $this->token . '/' . $this->message->methodName();
+        return self::$apiUrl . $this->token . '/' . $this->method->methodName();
     }
 
     public function send(): Response {
-        $query = array_merge(['chat_id' => $this->chatIdOrUsername()], $this->message->getPayload());
+        $query = array_merge(['chat_id' => $this->chatIdOrUsername()], $this->method->getPayload());
 
         $response = $this->httpClient->get($this->methodUrl(), ['query' => $query]);
 
