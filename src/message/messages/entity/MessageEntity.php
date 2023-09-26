@@ -14,7 +14,7 @@ use uzdevid\telegram\bot\objects\User;
  *
  * @property array $params
  */
-class MessageEntity implements MessageEntityInterface {
+class MessageEntity {
     public const TYPE_MENTION = 'mention';
     public const TYPE_HASHTAG = 'hashtag';
     public const TYPE_CASHTAG = 'cashtag';
