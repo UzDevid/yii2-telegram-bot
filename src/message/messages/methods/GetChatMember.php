@@ -6,12 +6,10 @@ use uzdevid\telegram\bot\message\messages\Method;
 use uzdevid\telegram\bot\message\messages\MethodInterface;
 
 class GetChatMember extends Method implements MethodInterface {
-    protected static string $__chat_id = 'chat_id';
     protected static string $__user_id = 'user_id';
 
     public function __construct(int $userId, array $attributes = []) {
         parent::__construct($attributes);
-        $this->addAttribute(self::$__chat_id, $this->chatIdOrUsername());
         $this->addAttribute(self::$__user_id, $userId);
     }
 
