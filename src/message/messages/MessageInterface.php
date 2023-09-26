@@ -15,6 +15,7 @@ interface MessageInterface {
 
     /**
      * @param array $attributes
+     *
      * @return void
      */
     public function setAttributes(array $attributes): void;
@@ -22,18 +23,21 @@ interface MessageInterface {
     /**
      * @param string $name
      * @param mixed $value
-     * @return mixed
+     *
+     * @return void
      */
     public function addAttribute(string $name, mixed $value): void;
 
     /**
      * @param string $name
+     *
      * @return mixed
      */
     public function getAttribute(string $name): mixed;
 
     /**
      * @param string $name
+     *
      * @return bool
      */
     public function issetAttribute(string $name): bool;
