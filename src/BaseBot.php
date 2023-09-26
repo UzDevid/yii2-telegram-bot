@@ -19,8 +19,8 @@ class BaseBot extends Component {
     protected static string $apiUrl = 'https://api.telegram.org/bot';
 
     private string $_token;
-    private int $_chatId;
-    private string $_username;
+    private int $_chatId = -1;
+    private string $_username = '';
     private Client $_httpClient;
 
     /**
