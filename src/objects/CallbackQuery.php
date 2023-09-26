@@ -2,6 +2,8 @@
 
 namespace uzdevid\telegram\bot\objects;
 
+use uzdevid\telegram\bot\ObjectTrait;
+
 /**
  * Class CallbackQuery
  *

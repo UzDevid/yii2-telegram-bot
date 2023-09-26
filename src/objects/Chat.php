@@ -2,6 +2,8 @@
 
 namespace uzdevid\telegram\bot\objects;
 
+use uzdevid\telegram\bot\ObjectTrait;
+
 /**
  * Class Chat
  *
@@ -10,7 +12,7 @@ namespace uzdevid\telegram\bot\objects;
  * @property int $id
  * @property string $type
  * @property string $title
- * @property string $username
+ * @property string|null $username
  * @property string $firstName
  * @property string $lastName
  * @property bool $isForum

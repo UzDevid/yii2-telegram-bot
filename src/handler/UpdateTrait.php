@@ -1,6 +1,6 @@
 <?php
 
-namespace uzdevid\telegram\bot\handler\updates;
+namespace uzdevid\telegram\bot\handler;
 
 use uzdevid\telegram\bot\AttributeComponentTrait;
 use uzdevid\telegram\bot\Service;
