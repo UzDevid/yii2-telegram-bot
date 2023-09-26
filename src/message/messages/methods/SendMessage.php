@@ -6,7 +6,7 @@ use uzdevid\telegram\bot\message\messages\entity\MessageEntityInterface;
 use uzdevid\telegram\bot\message\messages\Method;
 use uzdevid\telegram\bot\message\messages\MethodInterface;
 
-class TextMessage extends Method implements MethodInterface {
+class SendMessage extends Method implements MethodInterface {
     protected static string $__text = 'text';
     protected static string $__parseMode = 'parse_mode';
     protected static string $__entities = 'entities';

@@ -5,7 +5,7 @@ namespace uzdevid\telegram\bot\message\messages\methods;
 use uzdevid\telegram\bot\message\messages\Method;
 use uzdevid\telegram\bot\message\messages\MethodInterface;
 
-class DocumentMessage extends Method implements MethodInterface {
+class SendDocument extends Method implements MethodInterface {
     protected static string $__document = 'document';
     protected static string $__thumbnail = 'thumbnail';
     protected static string $__caption = 'caption';

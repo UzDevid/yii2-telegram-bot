@@ -5,7 +5,7 @@ namespace uzdevid\telegram\bot\message\messages\methods;
 use uzdevid\telegram\bot\message\messages\Method;
 use uzdevid\telegram\bot\message\messages\MethodInterface;
 
-class PhotoMessage extends Method implements MethodInterface {
+class SendPhoto extends Method implements MethodInterface {
     protected static string $__photo = 'photo';
     protected static string $__caption = 'caption';
     protected static string $__hasSpoiler = 'has_spoiler';
