@@ -52,14 +52,12 @@ trait AttributeComponentTrait {
     public function __isset($name) {
         try {
             return $this->__get($name) !== null;
-        } catch (Exception $t) {
-            return false;
-        } catch (Throwable $e) {
+        } catch (Exception|Throwable $t) {
             return false;
         }
     }
 
-    public function hasAttribute($name) {
+    public function hasAttribute($name): bool {
         return isset($this->_attributes[$name]);
     }
 
