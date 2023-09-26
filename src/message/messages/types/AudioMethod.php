@@ -2,11 +2,11 @@
 
 namespace uzdevid\telegram\bot\message\messages\types;
 
-use uzdevid\telegram\bot\message\messages\MessageInterface;
+use uzdevid\telegram\bot\message\messages\MethodInterface;
 use uzdevid\telegram\bot\message\messages\MessageTrait;
 use uzdevid\telegram\bot\message\messages\MessageType;
 
-class AudioMessage extends MessageType implements MessageInterface {
+class AudioMethod extends MessageType implements MethodInterface {
     use MessageTrait;
 
     protected static string $__audio = 'audio';

@@ -4,9 +4,9 @@ namespace uzdevid\telegram\bot\message\answer;
 
 use uzdevid\telegram\bot\AttributeComponentTrait;
 use uzdevid\telegram\bot\BaseBot;
-use uzdevid\telegram\bot\message\messages\MessageInterface;
+use uzdevid\telegram\bot\message\messages\MethodInterface;
 
-class Answer extends BaseBot implements MessageInterface {
+class Answer extends BaseBot implements MethodInterface {
     use AttributeComponentTrait;
 
     public function __construct(string $inlineQueryId) {

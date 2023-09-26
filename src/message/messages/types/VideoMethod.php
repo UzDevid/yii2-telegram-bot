@@ -2,11 +2,11 @@
 
 namespace uzdevid\telegram\bot\message\messages\types;
 
-use uzdevid\telegram\bot\message\messages\MessageInterface;
+use uzdevid\telegram\bot\message\messages\MethodInterface;
 use uzdevid\telegram\bot\message\messages\MessageTrait;
 use uzdevid\telegram\bot\message\messages\MessageType;
 
-class VideoMessage extends MessageType implements MessageInterface {
+class VideoMethod extends MessageType implements MethodInterface {
     use MessageTrait;
 
     protected static string $__video = 'video';

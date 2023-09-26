@@ -3,7 +3,7 @@
 namespace uzdevid\telegram\bot\message;
 
 use uzdevid\telegram\bot\BaseBot;
-use uzdevid\telegram\bot\message\messages\MessageInterface;
+use uzdevid\telegram\bot\message\messages\MethodInterface;
 
 /**
  * Class Message
@@ -11,32 +11,32 @@ use uzdevid\telegram\bot\message\messages\MessageInterface;
  * @package uzdevid\telegram\bot
  *
  * @property int $chatId
- * @property MessageInterface $message
+ * @property MethodInterface $method
  */
 class Manager extends BaseBot {
-    private MessageInterface|null $_message = null;
+    private MethodInterface|null $_method = null;
 
     /**
-     * @return MessageInterface
+     * @return MethodInterface
      */
-    protected function getMessage(): MessageInterface {
-        return $this->_message;
+    protected function getMessage(): MethodInterface {
+        return $this->_method;
     }
 
     /**
-     * @param MessageInterface $message
+     * @param MethodInterface $method
      */
-    public function setMessage(MessageInterface $message): void {
-        $this->_message = $message;
+    public function setMessage(MethodInterface $method): void {
+        $this->_method = $method;
     }
 
     /**
-     * @param MessageInterface $message
+     * @param MethodInterface $method
      *
      * @return Manager
      */
-    public function message(MessageInterface $message): static {
-        $this->_message = $message;
+    public function method(MethodInterface $method): static {
+        $this->_method = $method;
         return $this;
     }
 }

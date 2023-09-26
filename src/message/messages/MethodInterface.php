@@ -2,7 +2,7 @@
 
 namespace uzdevid\telegram\bot\message\messages;
 
-interface MessageInterface {
+interface MethodInterface {
     /**
      * @return string
      */
