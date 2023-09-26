@@ -1,11 +1,13 @@
 <?php
 
-namespace uzdevid\telegram\bot\message;
+namespace uzdevid\telegram\bot\message\managers;
 
+use uzdevid\telegram\bot\message\Manager;
+use uzdevid\telegram\bot\message\ManagerInterface;
 use uzdevid\telegram\bot\objects\Response;
 use uzdevid\telegram\bot\Service;
 
-class Sender extends Manager {
+class Sender extends Manager implements ManagerInterface {
     public function methodUrl(): string {
         return self::$apiUrl . $this->token . '/' . $this->method->methodName();
     }

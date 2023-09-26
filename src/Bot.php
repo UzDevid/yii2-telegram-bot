@@ -3,10 +3,9 @@
 namespace uzdevid\telegram\bot;
 
 use uzdevid\telegram\bot\handler\Handler;
-use uzdevid\telegram\bot\message\Editor;
-use uzdevid\telegram\bot\message\EditorInterface;
-use uzdevid\telegram\bot\message\Sender;
-use uzdevid\telegram\bot\message\SenderInterface;
+use uzdevid\telegram\bot\message\ManagerInterface;
+use uzdevid\telegram\bot\message\managers\Editor;
+use uzdevid\telegram\bot\message\managers\Sender;
 use yii\base\InvalidCallException;
 
 /**
@@ -16,11 +15,11 @@ use yii\base\InvalidCallException;
  */
 class Bot extends BaseBot {
     /**
-     * @param SenderInterface|null $sender
+     * @param ManagerInterface|null $sender
      *
      * @return Sender
      */
-    public function sender(SenderInterface|null $sender = null): Sender {
+    public function sender(ManagerInterface|null $sender = null): Sender {
         if ($sender === null) {
             $sender = new Sender();
         }
@@ -43,11 +42,11 @@ class Bot extends BaseBot {
     }
 
     /**
-     * @param EditorInterface|null $editor
+     * @param ManagerInterface|null $editor
      *
      * @return Editor
      */
-    public function editor(EditorInterface|null $editor = null): Editor {
+    public function editor(ManagerInterface|null $editor = null): Editor {
         if ($editor === null) {
             $editor = new Editor();
         }

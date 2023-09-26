@@ -19,14 +19,14 @@ class Manager extends BaseBot {
     /**
      * @return MethodInterface
      */
-    protected function getMessage(): MethodInterface {
+    protected function getMethod(): MethodInterface {
         return $this->_method;
     }
 
     /**
      * @param MethodInterface $method
      */
-    public function setMessage(MethodInterface $method): void {
+    public function setMethod(MethodInterface $method): void {
         $this->_method = $method;
     }
 

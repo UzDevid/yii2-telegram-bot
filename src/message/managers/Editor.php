@@ -1,7 +1,9 @@
 <?php
 
-namespace uzdevid\telegram\bot\message;
+namespace uzdevid\telegram\bot\message\managers;
 
+use uzdevid\telegram\bot\message\Manager;
+use uzdevid\telegram\bot\message\ManagerInterface;
 use uzdevid\telegram\bot\objects\Response;
 use uzdevid\telegram\bot\Service;
 
@@ -9,7 +11,7 @@ use uzdevid\telegram\bot\Service;
  *
  * @property int $messageId
  */
-class Editor extends Manager {
+class Editor extends Manager implements ManagerInterface {
     private int|null $_messageId = null;
 
     /**
