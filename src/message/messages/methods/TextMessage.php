@@ -1,6 +1,6 @@
 <?php
 
-namespace uzdevid\telegram\bot\message\messages\types;
+namespace uzdevid\telegram\bot\message\messages\methods;
 
 use uzdevid\telegram\bot\message\messages\entity\MessageEntityInterface;
 use uzdevid\telegram\bot\message\messages\MethodInterface;
