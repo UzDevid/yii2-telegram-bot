@@ -3,13 +3,10 @@
 namespace uzdevid\telegram\bot\message\messages\methods;
 
 use uzdevid\telegram\bot\message\messages\entity\MessageEntityInterface;
+use uzdevid\telegram\bot\message\messages\Method;
 use uzdevid\telegram\bot\message\messages\MethodInterface;
-use uzdevid\telegram\bot\message\messages\MessageTrait;
-use uzdevid\telegram\bot\message\messages\MessageType;
 
-class TextMessage extends MessageType implements MethodInterface {
-    use MessageTrait;
-
+class TextMessage extends Method implements MethodInterface {
     protected static string $__text = 'text';
     protected static string $__parseMode = 'parse_mode';
     protected static string $__entities = 'entities';

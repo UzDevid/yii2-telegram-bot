@@ -2,13 +2,10 @@
 
 namespace uzdevid\telegram\bot\message\messages\methods;
 
+use uzdevid\telegram\bot\message\messages\Method;
 use uzdevid\telegram\bot\message\messages\MethodInterface;
-use uzdevid\telegram\bot\message\messages\MessageTrait;
-use uzdevid\telegram\bot\message\messages\MessageType;
 
-class PhotoMessage extends MessageType implements MethodInterface {
-    use MessageTrait;
-
+class PhotoMessage extends Method implements MethodInterface {
     protected static string $__photo = 'photo';
     protected static string $__caption = 'caption';
     protected static string $__hasSpoiler = 'has_spoiler';

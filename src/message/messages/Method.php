@@ -3,11 +3,13 @@
 namespace uzdevid\telegram\bot\message\messages;
 
 use uzdevid\telegram\bot\AttributeComponentTrait;
+use uzdevid\telegram\bot\BaseBot;
 use uzdevid\telegram\bot\message\messages\entity\MessageEntityInterface;
 use uzdevid\telegram\bot\message\messages\keyboard\ReplyMarkupInterface;
 
-trait MessageTrait {
+class Method extends BaseBot {
     use AttributeComponentTrait;
+
 
     /**
      * Unique identifier for the target message thread (topic) of the forum; for forum supergroups only
@@ -81,5 +83,12 @@ trait MessageTrait {
         $serialized = json_encode($replyMarkup->getAttributes(), JSON_UNESCAPED_UNICODE);
         $this->addAttribute('reply_markup', $serialized);
         return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getPayload(): array {
+        return $this->attributes;
     }
 }
