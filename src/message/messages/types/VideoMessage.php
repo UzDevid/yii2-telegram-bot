@@ -6,7 +6,7 @@ use uzdevid\telegram\bot\message\messages\MessageInterface;
 use uzdevid\telegram\bot\message\messages\MessageTrait;
 use uzdevid\telegram\bot\message\messages\MessageType;
 
-class VideoMessage extends MessageType implements MessageInterface, VideoMessageInterface {
+class VideoMessage extends MessageType implements MessageInterface {
     use MessageTrait;
 
     protected static string $__video = 'video';

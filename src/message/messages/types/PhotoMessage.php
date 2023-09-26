@@ -6,7 +6,7 @@ use uzdevid\telegram\bot\message\messages\MessageInterface;
 use uzdevid\telegram\bot\message\messages\MessageTrait;
 use uzdevid\telegram\bot\message\messages\MessageType;
 
-class PhotoMessage extends MessageType implements MessageInterface, PhotoMessageInterface {
+class PhotoMessage extends MessageType implements MessageInterface {
     use MessageTrait;
 
     protected static string $__photo = 'photo';
@@ -27,6 +27,7 @@ class PhotoMessage extends MessageType implements MessageInterface, PhotoMessage
 
     /**
      * @param string $caption
+     *
      * @return $this
      */
     public function caption(string $caption): static {
@@ -36,6 +37,7 @@ class PhotoMessage extends MessageType implements MessageInterface, PhotoMessage
 
     /**
      * @param bool $hasSpoiler
+     *
      * @return $this
      */
     public function hasSpoiler(bool $hasSpoiler = true): static {

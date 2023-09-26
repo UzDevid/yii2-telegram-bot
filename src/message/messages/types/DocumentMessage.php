@@ -2,11 +2,11 @@
 
 namespace uzdevid\telegram\bot\message\messages\types;
 
-use MessageTrait;
 use uzdevid\telegram\bot\message\messages\MessageInterface;
+use uzdevid\telegram\bot\message\messages\MessageTrait;
 use uzdevid\telegram\bot\message\messages\MessageType;
 
-class DocumentMessage extends MessageType implements MessageInterface, DocumentMessageInterface {
+class DocumentMessage extends MessageType implements MessageInterface {
     use MessageTrait;
 
     protected static string $__document = 'document';
@@ -28,6 +28,7 @@ class DocumentMessage extends MessageType implements MessageInterface, DocumentM
 
     /**
      * @param string $thumbnail
+     *
      * @return $this
      */
     public function thumbnail(string $thumbnail): static {
@@ -37,6 +38,7 @@ class DocumentMessage extends MessageType implements MessageInterface, DocumentM
 
     /**
      * @param string $caption
+     *
      * @return $this
      */
     public function caption(string $caption): static {
@@ -46,6 +48,7 @@ class DocumentMessage extends MessageType implements MessageInterface, DocumentM
 
     /**
      * @param bool $disableContentTypeDetection
+     *
      * @return $this
      */
     public function disableContentTypeDetection(bool $disableContentTypeDetection): static {

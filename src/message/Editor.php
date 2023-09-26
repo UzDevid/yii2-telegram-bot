@@ -9,11 +9,12 @@ use uzdevid\telegram\bot\Service;
  *
  * @property int $messageId
  */
-class Editor extends Message implements EditorInterface {
+class Editor extends Manager {
     private int|null $_messageId = null;
 
     /**
      * @param string|null $method
+     *
      * @return string
      */
     public function methodUrl(string|null $method = null): string {
@@ -29,6 +30,7 @@ class Editor extends Message implements EditorInterface {
 
     /**
      * @param int $messageId
+     *
      * @return void
      */
     public function setMessageId(int $messageId): void {
@@ -37,6 +39,7 @@ class Editor extends Message implements EditorInterface {
 
     /**
      * @param int $messageId
+     *
      * @return $this
      */
     public function messageId(int $messageId): static {

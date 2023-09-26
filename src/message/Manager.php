@@ -7,12 +7,13 @@ use uzdevid\telegram\bot\message\messages\MessageInterface;
 
 /**
  * Class Message
+ *
  * @package uzdevid\telegram\bot
  *
  * @property int $chatId
  * @property MessageInterface $message
  */
-class Message extends BaseBot {
+class Manager extends BaseBot {
     private MessageInterface|null $_message = null;
 
     /**
@@ -31,7 +32,8 @@ class Message extends BaseBot {
 
     /**
      * @param MessageInterface $message
-     * @return Message
+     *
+     * @return Manager
      */
     public function message(MessageInterface $message): static {
         $this->_message = $message;
