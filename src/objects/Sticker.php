@@ -30,7 +30,7 @@ class Sticker extends BaseObject {
     /**
      * @return array
      */
-    public function attributeObjects(): array {
+    public static function attributeObjects(): array {
         return [
             'premiumAnimation' => File::class,
             'maskPosition' => MaskPosition::class,
