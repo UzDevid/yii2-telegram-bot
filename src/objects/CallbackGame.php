@@ -11,11 +11,4 @@ use uzdevid\telegram\bot\BaseObject;
  *
  * A placeholder, currently holds no information. Use BotFather to set up your game.
  */
-class CallbackGame extends BaseObject {
-    /**
-     * @return array
-     */
-    public static function attributeObjects(): array {
-        return [];
-    }
-}
+class CallbackGame extends BaseObject { }

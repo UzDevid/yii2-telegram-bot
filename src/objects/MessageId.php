@@ -11,11 +11,4 @@ use uzdevid\telegram\bot\BaseObject;
  *
  * @property int $messageId
  */
-class MessageId extends BaseObject {
-    /**
-     * @return array
-     */
-    public static function attributeObjects(): array {
-        return [];
-    }
-}
+class MessageId extends BaseObject { }

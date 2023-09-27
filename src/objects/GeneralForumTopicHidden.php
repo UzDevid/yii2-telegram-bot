@@ -11,11 +11,4 @@ use uzdevid\telegram\bot\BaseObject;
  *
  * This object represents a service message about General forum topic hidden in the chat. Currently holds no information.
  */
-class GeneralForumTopicHidden extends BaseObject {
-    /**
-     * @return array
-     */
-    public static function attributeObjects(): array {
-        return [];
-    }
-}
+class GeneralForumTopicHidden extends BaseObject { }

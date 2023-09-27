@@ -17,11 +17,4 @@ use uzdevid\telegram\bot\BaseObject;
  * @property int $userId
  * @property string $vcard
  */
-class Contact extends BaseObject {
-    /**
-     * @return array
-     */
-    public static function attributeObjects(): array {
-        return [];
-    }
-}
+class Contact extends BaseObject { }

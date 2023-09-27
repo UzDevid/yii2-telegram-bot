@@ -16,11 +16,4 @@ use uzdevid\telegram\bot\BaseObject;
  * @property int $fileSize
  * @property int $fileDate
  */
-class PassportFile extends BaseObject {
-    /**
-     * @return array
-     */
-    public static function attributeObjects(): array {
-        return [];
-    }
-}
+class PassportFile extends BaseObject { }

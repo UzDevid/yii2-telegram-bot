@@ -13,11 +13,4 @@ use uzdevid\telegram\bot\BaseObject;
  *
  * @property int $startDate
  */
-class VideoChatScheduled extends BaseObject {
-    /**
-     * @return array
-     */
-    public static function attributeObjects(): array {
-        return [];
-    }
-}
+class VideoChatScheduled extends BaseObject { }

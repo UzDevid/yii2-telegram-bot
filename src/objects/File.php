@@ -16,11 +16,4 @@ use uzdevid\telegram\bot\BaseObject;
  * @property int $fileSize
  * @property string $filePath
  */
-class File extends BaseObject {
-    /**
-     * @return array
-     */
-    public function attributeObjects(): array {
-        return [];
-    }
-}
+class File extends BaseObject { }

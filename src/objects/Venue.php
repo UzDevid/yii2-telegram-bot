@@ -19,11 +19,4 @@ use uzdevid\telegram\bot\BaseObject;
  * @property string $googlePlaceId
  * @property string $googlePlaceType
  */
-class Venue extends BaseObject {
-    /**
-     * @return array
-     */
-    public static function attributeObjects(): array {
-        return [];
-    }
-}
+class Venue extends BaseObject { }

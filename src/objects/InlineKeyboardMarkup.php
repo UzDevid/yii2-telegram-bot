@@ -13,11 +13,4 @@ use uzdevid\telegram\bot\BaseObject;
  *
  * @property InlineKeyboardButton[][] $inlineKeyboard
  */
-class InlineKeyboardMarkup extends BaseObject {
-    /**
-     * @return array
-     */
-    public static function attributeObjects(): array {
-        return [];
-    }
-}
+class InlineKeyboardMarkup extends BaseObject { }

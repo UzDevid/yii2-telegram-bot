@@ -18,11 +18,4 @@ use uzdevid\telegram\bot\BaseObject;
  * @property string $streetLine2
  * @property string $postCode
  */
-class ShippingAddress extends BaseObject {
-    /**
-     * @return array
-     */
-    public static function attributeObjects(): array {
-        return [];
-    }
-}
+class ShippingAddress extends BaseObject { }

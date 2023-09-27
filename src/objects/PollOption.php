@@ -14,11 +14,4 @@ use uzdevid\telegram\bot\BaseObject;
  * @property string $text
  * @property int $voterCount
  */
-class PollOption extends BaseObject {
-    /**
-     * @return array
-     */
-    public static function attributeObjects(): array {
-        return [];
-    }
-}
+class PollOption extends BaseObject { }

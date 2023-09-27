@@ -16,11 +16,4 @@ use uzdevid\telegram\bot\BaseObject;
  * @property string $email
  * @property ShippingAddress $shippingAddress
  */
-class OrderInfo extends BaseObject {
-    /**
-     * @return array
-     */
-    public static function attributeObjects(): array {
-        return [];
-    }
-}
+class OrderInfo extends BaseObject { }

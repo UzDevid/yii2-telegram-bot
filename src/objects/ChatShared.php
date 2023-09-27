@@ -14,11 +14,4 @@ use uzdevid\telegram\bot\BaseObject;
  * @property int $requestId
  * @property int $chatId
  */
-class ChatShared extends BaseObject {
-    /**
-     * @return array
-     */
-    public static function attributeObjects(): array {
-        return [];
-    }
-}
+class ChatShared extends BaseObject { }

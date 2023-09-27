@@ -18,11 +18,4 @@ use uzdevid\telegram\bot\BaseObject;
  * @property string $botUsername
  * @property bool $requestWriteAccess
  */
-class LoginUrl extends BaseObject {
-    /**
-     * @return array
-     */
-    public static function attributeObjects(): array {
-        return [];
-    }
-}
+class LoginUrl extends BaseObject { }

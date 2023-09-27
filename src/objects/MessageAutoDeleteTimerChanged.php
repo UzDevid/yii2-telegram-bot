@@ -13,11 +13,4 @@ use uzdevid\telegram\bot\BaseObject;
  *
  * @property int $message_auto_delete_time
  */
-class MessageAutoDeleteTimerChanged extends BaseObject {
-    /**
-     * @return array
-     */
-    public static function attributeObjects(): array {
-        return [];
-    }
-}
+class MessageAutoDeleteTimerChanged extends BaseObject { }

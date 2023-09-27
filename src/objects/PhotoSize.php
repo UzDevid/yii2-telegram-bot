@@ -17,11 +17,4 @@ use uzdevid\telegram\bot\BaseObject;
  * @property int $height
  * @property int $fileSize
  */
-class PhotoSize extends BaseObject {
-    /**
-     * @return array
-     */
-    public static function attributeObjects(): array {
-        return [];
-    }
-}
+class PhotoSize extends BaseObject { }

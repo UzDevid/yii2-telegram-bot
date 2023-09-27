@@ -13,11 +13,4 @@ use uzdevid\telegram\bot\BaseObject;
  *
  * @property string $url
  */
-class WebAppInfo extends BaseObject {
-    /**
-     * @return array
-     */
-    public static function attributeObjects(): array {
-        return [];
-    }
-}
+class WebAppInfo extends BaseObject { }

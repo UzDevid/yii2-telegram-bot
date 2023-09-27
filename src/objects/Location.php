@@ -18,11 +18,4 @@ use uzdevid\telegram\bot\BaseObject;
  * @property int $heading
  * @property int $proximityAlertRadius
  */
-class Location extends BaseObject {
-    /**
-     * @return array
-     */
-    public static function attributeObjects(): array {
-        return [];
-    }
-}
+class Location extends BaseObject { }

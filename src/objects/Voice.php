@@ -17,11 +17,4 @@ use uzdevid\telegram\bot\BaseObject;
  * @property string $mimeType
  * @property int $fileSize
  */
-class Voice extends BaseObject {
-    /**
-     * @return array
-     */
-    public static function attributeObjects(): array {
-        return [];
-    }
-}
+class Voice extends BaseObject { }

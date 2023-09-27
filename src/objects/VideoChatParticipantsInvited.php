@@ -13,11 +13,4 @@ use uzdevid\telegram\bot\BaseObject;
  *
  * @property User[] $users
  */
-class VideoChatParticipantsInvited extends BaseObject {
-    /**
-     * @return array
-     */
-    public static function attributeObjects(): array {
-        return [];
-    }
-}
+class VideoChatParticipantsInvited extends BaseObject { }

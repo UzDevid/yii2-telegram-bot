@@ -14,11 +14,4 @@ use uzdevid\telegram\bot\BaseObject;
  * @property string $emoji
  * @property int $value
  */
-class Dice extends BaseObject {
-    /**
-     * @return array
-     */
-    public static function attributeObjects(): array {
-        return [];
-    }
-}
+class Dice extends BaseObject { }

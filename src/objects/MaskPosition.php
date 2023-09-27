@@ -16,11 +16,4 @@ use uzdevid\telegram\bot\BaseObject;
  * @property float $yShift
  * @property float $scale
  */
-class MaskPosition extends BaseObject {
-    /**
-     * @return array
-     */
-    public function attributeObjects(): array {
-        return [];
-    }
-}
+class MaskPosition extends BaseObject { }

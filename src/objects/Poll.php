@@ -25,11 +25,4 @@ use uzdevid\telegram\bot\BaseObject;
  * @property int $openPeriod
  * @property int $closeDate
  */
-class Poll extends BaseObject {
-    /**
-     * @return array
-     */
-    public static function attributeObjects(): array {
-        return [];
-    }
-}
+class Poll extends BaseObject { }

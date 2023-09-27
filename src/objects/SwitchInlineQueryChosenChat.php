@@ -17,11 +17,4 @@ use uzdevid\telegram\bot\BaseObject;
  * @property bool $allowGroupChats
  * @property bool $allowChannelChats
  */
-class SwitchInlineQueryChosenChat extends BaseObject {
-    /**
-     * @return array
-     */
-    public static function attributeObjects(): array {
-        return [];
-    }
-}
+class SwitchInlineQueryChosenChat extends BaseObject { }

@@ -15,11 +15,4 @@ use uzdevid\telegram\bot\BaseObject;
  * @property string $webAppName
  * @property bool $fromAttachmentMenu
  */
-class WriteAccessAllowed extends BaseObject {
-    /**
-     * @return array
-     */
-    public static function attributeObjects(): array {
-        return [];
-    }
-}
+class WriteAccessAllowed extends BaseObject { }

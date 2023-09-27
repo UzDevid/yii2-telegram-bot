@@ -17,11 +17,4 @@ use uzdevid\telegram\bot\BaseObject;
  * @property string $currency
  * @property int $totalAmount
  */
-class Invoice extends BaseObject {
-    /**
-     * @return array
-     */
-    public static function attributeObjects(): array {
-        return [];
-    }
-}
+class Invoice extends BaseObject { }

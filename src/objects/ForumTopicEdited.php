@@ -14,11 +14,4 @@ use uzdevid\telegram\bot\BaseObject;
  * @property string $name
  * @property int $iconCustomEmojiId
  */
-class ForumTopicEdited extends BaseObject {
-    /**
-     * @return array
-     */
-    public static function attributeObjects(): array {
-        return [];
-    }
-}
+class ForumTopicEdited extends BaseObject { }

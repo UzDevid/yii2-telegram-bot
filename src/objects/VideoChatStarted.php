@@ -11,11 +11,4 @@ use uzdevid\telegram\bot\BaseObject;
  *
  * This object represents a service message about a video chat started in the chat. Currently holds no information.
  */
-class VideoChatStarted extends BaseObject {
-    /**
-     * @return array
-     */
-    public static function attributeObjects(): array {
-        return [];
-    }
-}
+class VideoChatStarted extends BaseObject { }

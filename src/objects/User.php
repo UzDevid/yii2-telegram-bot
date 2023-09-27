@@ -23,11 +23,4 @@ use uzdevid\telegram\bot\BaseObject;
  * @property bool $canReadAllGroupMessages
  * @property bool $supportsInlineQueries
  */
-class User extends BaseObject {
-    /**
-     * @return array
-     */
-    public static function attributeObjects(): array {
-        return [];
-    }
-}
+class User extends BaseObject { }

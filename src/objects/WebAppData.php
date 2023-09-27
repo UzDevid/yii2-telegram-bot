@@ -14,11 +14,4 @@ use uzdevid\telegram\bot\BaseObject;
  * @property string $data
  * @property string $buttonText
  */
-class WebAppData extends BaseObject {
-    /**
-     * @return array
-     */
-    public static function attributeObjects(): array {
-        return [];
-    }
-}
+class WebAppData extends BaseObject { }

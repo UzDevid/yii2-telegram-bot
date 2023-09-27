@@ -11,11 +11,4 @@ use uzdevid\telegram\bot\BaseObject;
  *
  * This object represents a service message about a forum topic closed in the chat. Currently holds no information.
  */
-class ForumTopicClosed extends BaseObject {
-    /**
-     * @return array
-     */
-    public static function attributeObjects(): array {
-        return [];
-    }
-}
+class ForumTopicClosed extends BaseObject { }

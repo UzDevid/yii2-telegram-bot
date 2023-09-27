@@ -40,11 +40,4 @@ use uzdevid\telegram\bot\BaseObject;
  * @property bool $linkedChatId
  * @property bool $location
  */
-class Chat extends BaseObject {
-    /**
-     * @return array
-     */
-    public static function attributeObjects(): array {
-        return [];
-    }
-}
+class Chat extends BaseObject { }

@@ -15,11 +15,4 @@ use uzdevid\telegram\bot\BaseObject;
  * @property string $hash
  * @property string $secret
  */
-class EncryptedCredentials extends BaseObject {
-    /**
-     * @return array
-     */
-    public static function attributeObjects(): array {
-        return [];
-    }
-}
+class EncryptedCredentials extends BaseObject { }

@@ -19,11 +19,4 @@ use uzdevid\telegram\bot\BaseObject;
  * @property string $telegramPaymentChargeId
  * @property string $providerPaymentChargeId
  */
-class SuccessfulPayment extends BaseObject {
-    /**
-     * @return array
-     */
-    public static function attributeObjects(): array {
-        return [];
-    }
-}
+class SuccessfulPayment extends BaseObject { }
