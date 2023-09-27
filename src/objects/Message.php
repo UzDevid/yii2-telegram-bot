@@ -2,7 +2,7 @@
 
 namespace uzdevid\telegram\bot\objects;
 
-use uzdevid\telegram\bot\ObjectTrait;
+use uzdevid\telegram\bot\Object;
 
 /**
  * Class Message
@@ -16,9 +16,7 @@ use uzdevid\telegram\bot\ObjectTrait;
  * @property string $text
  * @property array $replyMarkup
  */
-class Message {
-    use ObjectTrait;
-
+class Message extends Object {
     /**
      * @return array
      */

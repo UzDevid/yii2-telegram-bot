@@ -2,7 +2,7 @@
 
 namespace uzdevid\telegram\bot\objects;
 
-use uzdevid\telegram\bot\ObjectTrait;
+use uzdevid\telegram\bot\Object;
 
 /**
  * Class CallbackQuery
@@ -15,9 +15,7 @@ use uzdevid\telegram\bot\ObjectTrait;
  * @property Message $message
  * @property string $data
  */
-class CallbackQuery {
-    use ObjectTrait;
-
+class CallbackQuery extends Object {
     /**
      * @return array
      */

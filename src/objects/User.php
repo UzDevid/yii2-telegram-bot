@@ -2,7 +2,7 @@
 
 namespace uzdevid\telegram\bot\objects;
 
-use uzdevid\telegram\bot\ObjectTrait;
+use uzdevid\telegram\bot\Object;
 
 /**
  * Class User
@@ -21,9 +21,7 @@ use uzdevid\telegram\bot\ObjectTrait;
  * @property bool $canReadAllGroupMessages
  * @property bool $supportsInlineQueries
  */
-class User {
-    use ObjectTrait;
-
+class User extends Object {
     /**
      * @return array
      */

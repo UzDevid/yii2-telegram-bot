@@ -2,7 +2,7 @@
 
 namespace uzdevid\telegram\bot\objects;
 
-use uzdevid\telegram\bot\ObjectTrait;
+use uzdevid\telegram\bot\Object;
 
 /**
  * Class Chat
@@ -38,9 +38,7 @@ use uzdevid\telegram\bot\ObjectTrait;
  * @property bool $linkedChatId
  * @property bool $location
  */
-class Chat {
-    use ObjectTrait;
-
+class Chat extends Object {
     /**
      * @return array
      */

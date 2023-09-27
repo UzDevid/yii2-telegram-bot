@@ -5,7 +5,7 @@ namespace uzdevid\telegram\bot;
 use uzdevid\telegram\bot\AttributeComponentTrait;
 use uzdevid\telegram\bot\Service;
 
-trait ObjectTrait {
+class Object {
     use AttributeComponentTrait;
 
     public function __construct(array $data) {

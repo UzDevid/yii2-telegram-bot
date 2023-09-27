@@ -2,7 +2,7 @@
 
 namespace uzdevid\telegram\bot\objects;
 
-use uzdevid\telegram\bot\ObjectTrait;
+use uzdevid\telegram\bot\Object;
 
 /**
  * Class InlineQuery
@@ -15,9 +15,7 @@ use uzdevid\telegram\bot\ObjectTrait;
  * @property string $query
  * @property int $offset
  */
-class InlineQuery {
-    use ObjectTrait;
-
+class InlineQuery extends Object {
     /**
      * @return array
      */
