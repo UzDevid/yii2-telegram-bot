@@ -2,9 +2,6 @@
 
 namespace uzdevid\telegram\bot;
 
-use uzdevid\telegram\bot\AttributeComponentTrait;
-use uzdevid\telegram\bot\Service;
-
 class BaseObject {
     use AttributeComponentTrait;
 
@@ -24,5 +21,9 @@ class BaseObject {
         }
 
         $this->setAttributes($attributes);
+    }
+
+    public static function attributeObjects(): array {
+        return [];
     }
 }
