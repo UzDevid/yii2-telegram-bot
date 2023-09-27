@@ -2,12 +2,14 @@
 
 namespace uzdevid\telegram\bot\objects;
 
-use uzdevid\telegram\bot\Object;
+use uzdevid\telegram\bot\BaseObject;
 
 /**
- * Class Chat
+ * Type Chat
  *
- * @package uzdevid\telegram\bot
+ * @link https://core.telegram.org/bots/api#chat
+ *
+ * This object represents a chat.
  *
  * @property int $id
  * @property string $type
@@ -38,7 +40,7 @@ use uzdevid\telegram\bot\Object;
  * @property bool $linkedChatId
  * @property bool $location
  */
-class Chat extends Object {
+class Chat extends BaseObject {
     /**
      * @return array
      */

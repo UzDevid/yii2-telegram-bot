@@ -2,12 +2,14 @@
 
 namespace uzdevid\telegram\bot\objects;
 
-use uzdevid\telegram\bot\Object;
+use uzdevid\telegram\bot\BaseObject;
 
 /**
- * Class User
+ * Type User
  *
- * @package uzdevid\telegram\bot
+ * @link https://core.telegram.org/bots/api#user
+ *
+ * This object represents a Telegram user or bot.
  *
  * @property int $id
  * @property bool $isBot
@@ -21,7 +23,7 @@ use uzdevid\telegram\bot\Object;
  * @property bool $canReadAllGroupMessages
  * @property bool $supportsInlineQueries
  */
-class User extends Object {
+class User extends BaseObject {
     /**
      * @return array
      */

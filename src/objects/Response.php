@@ -2,7 +2,7 @@
 
 namespace uzdevid\telegram\bot\objects;
 
-use uzdevid\telegram\bot\Object;
+use uzdevid\telegram\bot\BaseObject;
 
 /**
  * Class Response
@@ -16,7 +16,7 @@ use uzdevid\telegram\bot\Object;
  * @property int $date
  * @property string $text
  */
-class Response extends Object {
+class Response extends BaseObject {
     /**
      * @return array
      */
