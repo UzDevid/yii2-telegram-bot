@@ -3,6 +3,7 @@
 namespace uzdevid\telegram\bot;
 
 use GuzzleHttp\Client;
+use Psr\Http\Client\ClientInterface;
 use yii\base\Component;
 
 /**
@@ -21,7 +22,7 @@ class BaseBot extends Component {
     private string $_token;
     private int $_chatId;
     private string $_username;
-    private Client $_httpClient;
+    private ClientInterface $_httpClient;
 
     /**
      * @return string
@@ -132,9 +133,9 @@ class BaseBot extends Component {
     }
 
     /**
-     * @return Client
+     * @return ClientInterface
      */
-    public function getHttpClient(): Client {
+    public function getHttpClient(): ClientInterface {
         if (!isset($this->_httpClient)) {
             $this->httpClient = new Client();
         }
@@ -143,9 +144,9 @@ class BaseBot extends Component {
     }
 
     /**
-     * @param Client $httpClient
+     * @param ClientInterface $httpClient
      */
-    public function setHttpClient(Client $httpClient): void {
+    public function setHttpClient(ClientInterface $httpClient): void {
         $this->_httpClient = $httpClient;
     }
 }
