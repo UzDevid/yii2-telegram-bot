@@ -10,7 +10,6 @@ use uzdevid\telegram\bot\message\messages\keyboard\ReplyMarkupInterface;
 class Method extends BaseBot {
     use AttributeComponentTrait;
 
-
     /**
      * Unique identifier for the target message thread (topic) of the forum; for forum supergroups only
      *
