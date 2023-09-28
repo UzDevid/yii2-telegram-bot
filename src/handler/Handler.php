@@ -16,8 +16,8 @@ class Handler {
     }
 
     public function on(string $updateClassName, array|callable $handle, array|string|callable $callback): static {
-        if (!is_subclass_of($updateClassName, UpdateInterface::class)) {
-            throw new InvalidCallException('Update class must be instance of ' . UpdateInterface::class);
+        if (!is_subclass_of($updateClassName, HandlerInterface::class)) {
+            throw new InvalidCallException('Update class must be instance of ' . HandlerInterface::class);
         }
 
         $objectName = call_user_func([$updateClassName, 'objectName']);
