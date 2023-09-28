@@ -3,12 +3,12 @@
 namespace uzdevid\telegram\bot\handler;
 
 use uzdevid\telegram\bot\Bot;
-use uzdevid\telegram\bot\handler\updates\CallbackQueryUpdate;
-use uzdevid\telegram\bot\handler\updates\InlineQueryUpdate;
-use uzdevid\telegram\bot\handler\updates\MessageUpdate;
+use uzdevid\telegram\bot\objects\CallbackQuery;
+use uzdevid\telegram\bot\objects\InlineQuery;
+use uzdevid\telegram\bot\objects\Message;
 
 interface HandlerInterface {
-    public static function canHandle(Bot $bot, MessageUpdate|CallbackQueryUpdate|InlineQueryUpdate $update): bool;
+    public static function canHandle(Bot $bot, Message|CallbackQuery|InlineQuery $updateBody): bool;
 
-    public function handle(Bot $bot, MessageUpdate|CallbackQueryUpdate|InlineQueryUpdate $update): void;
+    public function handle(Bot $bot, Message|CallbackQuery|InlineQuery $updateBody): void;
 }
