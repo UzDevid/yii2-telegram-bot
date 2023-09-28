@@ -8,7 +8,7 @@ use uzdevid\telegram\bot\objects\InlineQuery;
 use uzdevid\telegram\bot\objects\Message;
 
 interface HandlerInterface {
-    public static function canHandle(Bot $bot, Message|CallbackQuery|InlineQuery $updateBody): bool;
+    public static function canHandle(Bot $bot, Message|CallbackQuery|InlineQuery $body): bool;
 
-    public function handle(Bot $bot, Message|CallbackQuery|InlineQuery $updateBody): void;
+    public function handle(Bot $bot, Message|CallbackQuery|InlineQuery $body): void;
 }
