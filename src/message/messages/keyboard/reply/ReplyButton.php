@@ -2,12 +2,10 @@
 
 namespace uzdevid\telegram\bot\message\messages\keyboard\reply;
 
-use uzdevid\telegram\bot\AttributeComponentTrait;
+use uzdevid\telegram\bot\Component;
 use uzdevid\telegram\bot\message\messages\keyboard\ButtonInterface;
 
-class ReplyButton implements ButtonInterface {
-    use AttributeComponentTrait;
-
+class ReplyButton extends Component implements ButtonInterface {
     /**
      * @param string $text
      *

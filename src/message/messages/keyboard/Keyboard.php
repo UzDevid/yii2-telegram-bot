@@ -2,11 +2,9 @@
 
 namespace uzdevid\telegram\bot\message\messages\keyboard;
 
-use uzdevid\telegram\bot\AttributeComponentTrait;
+use uzdevid\telegram\bot\Component;
 
-abstract class Keyboard {
-    use AttributeComponentTrait;
-
+abstract class Keyboard extends Component {
     protected string $name;
 
     /**

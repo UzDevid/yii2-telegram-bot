@@ -2,9 +2,7 @@
 
 namespace uzdevid\telegram\bot;
 
-class BaseObject {
-    use AttributeComponentTrait;
-
+class BaseObject extends Component {
     public function __construct(array $data) {
         $attributes = [];
         $makeObjects = $this->makeObjects();
@@ -20,7 +18,7 @@ class BaseObject {
             }
         }
 
-        $this->setAttributes($attributes);
+        parent::__construct($attributes);
     }
 
     public function makeObjects(): array {

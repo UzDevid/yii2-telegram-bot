@@ -2,13 +2,11 @@
 
 namespace uzdevid\telegram\bot\message\messages\keyboard\inline;
 
-use uzdevid\telegram\bot\AttributeComponentTrait;
+use uzdevid\telegram\bot\Component;
 use uzdevid\telegram\bot\message\messages\keyboard\ButtonInterface;
 use uzdevid\telegram\bot\message\messages\keyboard\RowInterface;
 
-class InlineRow implements RowInterface {
-    use AttributeComponentTrait;
-
+class InlineRow extends Component implements RowInterface {
     /**
      * @param ButtonInterface $button
      *

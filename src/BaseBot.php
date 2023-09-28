@@ -4,7 +4,6 @@ namespace uzdevid\telegram\bot;
 
 use GuzzleHttp\Client;
 use Psr\Http\Client\ClientInterface;
-use yii\base\Component;
 
 /**
  * Class BaseBot

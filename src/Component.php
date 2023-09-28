@@ -8,13 +8,13 @@ use yii\base\InvalidCallException;
 use yii\base\UnknownPropertyException;
 
 /**
- * Trait AttributeComponentTrait
+ * Class Component
  *
  * @package uzdevid\telegram\bot
  *
  * @property array $attributes
  */
-trait AttributeComponentTrait {
+class Component {
     private array $_attributes = [];
 
     public function __construct(array $attributes = []) {
@@ -41,9 +41,7 @@ trait AttributeComponentTrait {
     public function __set($name, $value) {
         $setter = 'set' . $name;
 
-        if (property_exists($this, $name)) {
-            $this->$name = $value;
-        } elseif (method_exists($this, $setter)) {
+        if (method_exists($this, $setter)) {
             $this->$setter($value);
         } else {
             $this->_attributes[$name] = $value;
