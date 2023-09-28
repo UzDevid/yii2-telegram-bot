@@ -31,13 +31,14 @@ class Handler {
             return $this;
         }
 
+        /** @var UpdateInterface $update */
         $update = new $handlerClassName($this->data);
 
-        if (!$this->canHandle($update->body())) {
+        if (!$this->canHandle($update, $update->body())) {
             return $this;
         }
 
-        call_user_func([$update, 'handle'], $this->botInstance, $update);
+        call_user_func([$update, 'handle'], $this->botInstance, $update->body());
         $this->isHandled = true;
 
         return $this;
@@ -45,11 +46,11 @@ class Handler {
 
     protected function matchedUpdate(string $updateClassName): bool {
         $objectName = call_user_func([$updateClassName, 'objectName']);
-        return !$this->isHandled || $this->match($objectName, $this->data);
+        return !$this->isHandled && $this->match($objectName, $this->data);
     }
 
-    protected function canHandle(Message|CallbackQuery|InlineQuery $body): bool {
-        return call_user_func('canHandle', $this->botInstance, $body);
+    protected function canHandle(UpdateInterface $update, Message|CallbackQuery|InlineQuery $body): bool {
+        return call_user_func([$update, 'canHandle'], $this->botInstance, $body);
     }
 
     protected function match(string $objectName, array $data): bool {
