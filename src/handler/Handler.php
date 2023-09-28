@@ -3,10 +3,10 @@
 namespace uzdevid\telegram\bot\handler;
 
 use uzdevid\telegram\bot\Bot;
+use uzdevid\telegram\bot\exceptions\InvalidCallException;
 use uzdevid\telegram\bot\objects\CallbackQuery;
 use uzdevid\telegram\bot\objects\InlineQuery;
 use uzdevid\telegram\bot\objects\Message;
-use yii\base\InvalidCallException;
 
 class Handler {
     protected Bot $botInstance;

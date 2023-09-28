@@ -2,11 +2,11 @@
 
 namespace uzdevid\telegram\bot;
 
+use uzdevid\telegram\bot\exceptions\InvalidCallException;
 use uzdevid\telegram\bot\handler\Handler;
 use uzdevid\telegram\bot\message\ManagerInterface;
 use uzdevid\telegram\bot\message\managers\Editor;
 use uzdevid\telegram\bot\message\managers\Sender;
-use yii\base\InvalidCallException;
 
 /**
  * Class Bot

@@ -4,8 +4,8 @@ namespace uzdevid\telegram\bot;
 
 use Exception;
 use Throwable;
-use yii\base\InvalidCallException;
-use yii\base\UnknownPropertyException;
+use uzdevid\telegram\bot\exceptions\InvalidCallException;
+use uzdevid\telegram\bot\exceptions\UnknownPropertyException;
 
 /**
  * Class Component
@@ -21,6 +21,9 @@ class Component {
         $this->setAttributes($attributes);
     }
 
+    /**
+     * @throws UnknownPropertyException
+     */
     public function __get($name) {
         if (isset($this->_attributes[$name]) || array_key_exists($name, $this->_attributes)) {
             return $this->_attributes[$name];
