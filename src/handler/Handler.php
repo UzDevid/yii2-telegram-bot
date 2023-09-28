@@ -18,16 +18,20 @@ class Handler {
         $this->data = $data;
     }
 
-    public function on(string $updateClassName): static {
-        if (!is_subclass_of($updateClassName, MessageUpdateInterface::class) && !is_subclass_of($updateClassName, CallbackQueryUpdateInterface::class) && !is_subclass_of($updateClassName, InlineQueryUpdateInterface::class)) {
+    public function on(string $handlerClassName): static {
+        if (!(
+            is_subclass_of($handlerClassName, MessageUpdateInterface::class) ||
+            is_subclass_of($handlerClassName, CallbackQueryUpdateInterface::class) ||
+            is_subclass_of($handlerClassName, InlineQueryUpdateInterface::class)
+        )) {
             throw new InvalidCallException('Update class must be instance of ' . MessageUpdateInterface::class . ' or ' . CallbackQueryUpdateInterface::class . ' or ' . InlineQueryUpdateInterface::class . ' interface');
         }
 
-        if (!$this->matchedUpdate($updateClassName)) {
+        if (!$this->matchedUpdate($handlerClassName)) {
             return $this;
         }
 
-        $update = new $updateClassName($this->data);
+        $update = new $handlerClassName($this->data);
 
         if (!$this->canHandle($update->body())) {
             return $this;
