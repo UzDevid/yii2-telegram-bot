@@ -7,7 +7,7 @@ class BaseObject {
 
     public function __construct(array $data) {
         $attributes = [];
-        $attributeObjects = self::attributeObjects();
+        $attributeObjects = $this->makeObjects();
 
         foreach ($data as $key => $value) {
             $camelCaseName = Service::snakeToCamel($key);
@@ -23,7 +23,7 @@ class BaseObject {
         $this->setAttributes($attributes);
     }
 
-    public static function attributeObjects(): array {
+    public function makeObjects(): array {
         return [];
     }
 }

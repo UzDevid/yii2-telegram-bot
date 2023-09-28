@@ -26,7 +26,7 @@ class InlineKeyboardButton extends BaseObject {
     /**
      * @return array
      */
-    public static function attributeObjects(): array {
+    public function makeObjects(): array {
         return [
             'webApp' => WebAppInfo::class,
             'loginUrl' => LoginUrl::class,

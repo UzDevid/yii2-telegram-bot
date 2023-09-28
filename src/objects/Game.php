@@ -22,7 +22,7 @@ class Game extends BaseObject {
     /**
      * @return array
      */
-    public static function attributeObjects(): array {
+    public function makeObjects(): array {
         return [
             'animation' => Animation::class
         ];

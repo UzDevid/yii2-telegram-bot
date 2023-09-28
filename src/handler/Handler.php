@@ -28,7 +28,7 @@ class Handler {
 
         $update = new $updateClassName($objectName, $this->data);
 
-        if (!call_user_func($handle, $this->botInstance, $update)) {
+        if (!call_user_func($handle, $this->botInstance, $update->body())) {
             return $this;
         }
 

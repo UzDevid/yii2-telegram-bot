@@ -25,7 +25,7 @@ class Audio extends BaseObject {
     /**
      * @return array
      */
-    public static function attributeObjects(): array {
+    public function makeObjects(): array {
         return [
             'thumbnail' => PhotoSize::class,
         ];

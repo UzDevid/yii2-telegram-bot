@@ -26,7 +26,7 @@ class EncryptedPassportElement extends BaseObject {
     /**
      * @return array
      */
-    public static function attributeObjects(): array {
+    public function makeObjects(): array {
         return [
             'frontSide' => PassportFile::class,
             'reverseSide' => PassportFile::class,

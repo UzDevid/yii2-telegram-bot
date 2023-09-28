@@ -20,7 +20,7 @@ class PollAnswer extends BaseObject {
     /**
      * @return array
      */
-    public static function attributeObjects(): array {
+    public function makeObjects(): array {
         return [
             'voterChat' => Chat::class,
             'user' => User::class,

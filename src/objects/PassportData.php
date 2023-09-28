@@ -18,7 +18,7 @@ class PassportData extends BaseObject {
     /**
      * @return array
      */
-    public static function attributeObjects(): array {
+    public function makeObjects(): array {
         return [
             'credentials' => EncryptedCredentials::class
         ];
