@@ -6,6 +6,7 @@ use uzdevid\telegram\bot\Bot;
 use uzdevid\telegram\bot\type\CallbackQuery;
 use uzdevid\telegram\bot\type\InlineQuery;
 use uzdevid\telegram\bot\type\Message;
+use yii\base\BaseObject;
 use yii\base\Component;
 use yii\base\InvalidArgumentException;
 
@@ -17,7 +18,7 @@ use yii\base\InvalidArgumentException;
  * @property-write array $allowedInterfaces
  * @property-read string $handlersString
  */
-class Handler extends Component {
+class Handler extends BaseObject {
     protected Bot $botInstance;
 
     protected array $data = [];
@@ -65,7 +66,7 @@ class Handler extends Component {
      *
      * @return $this
      */
-    public function onUpdate(string $handler): static {
+    public function on(string $handler): static {
         if (!($this->validateHandler($handler))) {
             throw new InvalidArgumentException("Handler class must be instance of {$this->handlersString} interface");
         }
