@@ -4,7 +4,7 @@ namespace uzdevid\telegram\bot\handler\updates;
 
 use uzdevid\telegram\bot\BaseObject;
 use uzdevid\telegram\bot\handler\UpdateInterface;
-use uzdevid\telegram\bot\objects\CallbackQuery;
+use uzdevid\telegram\bot\type\CallbackQuery;
 
 /**
  * Class CallbackQueryUpdate

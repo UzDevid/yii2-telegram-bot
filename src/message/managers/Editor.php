@@ -2,9 +2,11 @@
 
 namespace uzdevid\telegram\bot\message\managers;
 
+use GuzzleHttp\Exception\GuzzleException;
+use JsonException;
 use uzdevid\telegram\bot\message\Manager;
 use uzdevid\telegram\bot\message\ManagerInterface;
-use uzdevid\telegram\bot\objects\Response;
+use uzdevid\telegram\bot\type\Response;
 use uzdevid\telegram\bot\Service;
 
 /**
@@ -50,22 +52,21 @@ class Editor extends Manager implements ManagerInterface {
     }
 
     /**
-     * @return void
-     */
-    public function edit() { }
-
-    /**
      * @return Response
+     * @throws GuzzleException
+     * @throws JsonException
      */
-    public function delete(): Response {
-        $query = ['chat_id' => $this->chatIdOrUsername(), 'message_id' => $this->messageId];
+    public function edit(): object {
+        if ($this->issetChatId() || $this->issetUsername()) {
+            $query = array_merge(['chat_id' => $this->chatIdOrUsername()], $this->method->getPayload());
+        } else {
+            $query = $this->method->getPayload();
+        }
 
-        $options = ['query' => $query];
+        $response = $this->httpClient->get($this->methodUrl(), ['query' => $query]);
 
-        $response = $this->httpClient->get($this->methodUrl('deleteMessage'), $options);
+        $responseBody = json_decode($response->getBody()->getContents(), true, 512, JSON_THROW_ON_ERROR);
 
-        $responseBody = json_decode($response->getBody()->getContents(), true);
-
-        return Service::buildResponse($responseBody);
+        return Service::buildResponse($responseBody, $this->method);
     }
 }

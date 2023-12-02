@@ -2,7 +2,7 @@
 
 namespace uzdevid\telegram\bot\message\messages\entity;
 
-use uzdevid\telegram\bot\objects\User;
+use uzdevid\telegram\bot\type\User;
 
 interface MessageEntityInterface {
     public function getParams(): array;

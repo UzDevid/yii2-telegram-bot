@@ -4,9 +4,9 @@ namespace uzdevid\telegram\bot\handler;
 
 use uzdevid\telegram\bot\Bot;
 use uzdevid\telegram\bot\exceptions\InvalidCallException;
-use uzdevid\telegram\bot\objects\CallbackQuery;
-use uzdevid\telegram\bot\objects\InlineQuery;
-use uzdevid\telegram\bot\objects\Message;
+use uzdevid\telegram\bot\type\CallbackQuery;
+use uzdevid\telegram\bot\type\InlineQuery;
+use uzdevid\telegram\bot\type\Message;
 
 class Handler {
     protected Bot $botInstance;
@@ -18,27 +18,27 @@ class Handler {
         $this->data = $data;
     }
 
-    public function on(string $handlerClassName): static {
+    public function on(string $handler): static {
         if (!(
-            is_subclass_of($handlerClassName, MessageUpdateInterface::class) ||
-            is_subclass_of($handlerClassName, CallbackQueryUpdateInterface::class) ||
-            is_subclass_of($handlerClassName, InlineQueryUpdateInterface::class)
+            is_subclass_of($handler, MessageUpdateInterface::class) ||
+            is_subclass_of($handler, CallbackQueryUpdateInterface::class) ||
+            is_subclass_of($handler, InlineQueryUpdateInterface::class)
         )) {
             throw new InvalidCallException('Update class must be instance of ' . MessageUpdateInterface::class . ' or ' . CallbackQueryUpdateInterface::class . ' or ' . InlineQueryUpdateInterface::class . ' interface');
         }
 
-        if (!$this->matchedUpdate($handlerClassName)) {
+        if (!$this->matchedUpdate($handler)) {
             return $this;
         }
 
-        /** @var UpdateInterface $update */
-        $update = new $handlerClassName($this->data);
+        /** @var MessageUpdateInterface|CallbackQueryUpdateInterface|InlineQueryUpdateInterface|UpdateInterface $update */
+        $update = new $handler($this->data);
 
         if (!$this->canHandle($update, $update->body())) {
             return $this;
         }
 
-        call_user_func([$update, 'handle'], $this->botInstance, $update->body());
+        $update->handle($this->botInstance, $update->body());
         $this->isHandled = true;
 
         return $this;
@@ -49,8 +49,8 @@ class Handler {
         return !$this->isHandled && $this->match($objectName, $this->data);
     }
 
-    protected function canHandle(UpdateInterface $update, Message|CallbackQuery|InlineQuery $body): bool {
-        return call_user_func([$update, 'canHandle'], $this->botInstance, $body);
+    protected function canHandle(MessageUpdateInterface|CallbackQueryUpdateInterface|InlineQueryUpdateInterface $update, Message|CallbackQuery|InlineQuery $body): bool {
+        return $update->canHandle($this->botInstance, $body);
     }
 
     protected function match(string $objectName, array $data): bool {

@@ -2,11 +2,11 @@
 
 namespace uzdevid\telegram\bot;
 
-use uzdevid\telegram\bot\exceptions\InvalidCallException;
 use uzdevid\telegram\bot\handler\Handler;
 use uzdevid\telegram\bot\message\ManagerInterface;
 use uzdevid\telegram\bot\message\managers\Editor;
 use uzdevid\telegram\bot\message\managers\Sender;
+use yii\base\InvalidConfigException;
 
 /**
  * Class Bot
@@ -18,6 +18,7 @@ class Bot extends BaseBot {
      * @param ManagerInterface|null $sender
      *
      * @return Sender
+     * @throws InvalidConfigException
      */
     public function sender(ManagerInterface|null $sender = null): Sender {
         if ($sender === null) {
@@ -25,7 +26,7 @@ class Bot extends BaseBot {
         }
 
         if (!isset($this->token)) {
-            throw new InvalidCallException('Token is not set');
+            throw new InvalidConfigException('Token is not set');
         }
 
         $sender->setToken($this->token);
@@ -45,6 +46,7 @@ class Bot extends BaseBot {
      * @param ManagerInterface|null $editor
      *
      * @return Editor
+     * @throws InvalidConfigException
      */
     public function editor(ManagerInterface|null $editor = null): Editor {
         if ($editor === null) {
@@ -52,7 +54,7 @@ class Bot extends BaseBot {
         }
 
         if (!isset($this->token)) {
-            throw new InvalidCallException('Token is not set');
+            throw new InvalidConfigException('Token is not set');
         }
 
         $editor->setToken($this->token);

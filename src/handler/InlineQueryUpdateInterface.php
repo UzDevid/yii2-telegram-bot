@@ -3,7 +3,7 @@
 namespace uzdevid\telegram\bot\handler;
 
 use uzdevid\telegram\bot\Bot;
-use uzdevid\telegram\bot\objects\InlineQuery;
+use uzdevid\telegram\bot\type\InlineQuery;
 
 interface InlineQueryUpdateInterface {
     public static function canHandle(Bot $bot, InlineQuery $query): bool;

@@ -3,7 +3,7 @@
 namespace uzdevid\telegram\bot\handler;
 
 use uzdevid\telegram\bot\Bot;
-use uzdevid\telegram\bot\objects\CallbackQuery;
+use uzdevid\telegram\bot\type\CallbackQuery;
 
 interface CallbackQueryUpdateInterface {
     public static function canHandle(Bot $bot, CallbackQuery $query): bool;
