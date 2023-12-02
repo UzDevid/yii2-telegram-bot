@@ -2,7 +2,7 @@
 
 namespace uzdevid\telegram\bot\handler\updates;
 
-use uzdevid\property\loader\traits\PropertyLoader;
+use uzdevid\property\loader\Entity;
 use uzdevid\telegram\bot\handler\UpdateInterface;
 use uzdevid\telegram\bot\type\InlineQuery;
 
@@ -10,9 +10,7 @@ use uzdevid\telegram\bot\type\InlineQuery;
 /**
  * Class InlineQueryUpdate
  */
-class InlineQueryUpdate implements UpdateInterface {
-    use PropertyLoader;
-
+class InlineQueryUpdate extends Entity implements UpdateInterface {
     public int $updateId;
     public InlineQuery $inlineQuery;
 
