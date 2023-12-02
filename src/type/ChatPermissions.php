@@ -10,20 +10,20 @@ use uzdevid\telegram\bot\core\Type;
  * @link https://core.telegram.org/bots/api#chatpermissions
  *
  * Describes actions that a non-administrator user is allowed to take in a chat.
- *
- * @property bool $canSendMessages
- * @property bool $canSendAudios
- * @property bool $canSendDocuments
- * @property bool $canSendPhotos
- * @property bool $canSendVideos
- * @property bool $canSendVideoNotes
- * @property bool $canSendVoiceNotes
- * @property bool $canSendPolls
- * @property bool $canSendOtherMessages
- * @property bool $canAddWebPagePreviews
- * @property bool $canChangeInfo
- * @property bool $canInviteUsers
- * @property bool $canPinMessages
- * @property bool $canManageTopics
  */
-class ChatPermissions extends Type { }
+class ChatPermissions extends Type {
+    public bool $canSendMessages;
+    public bool $canSendAudios;
+    public bool $canSendDocuments;
+    public bool $canSendPhotos;
+    public bool $canSendVideos;
+    public bool $canSendVideoNotes;
+    public bool $canSendVoiceNotes;
+    public bool $canSendPolls;
+    public bool $canSendOtherMessages;
+    public bool $canAddWebPagePreviews;
+    public bool $canChangeInfo;
+    public bool $canInviteUsers;
+    public bool $canPinMessages;
+    public bool $canManageTopics;
+}

@@ -9,10 +9,11 @@ use uzdevid\telegram\bot\core\Type;
  *
  * @link https://core.telegram.org/bots/api#encryptedcredentials
  *
- * Describes data required for decrypting and authenticating EncryptedPassportElement. See the Telegram Passport Documentation for a complete description of the data decryption and authentication processes.
- *
- * @property string $data
- * @property string $hash
- * @property string $secret
+ * Describes data required for decrypting and authenticating EncryptedPassportElement.
+ * See the Telegram Passport Documentation for a complete description of the data decryption and authentication processes.
  */
-class EncryptedCredentials extends Type { }
+class EncryptedCredentials extends Type {
+    public string $data;
+    public string $hash;
+    public string $secret;
+}

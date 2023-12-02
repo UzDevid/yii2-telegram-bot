@@ -10,18 +10,18 @@ use uzdevid\telegram\bot\core\Type;
  * @link https://core.telegram.org/bots/api#chatmemberbanned
  *
  * Represents a chat member that was banned in the chat and can't return to the chat or view chat messages.
- *
- * @property string $status
- * @property User $user
- * @property int $untilDate
  */
 class ChatMemberBanned extends Type {
+    public string $status;
+    public User $user;
+    public int $untilDate;
+
     /**
      * @return array
      */
     protected function properties(): array {
         return [
-            'user' => User::class,
+            'user' => [User::class, 'user'],
         ];
     }
 }

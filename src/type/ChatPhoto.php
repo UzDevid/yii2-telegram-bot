@@ -10,10 +10,10 @@ use uzdevid\telegram\bot\core\Type;
  * @link https://core.telegram.org/bots/api#chatphoto
  *
  * This object represents a chat photo.
- *
- * @property string $smallFileId
- * @property string $smallFileUniqueId
- * @property string $bigFileId
- * @property string $bigFileUniqueId
  */
-class ChatPhoto extends Type { }
+class ChatPhoto extends Type {
+    public string $smallFileId;
+    public string $smallFileUniqueId;
+    public string $bigFileId;
+    public string $bigFileUniqueId;
+}
