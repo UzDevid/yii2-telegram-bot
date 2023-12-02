@@ -21,7 +21,7 @@ class InlineQuery extends Type {
      */
     protected function properties(): array {
         return [
-            'from' => User::class,
+            'from' => [User::class, 'from'],
         ];
     }
 }

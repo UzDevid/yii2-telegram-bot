@@ -22,8 +22,8 @@ class ProximityAlertTriggered extends Type {
      */
     protected function properties(): array {
         return [
-            'traveler' => User::class,
-            'watcher' => User::class,
+            'traveler' => [User::class, 'traveler'],
+            'watcher' => [User::class, 'watcher'],
         ];
     }
 }

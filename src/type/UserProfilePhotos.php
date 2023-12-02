@@ -20,7 +20,7 @@ class UserProfilePhotos extends Type {
      */
     protected function properties(): array {
         return [
-            'photos' => [[PhotoSize::class]]
+            'photos' => [[PhotoSize::class, 'photoSize']]
         ];
     }
 }

@@ -3,6 +3,7 @@
 namespace uzdevid\telegram\bot\type;
 
 use uzdevid\telegram\bot\core\Type;
+use uzdevid\telegram\bot\message\messages\keyboard\ReplyMarkupInterface;
 
 /**
  * Type Message
@@ -79,54 +80,60 @@ class Message extends Type {
     public ForumTopicReopened $forumTopicReopened;
     public GeneralForumTopicHidden $generalForumTopicHidden;
     public GeneralForumTopicUnhidden $generalForumTopicUnhidden;
+    public VideoChatScheduled $videoChatScheduled;
+    public VideoChatStarted $videoChatStarted;
+    public VideoChatEnded $videoChatEnded;
+    public VideoChatParticipantsInvited $videoChatParticipantsInvited;
+    public WebAppData $webAppData;
+    public InlineKeyboardMarkup $replyMarkup;
     /**
      * @return array
      */
     protected function properties(): array {
         return [
-            'from' => User::class,
-            'chat' => Chat::class,
-            'forwardFrom' => User::class,
-            'forwardFromChat' => Chat::class,
-            'replyToMessage' => __CLASS__,
-            'viaBot' => User::class,
-            'animation' => Animation::class,
-            'audio' => Audio::class,
-            'document' => Document::class,
-            'photo' => [PhotoSize::class],
-            'sticker' => Sticker::class,
-            'story' => Story::class,
-            'video' => Video::class,
-            'videoNote' => VideoNote::class,
-            'voice' => Voice::class,
-            'contact' => Contact::class,
-            'dice' => Dice::class,
-            'game' => Game::class,
-            'poll' => Poll::class,
-            'venue' => Venue::class,
-            'location' => Location::class,
-            'leftChatMember' => User::class,
-            'messageAutoDeleteTimerChanged' => MessageAutoDeleteTimerChanged::class,
-            'pinnedMessage' => __CLASS__,
-            'invoice' => Invoice::class,
-            'successfulPayment' => SuccessfulPayment::class,
-            'userShared' => UserShared::class,
-            'chatShared' => ChatShared::class,
-            'writeAccessAllowed' => WriteAccessAllowed::class,
-            'passportData' => PassportData::class,
-            'proximityAlertTriggered' => ProximityAlertTriggered::class,
-            'forumTopicCreated' => ForumTopicCreated::class,
-            'forumTopicEdited' => ForumTopicEdited::class,
-            'forumTopicClosed' => ForumTopicClosed::class,
-            'forumTopicReopened' => ForumTopicReopened::class,
-            'generalForumTopicHidden' => GeneralForumTopicHidden::class,
-            'generalForumTopicUnhidden' => GeneralForumTopicUnhidden::class,
-            'videoChatScheduled' => VideoChatScheduled::class,
-            'videoChatStarted' => VideoChatStarted::class,
-            'videoChatEnded' => VideoChatEnded::class,
-            'videoChatParticipantsInvited' => VideoChatParticipantsInvited::class,
-            'webAppData' => WebAppData::class,
-            'replyMarkup' => InlineKeyboardMarkup::class,
+            'from' => [User::class, 'from'],
+            'chat' => [Chat::class, 'chat'],
+            'forwardFrom' => [User::class, 'forwardFrom'],
+            'forwardFromChat' => [Chat::class, 'forwardFromChat'],
+            'replyToMessage' => [__CLASS__, '$replyToMessage'],
+            'viaBot' => [User::class, 'viaBot'],
+            'animation' => [Animation::class, 'animation'],
+            'audio' => [Audio::class, 'audio'],
+            'document' => [Document::class, 'document'],
+            'photo' => [PhotoSize::class, 'photo'],
+            'sticker' => [Sticker::class, 'sticker'],
+            'story' => [Story::class, 'story'],
+            'video' => [Video::class, 'video'],
+            'videoNote' => [VideoNote::class, 'videoNote'],
+            'voice' => [Voice::class, 'voice'],
+            'contact' => [Contact::class, 'contact'],
+            'dice' => [Dice::class, 'dice'],
+            'game' => [Game::class, 'game'],
+            'poll' => [Poll::class, 'poll'],
+            'venue' => [Venue::class, 'venue'],
+            'location' => [Location::class, 'location'],
+            'leftChatMember' => [User::class, 'leftChatMember'],
+            'messageAutoDeleteTimerChanged' => [MessageAutoDeleteTimerChanged::class, '$messageAutoDeleteTimerChanged'],
+            'pinnedMessage' => [__CLASS__, 'pinnedMessage'],
+            'invoice' => [Invoice::class, 'invoice'],
+            'successfulPayment' => [SuccessfulPayment::class, '$successfulPayment'],
+            'userShared' => [UserShared::class, 'userShared'],
+            'chatShared' => [ChatShared::class, 'chatShared'],
+            'writeAccessAllowed' => [WriteAccessAllowed::class, 'writeAccessAllowed'],
+            'passportData' => [PassportData::class, 'passportData'],
+            'proximityAlertTriggered' => [ProximityAlertTriggered::class, 'proximityAlertTriggered'],
+            'forumTopicCreated' => [ForumTopicCreated::class, 'forumTopicCreated'],
+            'forumTopicEdited' => [ForumTopicEdited::class, 'forumTopicEdited'],
+            'forumTopicClosed' => [ForumTopicClosed::class, 'forumTopicClosed'],
+            'forumTopicReopened' =>[ForumTopicReopened::class, 'forumTopicReopened'],
+            'generalForumTopicHidden' => [GeneralForumTopicHidden::class, 'generalForumTopicHidden'],
+            'generalForumTopicUnhidden' => [GeneralForumTopicUnhidden::class, 'generalForumTopicUnhidden'],
+            'videoChatScheduled' => [VideoChatScheduled::class, 'videoChatScheduled'],
+            'videoChatStarted' => [VideoChatStarted::class, 'videoChatStarted'],
+            'videoChatEnded' => [VideoChatEnded::class, 'videoChatEnded'],
+            'videoChatParticipantsInvited' => [VideoChatParticipantsInvited::class, 'videoChatParticipantsInvited'],
+            'webAppData' => [WebAppData::class, 'webAppData'],
+            'replyMarkup' => [InlineKeyboardMarkup::class, 'replyMarkup'],
         ];
     }
 }

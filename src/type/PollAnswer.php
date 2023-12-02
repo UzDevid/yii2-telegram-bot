@@ -22,8 +22,8 @@ class PollAnswer extends Type {
      */
     protected function properties(): array {
         return [
-            'voterChat' => Chat::class,
-            'user' => User::class,
+            'voterChat' => [Chat::class, 'voterChat'],
+            'user' => [User::class, 'user'],
         ];
     }
 }

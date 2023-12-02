@@ -31,9 +31,9 @@ class Sticker extends Type {
      */
     protected function properties(): array {
         return [
-            'premiumAnimation' => File::class,
-            'maskPosition' => MaskPosition::class,
-            'thumbnail' => PhotoSize::class
+            'premiumAnimation' => [File::class, 'premiumAnimation'],
+            'maskPosition' => [MaskPosition::class, 'maskPosition'],
+            'thumbnail' => [PhotoSize::class, 'thumbnail']
         ];
     }
 }
