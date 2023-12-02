@@ -84,7 +84,7 @@ class Bot extends Component {
         $managerObject = Yii::createObject($manager, [$this]);
 
         if (!is_subclass_of($managerObject, ManagerInterface::class)) {
-            throw new InvalidArgumentException("{$managerObject::class} is not a manager");
+            throw new InvalidArgumentException("Manager class must be implement " . ManagerInterface::class . " interface");
         }
 
         return new $managerObject;
