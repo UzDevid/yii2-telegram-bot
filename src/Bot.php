@@ -9,6 +9,7 @@ use uzdevid\telegram\bot\message\ManagerInterface;
 use uzdevid\telegram\bot\message\managers\Editor;
 use uzdevid\telegram\bot\message\managers\Sender;
 use Yii;
+use yii\base\Component;
 use yii\base\InvalidArgumentException;
 use yii\base\InvalidConfigException;
 
@@ -17,7 +18,7 @@ use yii\base\InvalidConfigException;
  *
  * @package uzdevid\telegram\bot
  */
-class Bot extends BaseBot {
+class Bot extends Component {
     use Credentials;
 
     public ClientInterface $httpClient;
