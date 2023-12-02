@@ -2,10 +2,6 @@
 
 namespace uzdevid\telegram\bot\core;
 
-use uzdevid\property\loader\traits\PropertyLoader;
+use uzdevid\property\loader\Entity;
 
-class Type {
-    use PropertyLoader;
-
-    public mixed $ok;
-}
+class Type extends Entity { }
