@@ -10,16 +10,17 @@ use uzdevid\telegram\bot\core\Type;
  * @link https://core.telegram.org/bots/api#messageentity
  *
  * This object represents one special entity in a text message. For example, hashtags, usernames, URLs, etc.
- *
- * @property string $type
- * @property int $offset
- * @property int $length
- * @property string $url
- * @property User $user
- * @property string $language
- * @property string $customEmojiId
  */
 class MessageEntity extends Type {
+
+    public string $type;
+    public int $offset;
+    public int $length;
+    public string $url;
+    public User $user;
+    public string $language;
+    public string $customEmojiId;
+
     /**
      * @return array
      */

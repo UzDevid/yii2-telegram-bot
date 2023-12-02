@@ -10,13 +10,13 @@ use uzdevid\telegram\bot\core\Type;
  * @link https://core.telegram.org/bots/api#venue
  *
  * This object represents a venue.
- *
- * @property Location $location
- * @property string $title
- * @property string $address
- * @property string $foursquareId
- * @property string $foursquareType
- * @property string $googlePlaceId
- * @property string $googlePlaceType
  */
-class Venue extends Type { }
+class Venue extends Type {
+    public Location $location;
+    public string $title;
+    public string $address;
+    public string $foursquareId;
+    public string $foursquareType;
+    public string $googlePlaceId;
+    public string $googlePlaceType;
+}

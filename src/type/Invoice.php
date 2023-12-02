@@ -10,11 +10,12 @@ use uzdevid\telegram\bot\core\Type;
  * @link https://core.telegram.org/bots/api#invoice
  *
  * This object contains basic information about an invoice.
- *
- * @property string $title
- * @property string $description
- * @property string $startParameter
- * @property string $currency
- * @property int $totalAmount
  */
-class Invoice extends Type { }
+class Invoice extends Type {
+
+    public string $title;
+    public string $description;
+    public string $startParameter;
+    public string $currency;
+    public int $totalAmount;
+}

@@ -13,4 +13,6 @@ use uzdevid\telegram\bot\core\Type;
  *
  * @property int $message_auto_delete_time
  */
-class MessageAutoDeleteTimerChanged extends Type { }
+class MessageAutoDeleteTimerChanged extends Type {
+    public int $message_auto_delete_time;
+}

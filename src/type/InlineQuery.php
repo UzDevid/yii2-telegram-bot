@@ -8,14 +8,14 @@ use uzdevid\telegram\bot\core\Type;
  * Class InlineQuery
  *
  * @package uzdevid\telegram\bot\objects
- *
- * @property int $updateId
- * @property int $id
- * @property User $from
- * @property string $query
- * @property int $offset
  */
 class InlineQuery extends Type {
+
+    public int $updateId;
+    public int $id;
+    public User $from;
+    public string $query;
+    public int $offset;
     /**
      * @return array
      */

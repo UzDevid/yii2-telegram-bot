@@ -10,10 +10,11 @@ use uzdevid\telegram\bot\core\Type;
  * @link https://core.telegram.org/bots/api#forumtopic
  *
  * This object represents a forum topic.
- *
- * @property int $messageThreadId
- * @property string $name
- * @property int $iconColor
- * @property string $iconCustomEmojiId
  */
-class ForumTopic extends Type { }
+class ForumTopic extends Type {
+
+    public int $messageThreadId;
+    public string $name;
+    public int $iconColor;
+    public string $iconCustomEmojiId;
+}

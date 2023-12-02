@@ -10,9 +10,10 @@ use uzdevid\telegram\bot\core\Type;
  * @link https://core.telegram.org/bots/api#forumtopiccreated
  *
  * This object represents a service message about a new forum topic created in the chat.
- *
- * @property string $name
- * @property int $iconColor
- * @property string $iconCustomEmojiId
  */
-class ForumTopicCreated extends Type { }
+class ForumTopicCreated extends Type {
+
+    public string $name;
+    public int $iconColor;
+    public string $iconCustomEmojiId;
+}

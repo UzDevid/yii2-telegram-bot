@@ -8,16 +8,17 @@ use uzdevid\telegram\bot\core\Type;
  * Class Response
  *
  * @package uzdevid\telegram\bot\objects
- *
- * @property bool $ok
- * @property int $messageId
- * @property User $from
- * @property User $user
- * @property Chat $chat
- * @property int $date
- * @property string $text
  */
 class Response extends Type {
+
+
+    public bool $ok;
+    public int $messageId;
+    public User $from;
+    public User $user;
+    public Chat $chat;
+    public int $date;
+    public string $text;
     /**
      * @return array
      */

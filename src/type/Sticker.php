@@ -10,23 +10,22 @@ use uzdevid\telegram\bot\core\Type;
  * @link https://core.telegram.org/bots/api#sticker
  *
  * This object represents a sticker.
- *
- * @property string $fileId
- * @property string $fileUniqueId
- * @property int $width
- * @property int $height
- * @property bool $isAnimated
- * @property bool $isVideo
- * @property PhotoSize $thumbnail
- * @property string $emoji
- * @property string $setName
- * @property File $premiumAnimation
- * @property MaskPosition $maskPosition
- * @property string $customEmojiId
- * @property bool $needsRepainting
- * @property int $fileSize
  */
 class Sticker extends Type {
+    public string $fileId;
+    public string $fileUniqueId;
+    public int $width;
+    public int $height;
+    public bool $isAnimated;
+    public bool $isVideo;
+    public PhotoSize $thumbnail;
+    public string $emoji;
+    public string $setName;
+    public File $premiumAnimation;
+    public MaskPosition $maskPosition;
+    public string $customEmojiId;
+    public bool $needsRepainting;
+    public int $fileSize;
     /**
      * @return array
      */

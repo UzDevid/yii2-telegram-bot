@@ -10,7 +10,7 @@ use uzdevid\telegram\bot\core\Type;
  * @link https://core.telegram.org/bots/api#videochatended
  *
  * This object represents a service message about a video chat ended in the chat.
- *
- * @property int $duration
  */
-class VideoChatEnded extends Type { }
+class VideoChatEnded extends Type {
+    public int $duration;
+}

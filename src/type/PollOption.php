@@ -10,8 +10,9 @@ use uzdevid\telegram\bot\core\Type;
  * @link https://core.telegram.org/bots/api#polloption
  *
  * This object contains information about one answer option in a poll.
- *
- * @property string $text
- * @property int $voterCount
  */
-class PollOption extends Type { }
+class PollOption extends Type {
+
+    public string $text;
+    public int $voterCount;
+}

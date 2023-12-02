@@ -10,13 +10,14 @@ use uzdevid\telegram\bot\core\Type;
  * @link https://core.telegram.org/bots/api#successfulpayment
  *
  * This object contains basic information about a successful payment.
- *
- * @property string $currency
- * @property int $totalAmount
- * @property string $invoicePayload
- * @property string $shippingOptionId
- * @property OrderInfo $orderInfo
- * @property string $telegramPaymentChargeId
- * @property string $providerPaymentChargeId
  */
-class SuccessfulPayment extends Type { }
+class SuccessfulPayment extends Type {
+
+    public string $currency;
+    public int $totalAmount;
+    public string $invoicePayload;
+    public string $shippingOptionId;
+    public OrderInfo $orderInfo;
+    public string $telegramPaymentChargeId;
+    public string $providerPaymentChargeId;
+}

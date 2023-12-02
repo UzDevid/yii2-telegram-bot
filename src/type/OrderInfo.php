@@ -10,10 +10,11 @@ use uzdevid\telegram\bot\core\Type;
  * @link https://core.telegram.org/bots/api#orderinfo
  *
  * This object represents information about an order.
- *
- * @property string $name
- * @property string $phoneNumber
- * @property string $email
- * @property ShippingAddress $shippingAddress
  */
-class OrderInfo extends Type { }
+class OrderInfo extends Type {
+
+    public string $name;
+    public string $phoneNumber;
+    public string $email;
+    public ShippingAddress $shippingAddress;
+}

@@ -12,14 +12,14 @@ use uzdevid\telegram\bot\core\Type;
  * This object defines the criteria used to request a suitable chat.
  * The identifier of the selected chat will be shared with the bot when the corresponding button is pressed.
  * More about requesting chats (https://core.telegram.org/bots/features#chat-and-user-selection)
- *
- * @property int $requestId
- * @property bool $chatIsChannel
- * @property bool $chatIsForum
- * @property bool $chatHasUsername
- * @property bool $chatIsCreated
- * @property ChatAdministratorRights $chatAdministratorRights
- * @property ChatAdministratorRights $botAdministratorRights
- * @property bool $botIsMember
  */
-class KeyboardButtonRequestChat extends Type { }
+class KeyboardButtonRequestChat extends Type {
+    public int $requestId;
+    public bool $chatIsChannel;
+    public bool $chatIsForum;
+    public bool $chatHasUsername;
+    public bool $chatIsCreated;
+    public ChatAdministratorRights $chatAdministratorRights;
+    public ChatAdministratorRights $botAdministratorRights;
+    public bool $botIsMember;
+}

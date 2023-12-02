@@ -9,6 +9,6 @@ use uzdevid\telegram\bot\core\Type;
  *
  * @link https://core.telegram.org/bots/api#story
  *
- * This object represents a message about a forwarded story in the chat. Currently holds no information.
+ * This object represents a message about a forwarded story in the chat. Currently, holds no information.
  */
 class Story extends Type { }

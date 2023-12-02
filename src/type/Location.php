@@ -10,12 +10,13 @@ use uzdevid\telegram\bot\core\Type;
  * @link https://core.telegram.org/bots/api#location
  *
  * This object represents a point on the map.
- *
- * @property float $longitude
- * @property float $latitude
- * @property float $horizontalAccuracy
- * @property int $livePeriod
- * @property int $heading
- * @property int $proximityAlertRadius
  */
-class Location extends Type { }
+class Location extends Type {
+
+    public float $longitude;
+    public float $latitude;
+    public float $horizontalAccuracy;
+    public int $livePeriod;
+    public int $heading;
+    public int $proximityAlertRadius;
+}

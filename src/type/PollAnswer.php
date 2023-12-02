@@ -10,13 +10,13 @@ use uzdevid\telegram\bot\core\Type;
  * @link https://core.telegram.org/bots/api#pollanswer
  *
  * This object represents an answer of a user in a non-anonymous poll.
- *
- * @property string $pollId
- * @property Chat $voterChat
- * @property User $user
- * @property array $optionIds
  */
 class PollAnswer extends Type {
+
+    public string $pollId;
+    public Chat $voterChat;
+    public User $user;
+    public array $optionIds;
     /**
      * @return array
      */

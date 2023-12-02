@@ -10,17 +10,19 @@ use uzdevid\telegram\bot\core\Type;
  * @link https://core.telegram.org/bots/api#user
  *
  * This object represents a Telegram user or bot.
- *
- * @property int $id
- * @property bool $isBot
- * @property string $firstName
- * @property string $lastName
- * @property string $username
- * @property string $languageCode
- * @property bool $isPremium
- * @property bool $addedToAttachmentMenu
- * @property bool $canJoinGroups
- * @property bool $canReadAllGroupMessages
- * @property bool $supportsInlineQueries
  */
-class User extends Type { }
+class User extends Type {
+
+
+    public int $id;
+    public bool $isBot;
+    public string $firstName;
+    public string $lastName;
+    public string $username;
+    public string $languageCode;
+    public bool $isPremium;
+    public bool $addedToAttachmentMenu;
+    public bool $canJoinGroups;
+    public bool $canReadAllGroupMessages;
+    public bool $supportsInlineQueries;
+}

@@ -10,8 +10,9 @@ use uzdevid\telegram\bot\core\Type;
  * @link https://core.telegram.org/bots/api#forumtopicedited
  *
  * This object represents a service message about an edited forum topic.
- *
- * @property string $name
- * @property int $iconCustomEmojiId
  */
-class ForumTopicEdited extends Type { }
+class ForumTopicEdited extends Type {
+
+    public string $name;
+    public int $iconCustomEmojiId;
+}

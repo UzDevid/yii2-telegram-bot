@@ -19,11 +19,21 @@ use uzdevid\telegram\bot\core\Type;
  * @property Animation $animation
  */
 class Game extends Type {
+
+    public string $title;
+    public string $description;
+    public PhotoSize $photoSize;
+    public string $text;
+    public MessageEntity $textEntities;
+    public Animation $animation;
+
     /**
      * @return array
      */
     protected function properties(): array {
         return [
+            'photo' => [PhotoSize::class],
+            'message_entities' => [MessageEntity::class],
             'animation' => Animation::class
         ];
     }

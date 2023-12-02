@@ -10,8 +10,8 @@ use uzdevid\telegram\bot\core\Type;
  * @link https://core.telegram.org/bots/api#webappdata
  *
  * Describes data sent from a Web App to the bot.
- *
- * @property string $data
- * @property string $buttonText
  */
-class WebAppData extends Type { }
+class WebAppData extends Type {
+    public string $data;
+    public string $buttonText;
+}

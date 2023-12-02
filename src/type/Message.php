@@ -10,81 +10,75 @@ use uzdevid\telegram\bot\core\Type;
  * @link https://core.telegram.org/bots/api#message
  *
  * This object represents a message.
- *
- * @property int $messageId
- * @property int $messageThreadId
- * @property User $from
- * @property int $senderChat
- * @property int $date
- * @property Chat $chat
- * @property User $forwardFrom
- * @property Chat $forwardFromChat
- * @property int $forwardFromMessageId
- * @property string $forwardSignature
- * @property string $forwardSenderName
- * @property int $forwardDate
- * @property bool $isTopicMessage
- * @property bool isAutomaticForward
- * @property Message $replyToMessage
- * @property User $viaBot
- * @property int $editDate
- * @property bool $hasProtectedContent
- * @property string $mediaGroupId
- * @property string $authorSignature
- * @property string $text
- * @property MessageEntity[] $entities
- * @property Animation $animation
- * @property Audio $audio
- * @property Document $document
- * @property PhotoSize[] $photo
- * @property Sticker $sticker
- * @property Story $story
- * @property Video $video
- * @property VideoNote $videoNote
- * @property Voice $voice
- * @property string $caption
- * @property MessageEntity[] $captionEntities
- * @property bool $hasMediaSpoiler
- * @property Contact $contact
- * @property Dice $dice
- * @property Game $game
- * @property Poll $poll
- * @property Venue $venue
- * @property Location $location
- * @property User[] $newChatMembers
- * @property User $leftChatMember
- * @property string $newChatTitle
- * @property PhotoSize[] $newChatPhoto
- * @property bool $deleteChatPhoto
- * @property bool $groupChatCreated
- * @property bool $supergroupChatCreated
- * @property bool $channelChatCreated
- * @property MessageAutoDeleteTimerChanged $messageAutoDeleteTimerChanged
- * @property int $migrateToChatId
- * @property int $migrateFromChatId
- * @property Message $pinnedMessage
- * @property Invoice $invoice
- * @property SuccessfulPayment $successfulPayment
- * @property UserShared $userShared
- * @property ChatShared $chatShared
- * @property string $connectedWebsite
- * @property WriteAccessAllowed $writeAccessAllowed
- * @property PassportData $passportData
- * @property ProximityAlertTriggered $proximityAlertTriggered
- * @property ForumTopicCreated $forumTopicCreated
- * @property ForumTopicEdited $forumTopicEdited
- * @property ForumTopicClosed $forumTopicClosed
- * @property ForumTopicReopened $forumTopicReopened
- * @property GeneralForumTopicHidden $generalForumTopicHidden
- * @property GeneralForumTopicUnhidden $generalForumTopicUnhidden
- * @property VideoChatScheduled $videoChatScheduled
- * @property VideoChatStarted $videoChatStarted
- * @property VideoChatEnded $videoChatEnded
- * @property VideoChatParticipantsInvited $videoChatParticipantsInvited
- * @property WebAppData $webAppData
- * @property InlineKeyboardMarkup $replyMarkup
  */
 class Message extends Type {
+
+    public int $messageId;
+    public int $messageThreadId;
+    public User $from;
+    public int $senderChat;
+    public int $date;
+    public Chat $chat;
+    public User $forwardFrom;
+    public Chat $forwardFromChat;
+    public int $forwardFromMessageId;
+    public string $forwardSignature;
+    public string $forwardSenderName;
+    public int $forwardDate;
+    public bool $isTopicMessage;
+    public bool $isAutomaticForward;
+    public Message $replyToMessage;
+    public User $viaBot;
+    public int $editDate;
+    public bool $hasProtectedContent;
+    public string $mediaGroupId;
+    public string $authorSignature;
+    public string $text;
+    public MessageEntity $entities;
+    public Animation $animation;
+    public Audio $audio;
+    public Document $document;
+    public PhotoSize $photo;
+    public Sticker $sticker;
+    public Story $story;
+    public Video $video;
+    public VideoNote $videoNote;
+    public Voice $voice;
+    public string $caption;
+    public MessageEntity $captionEntities;
+    public bool $hasMediaSpoiler;
+    public Contact $contact;
+    public Dice $dice;
+    public Game $game;
+    public Poll $poll;
+    public Venue $venue;
+    public Location $location;
+    public User $newChatMembers;
+    public User $leftChatMember;
+    public string $newChatTitle;
+    public PhotoSize $newChatPhoto;
+    public bool $deleteChatPhoto;
+    public bool $groupChatCreated;
+    public bool $supergroupChatCreated;
+    public bool $channelChatCreated;
+    public MessageAutoDeleteTimerChanged $messageAutoDeleteTimerChanged;
+    public int $migrateToChatId;
+    public int $migrateFromChatId;
+    public Message $pinnedMessage;
+    public Invoice $invoice;
+    public SuccessfulPayment $successfulPayment;
+    public UserShared $userShared;
+    public ChatShared $chatShared;
+    public string $connectedWebsite;
+    public WriteAccessAllowed $writeAccessAllowed;
+    public PassportData $passportData;
+    public ProximityAlertTriggered $proximityAlertTriggered;
+    public ForumTopicCreated $forumTopicCreated;
+    public ForumTopicEdited $forumTopicEdited;
+    public ForumTopicClosed $forumTopicClosed;
+    public ForumTopicReopened $forumTopicReopened;
+    public GeneralForumTopicHidden $generalForumTopicHidden;
+    public GeneralForumTopicUnhidden $generalForumTopicUnhidden;
     /**
      * @return array
      */

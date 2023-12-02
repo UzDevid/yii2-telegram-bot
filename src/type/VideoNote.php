@@ -10,15 +10,14 @@ use uzdevid\telegram\bot\core\Type;
  * @link https://core.telegram.org/bots/api#videonote
  *
  * This object represents a video message (https://telegram.org/blog/video-messages-and-telescope) (available in Telegram apps as of v.4.0).
- *
- * @property string $fileId
- * @property string $fileUniqueId
- * @property int $length
- * @property int $duration
- * @property PhotoSize $thumbnail
- * @property int $fileSize
  */
 class VideoNote extends Type {
+    public string $fileId;
+    public string $fileUniqueId;
+    public int $length;
+    public int $duration;
+    public PhotoSize $thumbnail;
+    public int $fileSize;
     /**
      * @return array
      */
