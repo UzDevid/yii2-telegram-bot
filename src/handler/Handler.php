@@ -24,6 +24,7 @@ use yii\base\InvalidArgumentException;
  */
 class Handler extends BaseObject {
     protected Bot $botInstance;
+    protected Scenario|null $scenario;
 
     protected array $data = [];
     private bool $isHandled = false;
@@ -38,9 +39,12 @@ class Handler extends BaseObject {
     /**
      * @param Bot $botInstance
      * @param array $data
+     * @param Scenario|null $scenario
      */
-    public function __construct(Bot $botInstance, array $data) {
+    public function __construct(Bot $botInstance, array $data, Scenario|null $scenario = null) {
         $this->botInstance = $botInstance;
+        $this->scenario = $scenario;
+
         $this->data = $this->reformatData($data);
 
         parent::__construct();
@@ -110,6 +114,13 @@ class Handler extends BaseObject {
         $this->isHandled = true;
 
         return $this;
+    }
+
+    /**
+     * @return Scenario
+     */
+    public function end(): Scenario {
+        return $this->scenario;
     }
 
     /**

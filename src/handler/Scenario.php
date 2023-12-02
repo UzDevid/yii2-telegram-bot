@@ -26,7 +26,7 @@ class Scenario {
      */
     public function handler(array $data): Handler {
         /** @var Handler $handler */
-        $handler = Yii::createObject($this->botInstance->handler, [$this->botInstance, $data]);
+        $handler = Yii::createObject($this->botInstance->handler, [$this->botInstance, $data, $this]);
 
         return $handler;
     }
