@@ -5,9 +5,10 @@ namespace uzdevid\telegram\bot;
 use Psr\Http\Client\ClientInterface;
 use uzdevid\telegram\bot\core\Credentials;
 use uzdevid\telegram\bot\handler\Handler;
-use uzdevid\telegram\bot\message\ManagerInterface;
+use uzdevid\telegram\bot\handler\Scenario;
 use uzdevid\telegram\bot\message\manager\Editor;
 use uzdevid\telegram\bot\message\manager\Sender;
+use uzdevid\telegram\bot\message\ManagerInterface;
 use Yii;
 use yii\base\Component;
 use yii\base\InvalidArgumentException;
@@ -27,6 +28,8 @@ class Bot extends Component {
     public string|array $sender = Sender::class;
     public string|array $editor = Editor::class;
 
+    private Scenario|null $scenario;
+
     /**
      * @param array $data
      *
@@ -35,6 +38,17 @@ class Bot extends Component {
      */
     public function handler(array $data): Handler {
         return Yii::createObject($this->handler, [$this, $data]);
+    }
+
+    /**
+     * @return Scenario
+     */
+    public function scenario(): Scenario {
+        if (is_null($this->scenario)) {
+            $this->scenario = new Scenario($this);
+        }
+
+        return $this->scenario;
     }
 
     /**
