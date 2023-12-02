@@ -23,7 +23,7 @@ class VideoNote extends Type {
      */
     protected function properties(): array {
         return [
-            'thumbnail' => PhotoSize::class,
+            'thumbnail' => [PhotoSize::class, 'thumbnail'],
         ];
     }
 }

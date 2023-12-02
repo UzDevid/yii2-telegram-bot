@@ -20,7 +20,8 @@ class PassportData extends Type {
      */
     protected function properties(): array {
         return [
-            'credentials' => EncryptedCredentials::class
+            'data' => [EncryptedPassportElement::class, 'data'],
+            'credentials' => [EncryptedCredentials::class, 'credentials']
         ];
     }
 }

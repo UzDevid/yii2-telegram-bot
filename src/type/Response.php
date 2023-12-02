@@ -12,7 +12,6 @@ use uzdevid\telegram\bot\core\Type;
 class Response extends Type {
 
 
-    public bool $ok;
     public int $messageId;
     public User $from;
     public User $user;
@@ -24,9 +23,9 @@ class Response extends Type {
      */
     protected function properties(): array {
         return [
-            'from' => User::class,
-            'user' => User::class,
-            'chat' => Chat::class,
+            'from' => [User::class, 'from'],
+            'user' => [User::class, 'user'],
+            'chat' => [Chat::class, 'chat'],
         ];
     }
 }

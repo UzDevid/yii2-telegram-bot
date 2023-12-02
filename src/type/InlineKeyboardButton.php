@@ -30,10 +30,10 @@ class InlineKeyboardButton extends Type {
      */
     protected function properties(): array {
         return [
-            'webApp' => WebAppInfo::class,
-            'loginUrl' => LoginUrl::class,
-            'switchInlineQueryChosenChat' => SwitchInlineQueryChosenChat::class,
-            'callbackGame' => CallbackGame::class
+            'webApp' => [WebAppInfo::class, 'webApp'],
+            'loginUrl' => [LoginUrl::class, 'loginUrl'],
+            'switchInlineQueryChosenChat' => [SwitchInlineQueryChosenChat::class, 'switchInlineQueryChosenChat'],
+            'callbackGame' => [CallbackGame::class, 'callbackGame']
         ];
     }
 }

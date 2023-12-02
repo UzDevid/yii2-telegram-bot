@@ -10,13 +10,6 @@ use uzdevid\telegram\bot\core\Type;
  * @link https://core.telegram.org/bots/api#game
  *
  * This object represents a game. Use BotFather to create and edit games, their short names will act as unique identifiers.
- *
- * @property string $title
- * @property string $description
- * @property PhotoSize[] $photo
- * @property string $text
- * @property MessageEntity[] $textEntities
- * @property Animation $animation
  */
 class Game extends Type {
 
@@ -32,9 +25,9 @@ class Game extends Type {
      */
     protected function properties(): array {
         return [
-            'photo' => [PhotoSize::class],
-            'message_entities' => [MessageEntity::class],
-            'animation' => Animation::class
+            'photo' => [PhotoSize::class, 'photoSize'],
+            'message_entities' => [MessageEntity::class, 'textEntities'],
+            'animation' => [Animation::class, 'animation']
         ];
     }
 }
