@@ -2,7 +2,7 @@
 
 namespace uzdevid\telegram\bot\handler\updates;
 
-use uzdevid\property\loader\Entity;
+use uzdevid\telegram\bot\core\Entity;
 use uzdevid\telegram\bot\handler\UpdateInterface;
 use uzdevid\telegram\bot\type\Message;
 
