@@ -3,10 +3,11 @@
 namespace uzdevid\telegram\bot\handler;
 
 use uzdevid\telegram\bot\Bot;
+use uzdevid\telegram\bot\Service;
 use uzdevid\telegram\bot\type\CallbackQuery;
 use uzdevid\telegram\bot\type\InlineQuery;
 use uzdevid\telegram\bot\type\Message;
-use yii\base\Component;
+use yii\base\BaseObject;
 use yii\base\InvalidArgumentException;
 
 /**
@@ -17,7 +18,7 @@ use yii\base\InvalidArgumentException;
  * @property-write array $allowedInterfaces
  * @property-read string $handlersString
  */
-class Handler extends Component {
+class Handler extends BaseObject {
     protected Bot $botInstance;
 
     protected array $data = [];
@@ -36,9 +37,29 @@ class Handler extends Component {
      */
     public function __construct(Bot $botInstance, array $data) {
         $this->botInstance = $botInstance;
-        $this->data = $data;
+        $this->data = $this->reformatData($data);
 
         parent::__construct();
+    }
+
+    /**
+     * @param array $data
+     *
+     * @return array
+     */
+    protected function reformatData(array $data): array {
+        foreach ($data as $key => $value) {
+            unset($data[$key]);
+            $camelCaseName = Service::snakeToCamel($key);
+
+            if (is_array($value)) {
+                $value = $this->reformatData($value);
+            }
+
+            $data[$camelCaseName] = $value;
+        }
+
+        return $data;
     }
 
     /**

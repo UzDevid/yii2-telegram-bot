@@ -2,16 +2,14 @@
 
 namespace uzdevid\telegram\bot\handler\updates;
 
-use uzdevid\property\loader\traits\PropertyLoader;
+use uzdevid\property\loader\Entity;
 use uzdevid\telegram\bot\handler\UpdateInterface;
 use uzdevid\telegram\bot\type\Message;
 
 /**
  * Class MessageUpdate
  */
-class MessageUpdate implements UpdateInterface {
-    use PropertyLoader;
-
+class MessageUpdate extends Entity implements UpdateInterface {
     public int $updateId;
     public Message $message;
 
