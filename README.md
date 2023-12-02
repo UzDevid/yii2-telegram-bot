@@ -40,7 +40,7 @@ Matnli habar yuborish
 -----------------------
 
 ```php
-use uzdevid\telegram\bot\message\messages\methods\SendMessage;
+use uzdevid\telegram\bot\message\message\method\SendMessage;
 
 $bot->sender()
     ->chatId(123456789) // yoki ->username('@uzdevid')
@@ -62,7 +62,7 @@ Rasmli habar yuborish
 Rasmli habar yuborish ham huddi matnli habar yuborish kabi amalga oshiriladi. Faqatgi farqi rasmni yuborish uchun __method()__ metodiga __SendPhoto__ obyektini uzatish kerak.
 
 ```php
-use uzdevid\telegram\bot\message\messages\methods\SendPhoto;
+use uzdevid\telegram\bot\message\message\method\SendPhoto;
 
 $sendPhoto = new SendPhoto('https://uzdevid.com/img/logo.png');
 $sendPhoto->caption('Bu rasmli habar')->hasSpoiler();
@@ -83,10 +83,10 @@ Tugmali habar yuborish
 -----------------------
 
 ```php
-use uzdevid\telegram\bot\message\messages\methods\SendMessage;
-use uzdevid\telegram\bot\message\messages\keyboard\reply\ReplyButton;
-use uzdevid\telegram\bot\message\messages\keyboard\reply\ReplyKeyboardMarkup;
-use uzdevid\telegram\bot\message\messages\keyboard\reply\ReplyRow;
+use uzdevid\telegram\bot\message\message\method\SendMessage;
+use uzdevid\telegram\bot\message\message\keyboard\reply\ReplyButton;
+use uzdevid\telegram\bot\message\message\keyboard\reply\ReplyKeyboardMarkup;
+use uzdevid\telegram\bot\message\message\keyboard\reply\ReplyRow;
 
 $replyMarkup = new ReplyKeyboardMarkup();
 $replyMarkup->resizeKeyboard()->addRow(
@@ -109,8 +109,8 @@ Tugmali habar yuborilganidan so'ng undan keyingi habardan tugmalarni
 o'chirish uchun yangi habarni shunday ko'rinishda yuborish kerak
 
 ```php
-use uzdevid\telegram\bot\message\messages\methods\SendMessage;
-use uzdevid\telegram\bot\message\messages\keyboard\reply\ReplyKeyboardRemove;
+use uzdevid\telegram\bot\message\message\method\SendMessage;
+use uzdevid\telegram\bot\message\message\keyboard\reply\ReplyKeyboardRemove;
 
 $sendMessage = new SendMessage('Bu oddiy habar');
 $sendMessage->addReplyMarkup(new ReplyKeyboardRemove());
@@ -153,9 +153,7 @@ ChatStart.php
 ```php
 namespace App\Handlers;
 
-use uzdevid\telegram\bot\handler\updates\MessageUpdate;
-use uzdevid\telegram\bot\handler\MessageUpdateInterface;
-use uzdevid\telegram\bot\type\Message;
+use uzdevid\telegram\bot\handler\update\MessageUpdate;use uzdevid\telegram\bot\handler\update\MessageUpdateInterface;use uzdevid\telegram\bot\type\Message;
 
 class ChatStart extends MessageUpdate implements MessageUpdateInterface {
     public static function canHandle(Bot $bot, Message $message): bool {

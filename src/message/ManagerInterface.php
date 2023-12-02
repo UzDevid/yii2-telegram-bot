@@ -2,7 +2,7 @@
 
 namespace uzdevid\telegram\bot\message;
 
-use uzdevid\telegram\bot\message\messages\MethodInterface;
+use uzdevid\telegram\bot\message\message\MethodInterface;
 
 interface ManagerInterface {
     public function method(MethodInterface $method): static;

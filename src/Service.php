@@ -2,7 +2,7 @@
 
 namespace uzdevid\telegram\bot;
 
-use uzdevid\telegram\bot\message\messages\MethodInterface;
+use uzdevid\telegram\bot\message\message\MethodInterface;
 
 class Service {
     /**

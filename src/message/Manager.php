@@ -7,7 +7,7 @@ use GuzzleHttp\Exception\GuzzleException;
 use Psr\Http\Client\ClientInterface;
 use uzdevid\telegram\bot\Bot;
 use uzdevid\telegram\bot\core\Credentials;
-use uzdevid\telegram\bot\message\messages\MethodInterface;
+use uzdevid\telegram\bot\message\message\MethodInterface;
 use yii\base\BaseObject;
 use yii\helpers\Json;
 

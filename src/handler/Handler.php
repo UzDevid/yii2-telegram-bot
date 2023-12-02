@@ -3,6 +3,10 @@
 namespace uzdevid\telegram\bot\handler;
 
 use uzdevid\telegram\bot\Bot;
+use uzdevid\telegram\bot\handler\update\CallbackQueryUpdateInterface;
+use uzdevid\telegram\bot\handler\update\InlineQueryUpdateInterface;
+use uzdevid\telegram\bot\handler\update\MessageUpdateInterface;
+use uzdevid\telegram\bot\handler\update\UpdateInterface;
 use uzdevid\telegram\bot\Service;
 use uzdevid\telegram\bot\type\CallbackQuery;
 use uzdevid\telegram\bot\type\InlineQuery;
