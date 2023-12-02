@@ -87,6 +87,6 @@ class Bot extends Component {
             throw new InvalidArgumentException("Manager class must be implement " . ManagerInterface::class . " interface");
         }
 
-        return new $managerObject;
+        return $managerObject;
     }
 }

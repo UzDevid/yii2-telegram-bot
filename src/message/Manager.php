@@ -2,6 +2,7 @@
 
 namespace uzdevid\telegram\bot\message;
 
+use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 use Psr\Http\Client\ClientInterface;
 use uzdevid\telegram\bot\Bot;
@@ -69,6 +70,17 @@ class Manager extends BaseObject implements ManagerInterface {
         }
 
         return $params;
+    }
+
+    /**
+     * @return ClientInterface
+     */
+    protected function getHttpClient(): ClientInterface {
+        if (!isset($this->botInstance->httpClient)) {
+            $this->botInstance->httpClient = new Client();
+        }
+
+        return $this->botInstance->httpClient;
     }
 
     /**
