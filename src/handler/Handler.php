@@ -65,7 +65,7 @@ class Handler extends Component {
      *
      * @return $this
      */
-    public function on(string $handler): static {
+    public function onUpdate(string $handler): static {
         if (!($this->validateHandler($handler))) {
             throw new InvalidArgumentException("Handler class must be instance of {$this->handlersString} interface");
         }
