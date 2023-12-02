@@ -16,7 +16,6 @@ use yii\helpers\Json;
  *
  * @package uzdevid\telegram\bot
  *
- * @property int $chatId
  * @property-read string $url
  * @property ClientInterface $httpClient
  * @property-read array $params
@@ -63,10 +62,10 @@ class Manager extends BaseObject implements ManagerInterface {
     protected function getParams(): array {
         $params = [];
 
-        if (!is_null($this->botInstance->username)) {
-            $params['chat_id'] = $this->botInstance->username;
+        if (!is_null($this->username)) {
+            $params['chat_id'] = $this->username;
         } elseif (!is_null($this->chatId)) {
-            $params['chat_id'] = $this->botInstance->chatId;
+            $params['chat_id'] = $this->chatId;
         }
 
         return $params;
