@@ -37,7 +37,7 @@ class Handler extends BaseObject {
      */
     public function __construct(Bot $botInstance, array $data) {
         $this->botInstance = $botInstance;
-        $this->loadData($data);
+        $this->data = $this->reformatData($data);
 
         parent::__construct();
     }
@@ -45,13 +45,21 @@ class Handler extends BaseObject {
     /**
      * @param array $data
      *
-     * @return void
+     * @return array
      */
-    protected function loadData(array $data): void {
+    protected function reformatData(array $data): array {
         foreach ($data as $key => $value) {
+            unset($data[$key]);
             $camelCaseName = Service::snakeToCamel($key);
-            $this->data[$camelCaseName] = $value;
+
+            if (is_array($value)) {
+                $value = $this->reformatData($value);
+            }
+
+            $data[$camelCaseName] = $value;
         }
+
+        return $data;
     }
 
     /**
