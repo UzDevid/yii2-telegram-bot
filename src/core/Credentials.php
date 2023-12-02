@@ -3,9 +3,9 @@
 namespace uzdevid\telegram\bot\core;
 
 trait Credentials {
-    protected string|null $token = null;
-    protected int|null $chatId = null;
-    protected string|null $username = null;
+    public string|null $token = null;
+    public int|null $chatId = null;
+    public string|null $username = null;
 
     /**
      * @param string $token
