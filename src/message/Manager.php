@@ -5,6 +5,7 @@ namespace uzdevid\telegram\bot\message;
 use GuzzleHttp\Exception\GuzzleException;
 use Psr\Http\Client\ClientInterface;
 use uzdevid\telegram\bot\Bot;
+use uzdevid\telegram\bot\core\Credentials;
 use uzdevid\telegram\bot\message\messages\MethodInterface;
 use yii\base\BaseObject;
 use yii\helpers\Json;
@@ -21,6 +22,8 @@ use yii\helpers\Json;
  * @property MethodInterface $method
  */
 class Manager extends BaseObject implements ManagerInterface {
+    use Credentials;
+
     protected static string $endpoint = 'https://api.telegram.org/bot';
 
     protected MethodInterface|null $method = null;
