@@ -50,7 +50,7 @@ class Bot extends Component {
             return $sender;
         }
 
-        return $this->manager($sender);
+        return $this->manager($senderClass);
     }
 
     /**
