@@ -41,11 +41,13 @@ class Bot extends Component {
     }
 
     /**
+     * @param array $data
+     *
      * @return Scenario
      */
-    public function scenario(): Scenario {
+    public function scenario(array $data): Scenario {
         if (is_null($this->scenario)) {
-            $this->scenario = new Scenario($this);
+            $this->scenario = new Scenario($this, $data);
         }
 
         return $this->scenario;

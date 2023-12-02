@@ -117,9 +117,9 @@ class Handler extends BaseObject {
     }
 
     /**
-     * @return Scenario
+     * @return Scenario|null
      */
-    public function end(): Scenario {
+    public function end(): Scenario|null {
         return $this->scenario;
     }
 
