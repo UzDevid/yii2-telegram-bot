@@ -2,12 +2,13 @@
 
 namespace uzdevid\telegram\bot\message\messages\keyboard\reply;
 
-use uzdevid\telegram\bot\Component;
+use uzdevid\telegram\bot\core\AttributeContainer;
 use uzdevid\telegram\bot\message\messages\keyboard\ReplyMarkupInterface;
 
-class ReplyKeyboardRemove extends Component implements ReplyMarkupInterface {
+class ReplyKeyboardRemove implements ReplyMarkupInterface {
+    use AttributeContainer;
+
     public function __construct() {
-        parent::__construct();
         $this->addAttribute('remove_keyboard', true);
     }
 

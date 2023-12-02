@@ -42,18 +42,35 @@ class MessageEntity {
 
     private array $_params = [];
 
+    /**
+     * @param array $params
+     */
     public function __construct(array $params = []) {
         $this->params = $params;
     }
 
+    /**
+     * @return array
+     */
     public function getParams(): array {
         return $this->_params;
     }
 
+    /**
+     * @param array $params
+     *
+     * @return void
+     */
     public function setParams(array $params): void {
         $this->_params = $params;
     }
 
+    /**
+     * @param string $name
+     * @param mixed $value
+     *
+     * @return void
+     */
     public function addParams(string $name, mixed $value): void {
         $this->_params[$name] = $value;
     }

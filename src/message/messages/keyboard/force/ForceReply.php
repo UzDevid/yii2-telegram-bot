@@ -2,12 +2,16 @@
 
 namespace uzdevid\telegram\bot\message\messages\keyboard\force;
 
-use uzdevid\telegram\bot\Component;
+use uzdevid\telegram\bot\core\AttributeContainer;
 use uzdevid\telegram\bot\message\messages\keyboard\ReplyMarkupInterface;
 
-class ForceReply extends Component implements ReplyMarkupInterface {
+class ForceReply implements ReplyMarkupInterface {
+    use AttributeContainer {
+        AttributeContainer::__construct as private __attributeConstruct;
+    }
+
     public function __construct(array $attributes = []) {
-        parent::__construct($attributes);
+        $this->__attributeConstruct($attributes);
         $this->addAttribute('force_reply', true);
     }
 

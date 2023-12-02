@@ -36,13 +36,6 @@ interface MethodInterface {
     public function getAttribute(string $name): mixed;
 
     /**
-     * @param string $name
-     *
-     * @return bool
-     */
-    public function issetAttribute(string $name): bool;
-
-    /**
      * @return array
      */
     public function getPayload(): array;

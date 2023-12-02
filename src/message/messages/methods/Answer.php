@@ -1,13 +1,19 @@
 <?php
 
-namespace uzdevid\telegram\bot\message\answer;
+namespace uzdevid\telegram\bot\message\messages\methods;
 
-use uzdevid\telegram\bot\BaseBot;
+use uzdevid\telegram\bot\core\AttributeContainer;
+use uzdevid\telegram\bot\message\answer\AnswerInterface;
 use uzdevid\telegram\bot\message\messages\MethodInterface;
+use yii\helpers\Json;
 
-class Answer extends BaseBot implements MethodInterface {
+class Answer implements MethodInterface {
+    use AttributeContainer {
+        AttributeContainer::__construct as private __attributeConstruct;
+    }
+
     public function __construct(string $inlineQueryId) {
-        parent::__construct(['inline_query_id' => $inlineQueryId]);
+        $this->__attributeConstruct(['inline_query_id' => $inlineQueryId]);
     }
 
     /**
@@ -61,10 +67,14 @@ class Answer extends BaseBot implements MethodInterface {
      * @return array
      */
     public function getPayload(): array {
-        $results = json_encode($this->getAttribute('results'), JSON_UNESCAPED_UNICODE);
+        $results = Json::encode($this->getAttribute('results'), JSON_UNESCAPED_UNICODE);
 
         $this->addAttribute('results', $results);
 
         return $this->attributes;
+    }
+
+    public function response(): string {
+        // TODO: Implement response() method.
     }
 }

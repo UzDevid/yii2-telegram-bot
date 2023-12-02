@@ -2,11 +2,13 @@
 
 namespace uzdevid\telegram\bot\message\messages\keyboard\reply;
 
-use uzdevid\telegram\bot\Component;
+use uzdevid\telegram\bot\core\AttributeContainer;
 use uzdevid\telegram\bot\message\messages\keyboard\ButtonInterface;
 use uzdevid\telegram\bot\message\messages\keyboard\RowInterface;
 
-class ReplyRow extends Component implements RowInterface {
+class ReplyRow implements RowInterface {
+    use AttributeContainer;
+
     /**
      * @inheritDoc
      */

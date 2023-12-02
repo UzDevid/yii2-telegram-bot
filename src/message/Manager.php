@@ -2,8 +2,12 @@
 
 namespace uzdevid\telegram\bot\message;
 
-use uzdevid\telegram\bot\BaseBot;
+use GuzzleHttp\Exception\GuzzleException;
+use Psr\Http\Client\ClientInterface;
+use uzdevid\telegram\bot\Bot;
 use uzdevid\telegram\bot\message\messages\MethodInterface;
+use yii\base\BaseObject;
+use yii\helpers\Json;
 
 /**
  * Class Message
@@ -11,23 +15,25 @@ use uzdevid\telegram\bot\message\messages\MethodInterface;
  * @package uzdevid\telegram\bot
  *
  * @property int $chatId
+ * @property-read string $url
+ * @property ClientInterface $httpClient
+ * @property-read array $params
  * @property MethodInterface $method
  */
-class Manager extends BaseBot {
-    private MethodInterface|null $_method = null;
+class Manager extends BaseObject implements ManagerInterface {
+    protected static string $endpoint = 'https://api.telegram.org/bot';
+
+    protected MethodInterface|null $method = null;
+
+    private Bot $botInstance;
 
     /**
-     * @return MethodInterface
+     * @param Bot $botInstance
+     * @param array $config
      */
-    protected function getMethod(): MethodInterface {
-        return $this->_method;
-    }
-
-    /**
-     * @param MethodInterface $method
-     */
-    public function setMethod(MethodInterface $method): void {
-        $this->_method = $method;
+    public function __construct(Bot $botInstance, array $config = []) {
+        $this->botInstance = $botInstance;
+        parent::__construct($config);
     }
 
     /**
@@ -36,7 +42,41 @@ class Manager extends BaseBot {
      * @return Manager
      */
     public function method(MethodInterface $method): static {
-        $this->_method = $method;
+        $this->method = $method;
         return $this;
+    }
+
+    /**
+     * @return string
+     */
+    protected function getUrl(): string {
+        return self::$endpoint . $this->botInstance->token . '/' . $this->method->methodName();
+    }
+
+    /**
+     * @return array
+     */
+    protected function getParams(): array {
+        $params = [];
+
+        if (!is_null($this->botInstance->username)) {
+            $params['chat_id'] = $this->botInstance->username;
+        } elseif (!is_null($this->chatId)) {
+            $params['chat_id'] = $this->botInstance->chatId;
+        }
+
+        return $params;
+    }
+
+    /**
+     * @return array|null
+     * @throws GuzzleException
+     */
+    public function sendRequest(): array|null {
+        $query = array_merge($this->getParams(), $this->method->getPayload());
+
+        $response = $this->httpClient->get($this->getUrl(), ['query' => $query]);
+
+        return Json::decode($response->getBody()->getContents());
     }
 }
