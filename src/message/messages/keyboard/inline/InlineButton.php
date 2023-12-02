@@ -2,10 +2,12 @@
 
 namespace uzdevid\telegram\bot\message\messages\keyboard\inline;
 
-use uzdevid\telegram\bot\Component;
+use uzdevid\telegram\bot\core\AttributeContainer;
 use uzdevid\telegram\bot\message\messages\keyboard\ButtonInterface;
 
-class InlineButton extends Component implements ButtonInterface {
+class InlineButton implements ButtonInterface {
+    use AttributeContainer;
+
     /**
      * @param string $text
      *

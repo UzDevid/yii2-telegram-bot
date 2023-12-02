@@ -6,4 +6,6 @@ use uzdevid\property\loader\traits\PropertyLoader;
 
 class Type {
     use PropertyLoader;
+
+    public mixed $ok;
 }

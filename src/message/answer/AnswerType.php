@@ -2,9 +2,11 @@
 
 namespace uzdevid\telegram\bot\message\answer;
 
-use uzdevid\telegram\bot\BaseBot;
+use uzdevid\telegram\bot\core\AttributeContainer;
 
-class AnswerType extends BaseBot {
+class AnswerType {
+    use AttributeContainer;
+
     /**
      * @return array
      */

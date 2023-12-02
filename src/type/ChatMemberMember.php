@@ -15,12 +15,15 @@ use uzdevid\telegram\bot\core\Type;
  * @property User $user
  */
 class ChatMemberMember extends Type {
+    public string $status;
+    public User $user;
+
     /**
      * @return array
      */
     protected function properties(): array {
         return [
-            'user' => User::class,
+            'user' => [User::class, 'user'],
         ];
     }
 }

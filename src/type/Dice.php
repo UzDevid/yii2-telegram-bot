@@ -10,8 +10,8 @@ use uzdevid\telegram\bot\core\Type;
  * @link https://core.telegram.org/bots/api#dice
  *
  * This object represents an animated emoji that displays a random value.
- *
- * @property string $emoji
- * @property int $value
  */
-class Dice extends Type { }
+class Dice extends Type {
+    public string $emoji;
+    public int $value;
+}

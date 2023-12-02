@@ -4,7 +4,6 @@ namespace uzdevid\telegram\bot\message\messages\methods;
 
 use uzdevid\telegram\bot\message\messages\Method;
 use uzdevid\telegram\bot\message\messages\MethodInterface;
-use uzdevid\telegram\bot\type\Response;
 
 class AnswerCallbackQuery extends Method implements MethodInterface {
     protected static string $__callback_query_id = 'callback_query_id';
@@ -13,13 +12,20 @@ class AnswerCallbackQuery extends Method implements MethodInterface {
     protected static string $__url = 'url';
     protected static string $__cache_time = 'cache_time';
 
-    public function methodName(): string {
-        return "answerCallbackQuery";
-    }
-
+    /**
+     * @param string $callbackQueryId
+     * @param array $attributes
+     */
     public function __construct(string $callbackQueryId, array $attributes = []) {
         parent::__construct($attributes);
         $this->addAttribute(self::$__callback_query_id, $callbackQueryId);
+    }
+
+    /**
+     * @return string
+     */
+    public function methodName(): string {
+        return "answerCallbackQuery";
     }
 
     /**

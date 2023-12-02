@@ -10,11 +10,11 @@ use uzdevid\telegram\bot\core\Type;
  * @link https://core.telegram.org/bots/api#contact
  *
  * This object represents a phone contact.
- *
- * @property string $phoneNumber
- * @property string $firstName
- * @property string $lastName
- * @property int $userId
- * @property string $vcard
  */
-class Contact extends Type { }
+class Contact extends Type {
+    public string $phoneNumber;
+    public string $firstName;
+    public string $lastName;
+    public int $userId;
+    public string $vcard;
+}

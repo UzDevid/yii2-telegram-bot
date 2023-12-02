@@ -10,24 +10,24 @@ use uzdevid\telegram\bot\core\Type;
  * @link https://core.telegram.org/bots/api#chatmemberupdated
  *
  * This object represents changes in the status of a chat member.
- *
- * @property Chat $chat
- * @property User $from
- * @property int $date
- * @property array $oldChatMember
- * @property array $newChatMember
- * @property ChatInviteLink $inviteLink
- * @property bool $viaChatFolderInviteLink
  */
 class ChatMemberUpdated extends Type {
+    public Chat $chat;
+    public User $from;
+    public int $date;
+    public array $oldChatMember;
+    public array $newChatMember;
+    public ChatInviteLink $inviteLink;
+    public bool $viaChatFolderInviteLink;
+
     /**
      * @return array
      */
     protected function properties(): array {
         return [
-            'chat' => Chat::class,
-            'from' => User::class,
-            'inviteLink' => ChatInviteLink::class,
+            'chat' => [Chat::class, 'chat'],
+            'from' => [User::class, 'from'],
+            'inviteLink' => [ChatInviteLink::class, 'inviteLink'],
         ];
     }
 }

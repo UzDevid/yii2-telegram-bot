@@ -10,17 +10,17 @@ use uzdevid\telegram\bot\core\Type;
  * @link https://core.telegram.org/bots/api#chatmemberleft
  *
  * Represents a chat member that isn't currently a member of the chat, but may join it themselves.
- *
- * @property string $status
- * @property User $user
  */
 class ChatMemberLeft extends Type {
+    public string $status;
+    public User $user;
+
     /**
      * @return array
      */
     protected function properties(): array {
         return [
-            'user' => User::class,
+            'user' => [User::class, 'user'],
         ];
     }
 }

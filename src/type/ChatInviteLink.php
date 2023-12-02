@@ -10,24 +10,24 @@ use uzdevid\telegram\bot\core\Type;
  * @link https://core.telegram.org/bots/api#chatinvitelink
  *
  * Represents an invite link for a chat.
- *
- * @property string $inviteLink
- * @property User $creator
- * @property bool $createsJoinRequest
- * @property bool $isPrimary
- * @property bool $isRevoked
- * @property string $name
- * @property int $expireDate
- * @property int $memberLimit
- * @property int $pendingJoinRequestsCount
  */
 class ChatInviteLink extends Type {
+    public string $inviteLink;
+    public User $creator;
+    public bool $createsJoinRequest;
+    public bool $isPrimary;
+    public bool $isRevoked;
+    public string $name;
+    public int $expireDate;
+    public int $memberLimit;
+    public int $pendingJoinRequestsCount;
+
     /**
      * @return array
      */
     protected function properties(): array {
         return [
-            'creator' => User::class,
+            'creator' => [User::class, 'creator'],
         ];
     }
 }

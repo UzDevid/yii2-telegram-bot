@@ -2,12 +2,20 @@
 
 namespace uzdevid\telegram\bot\message\messages;
 
-use uzdevid\telegram\bot\BaseBot;
+use uzdevid\telegram\bot\core\AttributeContainer;
 use uzdevid\telegram\bot\message\messages\entity\MessageEntityInterface;
 use uzdevid\telegram\bot\message\messages\keyboard\ReplyMarkupInterface;
 use uzdevid\telegram\bot\type\Response;
+use yii\base\BaseObject;
+use yii\helpers\Json;
 
-class Method extends BaseBot {
+/**
+ *
+ * @property-read array $payload
+ */
+class Method extends BaseObject {
+    use AttributeContainer;
+
     /**
      * Unique identifier for the target message thread (topic) of the forum; for forum supergroups only
      *
@@ -77,7 +85,7 @@ class Method extends BaseBot {
      * @return static
      */
     public function addReplyMarkup(ReplyMarkupInterface $replyMarkup): static {
-        $serialized = json_encode($replyMarkup->getAttributes(), JSON_UNESCAPED_UNICODE);
+        $serialized = Json::encode($replyMarkup->getAttributes(), JSON_UNESCAPED_UNICODE);
         $this->addAttribute('reply_markup', $serialized);
         return $this;
     }

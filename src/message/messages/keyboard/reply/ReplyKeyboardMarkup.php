@@ -11,9 +11,9 @@ class ReplyKeyboardMarkup extends Keyboard implements ReplyMarkupInterface {
     /**
      * @param bool $isPersistent
      *
-     * @return bool
+     * @return static
      */
-    public function isPersistent(bool $isPersistent): bool {
+    public function isPersistent(bool $isPersistent): static {
         $this->addAttribute('is_persistent', $isPersistent);
         return $this;
     }
