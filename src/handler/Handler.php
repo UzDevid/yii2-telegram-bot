@@ -3,6 +3,10 @@
 namespace uzdevid\telegram\bot\handler;
 
 use uzdevid\telegram\bot\Bot;
+use uzdevid\telegram\bot\handler\update\CallbackQueryUpdateInterface;
+use uzdevid\telegram\bot\handler\update\InlineQueryUpdateInterface;
+use uzdevid\telegram\bot\handler\update\MessageUpdateInterface;
+use uzdevid\telegram\bot\handler\update\UpdateInterface;
 use uzdevid\telegram\bot\Service;
 use uzdevid\telegram\bot\type\CallbackQuery;
 use uzdevid\telegram\bot\type\InlineQuery;
@@ -20,6 +24,7 @@ use yii\base\InvalidArgumentException;
  */
 class Handler extends BaseObject {
     protected Bot $botInstance;
+    protected Scenario|null $scenario;
 
     protected array $data = [];
     private bool $isHandled = false;
@@ -34,9 +39,12 @@ class Handler extends BaseObject {
     /**
      * @param Bot $botInstance
      * @param array $data
+     * @param Scenario|null $scenario
      */
-    public function __construct(Bot $botInstance, array $data) {
+    public function __construct(Bot $botInstance, array $data, Scenario|null $scenario = null) {
         $this->botInstance = $botInstance;
+        $this->scenario = $scenario;
+
         $this->data = $this->reformatData($data);
 
         parent::__construct();
@@ -106,6 +114,13 @@ class Handler extends BaseObject {
         $this->isHandled = true;
 
         return $this;
+    }
+
+    /**
+     * @return Scenario|null
+     */
+    public function end(): Scenario|null {
+        return $this->scenario;
     }
 
     /**

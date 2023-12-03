@@ -2,11 +2,12 @@
 
 namespace uzdevid\telegram\bot\message;
 
+use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 use Psr\Http\Client\ClientInterface;
 use uzdevid\telegram\bot\Bot;
 use uzdevid\telegram\bot\core\Credentials;
-use uzdevid\telegram\bot\message\messages\MethodInterface;
+use uzdevid\telegram\bot\message\message\MethodInterface;
 use yii\base\BaseObject;
 use yii\helpers\Json;
 
@@ -15,7 +16,6 @@ use yii\helpers\Json;
  *
  * @package uzdevid\telegram\bot
  *
- * @property int $chatId
  * @property-read string $url
  * @property ClientInterface $httpClient
  * @property-read array $params
@@ -62,13 +62,24 @@ class Manager extends BaseObject implements ManagerInterface {
     protected function getParams(): array {
         $params = [];
 
-        if (!is_null($this->botInstance->username)) {
-            $params['chat_id'] = $this->botInstance->username;
+        if (!is_null($this->username)) {
+            $params['chat_id'] = $this->username;
         } elseif (!is_null($this->chatId)) {
-            $params['chat_id'] = $this->botInstance->chatId;
+            $params['chat_id'] = $this->chatId;
         }
 
         return $params;
+    }
+
+    /**
+     * @return ClientInterface
+     */
+    protected function getHttpClient(): ClientInterface {
+        if (!isset($this->botInstance->httpClient)) {
+            $this->botInstance->httpClient = new Client();
+        }
+
+        return $this->botInstance->httpClient;
     }
 
     /**

@@ -5,9 +5,10 @@ namespace uzdevid\telegram\bot;
 use Psr\Http\Client\ClientInterface;
 use uzdevid\telegram\bot\core\Credentials;
 use uzdevid\telegram\bot\handler\Handler;
+use uzdevid\telegram\bot\handler\Scenario;
+use uzdevid\telegram\bot\message\manager\Editor;
+use uzdevid\telegram\bot\message\manager\Sender;
 use uzdevid\telegram\bot\message\ManagerInterface;
-use uzdevid\telegram\bot\message\managers\Editor;
-use uzdevid\telegram\bot\message\managers\Sender;
 use Yii;
 use yii\base\Component;
 use yii\base\InvalidArgumentException;
@@ -27,6 +28,8 @@ class Bot extends Component {
     public string|array $sender = Sender::class;
     public string|array $editor = Editor::class;
 
+    private Scenario|null $scenario;
+
     /**
      * @param array $data
      *
@@ -35,6 +38,19 @@ class Bot extends Component {
      */
     public function handler(array $data): Handler {
         return Yii::createObject($this->handler, [$this, $data]);
+    }
+
+    /**
+     * @param array $data
+     *
+     * @return Scenario
+     */
+    public function scenario(array $data): Scenario {
+        if (is_null($this->scenario)) {
+            $this->scenario = new Scenario($this, $data);
+        }
+
+        return $this->scenario;
     }
 
     /**
@@ -50,7 +66,7 @@ class Bot extends Component {
             return $sender;
         }
 
-        return $this->manager($sender);
+        return $this->manager($senderClass);
     }
 
     /**
@@ -87,6 +103,6 @@ class Bot extends Component {
             throw new InvalidArgumentException("Manager class must be implement " . ManagerInterface::class . " interface");
         }
 
-        return new $managerObject;
+        return $managerObject;
     }
 }
