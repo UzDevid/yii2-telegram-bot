@@ -12,7 +12,6 @@ use uzdevid\telegram\bot\core\Type;
  * This object represents one special entity in a text message. For example, hashtags, usernames, URLs, etc.
  */
 class MessageEntity extends Type {
-
     public string $type;
     public int $offset;
     public int $length;
@@ -26,7 +25,7 @@ class MessageEntity extends Type {
      */
     protected function properties(): array {
         return [
-            'user' => User::class
+            'user' => [User::class, 'user']
         ];
     }
 }
