@@ -35,7 +35,7 @@ class Message extends Type {
     public string $mediaGroupId;
     public string $authorSignature;
     public string $text;
-    public MessageEntity $entities;
+    public array $entities;
     public Animation $animation;
     public Audio $audio;
     public Document $document;
@@ -46,7 +46,7 @@ class Message extends Type {
     public VideoNote $videoNote;
     public Voice $voice;
     public string $caption;
-    public MessageEntity $captionEntities;
+    public array $captionEntities;
     public bool $hasMediaSpoiler;
     public Contact $contact;
     public Dice $dice;
@@ -54,7 +54,7 @@ class Message extends Type {
     public Poll $poll;
     public Venue $venue;
     public Location $location;
-    public User $newChatMembers;
+    public array $newChatMembers;
     public User $leftChatMember;
     public string $newChatTitle;
     public PhotoSize $newChatPhoto;
@@ -97,6 +97,7 @@ class Message extends Type {
             'forwardFromChat' => [Chat::class, 'forwardFromChat'],
             'replyToMessage' => [__CLASS__, '$replyToMessage'],
             'viaBot' => [User::class, 'viaBot'],
+            'entities' => [[MessageEntity::class], 'entities'],
             'animation' => [Animation::class, 'animation'],
             'audio' => [Audio::class, 'audio'],
             'document' => [Document::class, 'document'],
@@ -106,12 +107,14 @@ class Message extends Type {
             'video' => [Video::class, 'video'],
             'videoNote' => [VideoNote::class, 'videoNote'],
             'voice' => [Voice::class, 'voice'],
+            'captionEntities' => [[MessageEntity::class], 'captionEntities'],
             'contact' => [Contact::class, 'contact'],
             'dice' => [Dice::class, 'dice'],
             'game' => [Game::class, 'game'],
             'poll' => [Poll::class, 'poll'],
             'venue' => [Venue::class, 'venue'],
             'location' => [Location::class, 'location'],
+            'newChatMembers' => [[User::class], 'newChatMembers'],
             'leftChatMember' => [User::class, 'leftChatMember'],
             'messageAutoDeleteTimerChanged' => [MessageAutoDeleteTimerChanged::class, '$messageAutoDeleteTimerChanged'],
             'pinnedMessage' => [__CLASS__, 'pinnedMessage'],
