@@ -12,10 +12,10 @@ use uzdevid\telegram\bot\core\Type;
 class InlineQuery extends Type {
 
     public int $updateId;
-    public int $id;
+    public string $id;
     public User $from;
     public string $query;
-    public int $offset;
+    public string $offset;
     /**
      * @return array
      */
