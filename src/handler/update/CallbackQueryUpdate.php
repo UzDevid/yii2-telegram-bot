@@ -16,7 +16,7 @@ class CallbackQueryUpdate extends Entity implements UpdateInterface {
      * @return string
      */
     public static function objectName(): string {
-        return 'callback_query';
+        return 'callbackQuery';
     }
 
     /**

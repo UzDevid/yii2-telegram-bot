@@ -17,7 +17,7 @@ class InlineQueryUpdate extends Entity implements UpdateInterface {
      * @return string
      */
     public static function objectName(): string {
-        return 'inline_query';
+        return 'inlineQuery';
     }
 
     /**
