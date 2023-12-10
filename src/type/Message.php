@@ -95,7 +95,7 @@ class Message extends Type {
             'chat' => [Chat::class, 'chat'],
             'forwardFrom' => [User::class, 'forwardFrom'],
             'forwardFromChat' => [Chat::class, 'forwardFromChat'],
-            'replyToMessage' => [__CLASS__, '$replyToMessage'],
+            'replyToMessage' => [__CLASS__, 'replyToMessage'],
             'viaBot' => [User::class, 'viaBot'],
             'animation' => [Animation::class, 'animation'],
             'audio' => [Audio::class, 'audio'],
