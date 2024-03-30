@@ -24,7 +24,7 @@ class Response extends Type {
     protected function properties(): array {
         return [
             'from' => [User::class, 'from'],
-            'user' => [User::class, 'user'],
+//            'user' => [User::class, 'user'],
             'chat' => [Chat::class, 'chat'],
         ];
     }
