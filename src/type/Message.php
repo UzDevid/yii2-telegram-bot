@@ -93,8 +93,8 @@ class Message extends Type {
         return [
             'from' => [User::class, 'from'],
             'chat' => [Chat::class, 'chat'],
-            'forwardFrom' => [User::class, 'forwardFrom'],
-            'forwardFromChat' => [Chat::class, 'forwardFromChat'],
+//            'forwardFrom' => [User::class, 'forwardFrom'],
+//            'forwardFromChat' => [Chat::class, 'forwardFromChat'],
             'replyToMessage' => [__CLASS__, 'replyToMessage'],
             'viaBot' => [User::class, 'viaBot'],
             'entities' => [[MessageEntity::class], 'entities'],
