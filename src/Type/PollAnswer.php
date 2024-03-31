@@ -2,7 +2,7 @@
 
 namespace UzDevid\Telegram\Bot\Type;
 
-use UzDevid\Telegram\Bot\Core\Type;
+use uzdevid\telegram\bot\core\Type;
 
 /**
  * Type PollAnswer
@@ -12,11 +12,8 @@ use UzDevid\Telegram\Bot\Core\Type;
  * This object represents an answer of a user in a non-anonymous poll.
  */
 class PollAnswer extends Type {
-    public function __construct(
-        public string $pollId,
-        public Chat   $voterChat,
-        public User   $user,
-        public array  $optionIds
-    ) {
-    }
+    public string $pollId;
+    public Chat $voterChat;
+    public User $user;
+    public array $optionIds;
 }

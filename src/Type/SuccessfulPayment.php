@@ -2,7 +2,7 @@
 
 namespace UzDevid\Telegram\Bot\Type;
 
-use UzDevid\Telegram\Bot\Core\Type;
+use uzdevid\telegram\bot\core\Type;
 
 /**
  * Type SuccessfulPayment
@@ -12,14 +12,12 @@ use UzDevid\Telegram\Bot\Core\Type;
  * This object contains basic information about a successful payment.
  */
 class SuccessfulPayment extends Type {
-    public function __construct(
-        public string    $currency,
-        public int       $totalAmount,
-        public string    $invoicePayload,
-        public string    $shippingOptionId,
-        public OrderInfo $orderInfo,
-        public string    $telegramPaymentChargeId,
-        public string    $providerPaymentChargeId
-    ) {
-    }
+
+    public string $currency;
+    public int $totalAmount;
+    public string $invoicePayload;
+    public string $shippingOptionId;
+    public OrderInfo $orderInfo;
+    public string $telegramPaymentChargeId;
+    public string $providerPaymentChargeId;
 }

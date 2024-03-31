@@ -2,7 +2,7 @@
 
 namespace UzDevid\Telegram\Bot\Type;
 
-use UzDevid\Telegram\Bot\Core\Type;
+use uzdevid\telegram\bot\core\Type;
 
 /**
  * Type InlineKeyboardButton
@@ -12,17 +12,15 @@ use UzDevid\Telegram\Bot\Core\Type;
  * This object represents one button of an inline keyboard. You must use exactly one of the optional fields.
  */
 class InlineKeyboardButton extends Type {
-    public function __construct(
-        public string                      $text,
-        public string                      $url,
-        public string                      $callbackData,
-        public WebAppInfo                  $webApp,
-        public LoginUrl                    $loginUrl,
-        public string                      $switchInlineQuery,
-        public string                      $switchInlineQueryCurrentChat,
-        public SwitchInlineQueryChosenChat $switchInlineQueryChosenChat,
-        public CallbackGame                $callbackGame,
-        public bool                        $pay
-    ) {
-    }
+
+    public string $text;
+    public string $url;
+    public string $callbackData;
+    public WebAppInfo $webApp;
+    public LoginUrl $loginUrl;
+    public string $switchInlineQuery;
+    public string $switchInlineQueryCurrentChat;
+    public SwitchInlineQueryChosenChat $switchInlineQueryChosenChat;
+    public CallbackGame $callbackGame;
+    public bool $pay;
 }

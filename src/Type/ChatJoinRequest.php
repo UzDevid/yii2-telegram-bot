@@ -2,7 +2,7 @@
 
 namespace UzDevid\Telegram\Bot\Type;
 
-use UzDevid\Telegram\Bot\Core\Type;
+use uzdevid\telegram\bot\core\Type;
 
 /**
  * Type ChatJoinRequest
@@ -12,13 +12,10 @@ use UzDevid\Telegram\Bot\Core\Type;
  * Represents a join request sent to a chat.
  */
 class ChatJoinRequest extends Type {
-    public function __construct(
-        public Chat           $chat,
-        public User           $from,
-        public int            $userChatId,
-        public int            $date,
-        public string         $bio,
-        public ChatInviteLink $inviteLink
-    ) {
-    }
+    public Chat $chat;
+    public User $from;
+    public int $userChatId;
+    public int $date;
+    public string $bio;
+    public ChatInviteLink $inviteLink;
 }

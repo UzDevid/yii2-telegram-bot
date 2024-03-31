@@ -2,7 +2,7 @@
 
 namespace UzDevid\Telegram\Bot\Type;
 
-use UzDevid\Telegram\Bot\Core\Type;
+use uzdevid\telegram\bot\core\Type;
 
 /**
  * Type Venue
@@ -12,14 +12,11 @@ use UzDevid\Telegram\Bot\Core\Type;
  * This object represents a venue.
  */
 class Venue extends Type {
-    public function __construct(
-        public Location $location,
-        public string   $title,
-        public string   $address,
-        public string   $foursquareId,
-        public string   $foursquareType,
-        public string   $googlePlaceId,
-        public string   $googlePlaceType
-    ) {
-    }
+    public Location $location;
+    public string $title;
+    public string $address;
+    public string $foursquareId;
+    public string $foursquareType;
+    public string $googlePlaceId;
+    public string $googlePlaceType;
 }

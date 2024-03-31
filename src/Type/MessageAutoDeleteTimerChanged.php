@@ -2,7 +2,7 @@
 
 namespace UzDevid\Telegram\Bot\Type;
 
-use UzDevid\Telegram\Bot\Core\Type;
+use uzdevid\telegram\bot\core\Type;
 
 /**
  * Type MessageAutoDeleteTimerChanged
@@ -14,8 +14,5 @@ use UzDevid\Telegram\Bot\Core\Type;
  * @property int $message_auto_delete_time
  */
 class MessageAutoDeleteTimerChanged extends Type {
-    public function __construct(
-        public int $message_auto_delete_time
-    ) {
-    }
+    public int $message_auto_delete_time;
 }

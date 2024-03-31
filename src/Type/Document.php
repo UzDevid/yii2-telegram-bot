@@ -2,7 +2,7 @@
 
 namespace UzDevid\Telegram\Bot\Type;
 
-use UzDevid\Telegram\Bot\Core\Type;
+use uzdevid\telegram\bot\core\Type;
 
 /**
  * Type Document
@@ -12,13 +12,10 @@ use UzDevid\Telegram\Bot\Core\Type;
  * This object represents a general file (as opposed to photos, voice messages and audio files).
  */
 class Document extends Type {
-    public function __construct(
-        public string    $fileId,
-        public string    $fileUniqueId,
-        public PhotoSize $thumbnail,
-        public string    $fileName,
-        public string    $mimeType,
-        public int       $fileSize
-    ) {
-    }
+    public string $fileId;
+    public string $fileUniqueId;
+    public PhotoSize $thumbnail;
+    public string $fileName;
+    public string $mimeType;
+    public int $fileSize;
 }

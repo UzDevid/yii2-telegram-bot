@@ -2,7 +2,7 @@
 
 namespace UzDevid\Telegram\Bot\Type;
 
-use UzDevid\Telegram\Bot\Core\Type;
+use uzdevid\telegram\bot\core\Type;
 
 /**
  * Type KeyboardButtonRequestChat
@@ -14,15 +14,12 @@ use UzDevid\Telegram\Bot\Core\Type;
  * More about requesting chats (https://core.telegram.org/bots/features#chat-and-user-selection)
  */
 class KeyboardButtonRequestChat extends Type {
-    public function __construct(
-        public int                     $requestId,
-        public bool                    $chatIsChannel,
-        public bool                    $chatIsForum,
-        public bool                    $chatHasUsername,
-        public bool                    $chatIsCreated,
-        public ChatAdministratorRights $chatAdministratorRights,
-        public ChatAdministratorRights $botAdministratorRights,
-        public bool                    $botIsMember
-    ) {
-    }
+    public int $requestId;
+    public bool $chatIsChannel;
+    public bool $chatIsForum;
+    public bool $chatHasUsername;
+    public bool $chatIsCreated;
+    public ChatAdministratorRights $chatAdministratorRights;
+    public ChatAdministratorRights $botAdministratorRights;
+    public bool $botIsMember;
 }

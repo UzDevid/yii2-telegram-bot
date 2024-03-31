@@ -2,7 +2,7 @@
 
 namespace UzDevid\Telegram\Bot\Type;
 
-use UzDevid\Telegram\Bot\Core\Type;
+use uzdevid\telegram\bot\core\Type;
 
 /**
  * Type MessageId
@@ -10,8 +10,5 @@ use UzDevid\Telegram\Bot\Core\Type;
  * @link https://core.telegram.org/bots/api#messageid
  */
 class MessageId extends Type {
-    public function __construct(
-        public int $messageId
-    ) {
-    }
+    public int $messageId;
 }

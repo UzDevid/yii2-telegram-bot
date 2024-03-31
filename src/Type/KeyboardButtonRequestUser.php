@@ -2,7 +2,7 @@
 
 namespace UzDevid\Telegram\Bot\Type;
 
-use UzDevid\Telegram\Bot\Core\Type;
+use uzdevid\telegram\bot\core\Type;
 
 /**
  * Type KeyboardButtonRequestUser
@@ -14,10 +14,7 @@ use UzDevid\Telegram\Bot\Core\Type;
  * More about requesting users (https://core.telegram.org/bots/features#chat-and-user-selection)
  */
 class KeyboardButtonRequestUser extends Type {
-    public function __construct(
-        public int  $requestId,
-        public bool $userIsBot,
-        public bool $userIsPremium
-    ) {
-    }
+    public int $requestId;
+    public bool $userIsBot;
+    public bool $userIsPremium;
 }

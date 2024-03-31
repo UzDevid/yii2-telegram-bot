@@ -2,7 +2,7 @@
 
 namespace UzDevid\Telegram\Bot\Type;
 
-use UzDevid\Telegram\Bot\Core\Type;
+use uzdevid\telegram\bot\core\Type;
 
 /**
  * Type ProximityAlertTriggered
@@ -12,10 +12,7 @@ use UzDevid\Telegram\Bot\Core\Type;
  * This object represents the content of a service message, sent whenever a user in the chat triggers a proximity alert set by another user.
  */
 class ProximityAlertTriggered extends Type {
-    public function __construct(
-        public User $traveler,
-        public User $watcher,
-        public int  $distance
-    ) {
-    }
+    public User $traveler;
+    public User $watcher;
+    public int $distance;
 }

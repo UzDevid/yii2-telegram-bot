@@ -2,7 +2,7 @@
 
 namespace UzDevid\Telegram\Bot\Type;
 
-use UzDevid\Telegram\Bot\Core\Type;
+use uzdevid\telegram\bot\core\Type;
 
 /**
  * Type ChatMemberBanned
@@ -12,10 +12,7 @@ use UzDevid\Telegram\Bot\Core\Type;
  * Represents a chat member that was banned in the chat and can't return to the chat or view chat messages.
  */
 class ChatMemberBanned extends Type {
-    public function __construct(
-        public string $status,
-        public User   $user,
-        public int    $untilDate
-    ) {
-    }
+    public string $status;
+    public User $user;
+    public int $untilDate;
 }

@@ -2,7 +2,7 @@
 
 namespace UzDevid\Telegram\Bot\Type;
 
-use UzDevid\Telegram\Bot\Core\Type;
+use uzdevid\telegram\bot\core\Type;
 
 /**
  * Type ChatMemberUpdated
@@ -12,14 +12,11 @@ use UzDevid\Telegram\Bot\Core\Type;
  * This object represents changes in the status of a chat member.
  */
 class ChatMemberUpdated extends Type {
-    public function __construct(
-        public Chat           $chat,
-        public User           $from,
-        public int            $date,
-        public array          $oldChatMember,
-        public array          $newChatMember,
-        public ChatInviteLink $inviteLink,
-        public bool           $viaChatFolderInviteLink
-    ) {
-    }
+    public Chat $chat;
+    public User $from;
+    public int $date;
+    public array $oldChatMember;
+    public array $newChatMember;
+    public ChatInviteLink $inviteLink;
+    public bool $viaChatFolderInviteLink;
 }

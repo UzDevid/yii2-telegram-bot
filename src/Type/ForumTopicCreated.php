@@ -2,7 +2,7 @@
 
 namespace UzDevid\Telegram\Bot\Type;
 
-use UzDevid\Telegram\Bot\Core\Type;
+use uzdevid\telegram\bot\core\Type;
 
 /**
  * Type ForumTopicCreated
@@ -12,10 +12,8 @@ use UzDevid\Telegram\Bot\Core\Type;
  * This object represents a service message about a new forum topic created in the chat.
  */
 class ForumTopicCreated extends Type {
-    public function __construct(
-        public string $name,
-        public int    $iconColor,
-        public string $iconCustomEmojiId,
-    ) {
-    }
+
+    public string $name;
+    public int $iconColor;
+    public string $iconCustomEmojiId;
 }

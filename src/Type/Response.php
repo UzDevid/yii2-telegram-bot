@@ -2,21 +2,18 @@
 
 namespace UzDevid\Telegram\Bot\Type;
 
-use UzDevid\Telegram\Bot\Core\Type;
+use uzdevid\telegram\bot\core\Type;
 
 /**
  * Class Response
  *
- * @package UzDevid\Telegram\Bot\objects
+ * @package uzdevid\telegram\bot\objects
  */
 class Response extends Type {
-    public function __construct(
-        public int    $messageId,
-        public User   $from,
-        public User   $user,
-        public Chat   $chat,
-        public int    $date,
-        public string $text
-    ) {
-    }
+    public int $messageId;
+    public User $from;
+    public User $user;
+    public Chat $chat;
+    public int $date;
+    public string $text;
 }

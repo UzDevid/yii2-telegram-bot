@@ -2,7 +2,7 @@
 
 namespace UzDevid\Telegram\Bot\Type;
 
-use UzDevid\Telegram\Bot\Core\Type;
+use uzdevid\telegram\bot\core\Type;
 
 /**
  * Type ChatMemberAdministrator
@@ -12,26 +12,23 @@ use UzDevid\Telegram\Bot\Core\Type;
  * Represents a chat member that has some additional privileges.
  */
 class ChatMemberAdministrator extends Type {
-    public function __construct(
-        public string $status,
-        public User   $user,
-        public bool   $canBeEdited,
-        public bool   $isAnonymous,
-        public bool   $canManageChat,
-        public bool   $canDeleteMessages,
-        public bool   $canManageVideoChats,
-        public bool   $canRestrictMembers,
-        public bool   $canPromoteMembers,
-        public bool   $canChangeInfo,
-        public bool   $canInviteUsers,
-        public bool   $canPostMessages,
-        public bool   $canEditMessages,
-        public bool   $canPinMessages,
-        public bool   $canPostStories,
-        public bool   $canEditStories,
-        public bool   $canDeleteStories,
-        public bool   $canManageTopics,
-        public string $customTitle
-    ) {
-    }
+    public string $status;
+    public User $user;
+    public bool $canBeEdited;
+    public bool $isAnonymous;
+    public bool $canManageChat;
+    public bool $canDeleteMessages;
+    public bool $canManageVideoChats;
+    public bool $canRestrictMembers;
+    public bool $canPromoteMembers;
+    public bool $canChangeInfo;
+    public bool $canInviteUsers;
+    public bool $canPostMessages;
+    public bool $canEditMessages;
+    public bool $canPinMessages;
+    public bool $canPostStories;
+    public bool $canEditStories;
+    public bool $canDeleteStories;
+    public bool $canManageTopics;
+    public string $customTitle;
 }

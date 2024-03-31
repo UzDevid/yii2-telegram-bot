@@ -2,7 +2,7 @@
 
 namespace UzDevid\Telegram\Bot\Type;
 
-use UzDevid\Telegram\Bot\Core\Type;
+use uzdevid\telegram\bot\core\Type;
 
 /**
  * Type ForceReply
@@ -14,10 +14,7 @@ use UzDevid\Telegram\Bot\Core\Type;
  * This can be extremely useful if you want to create user-friendly step-by-step interfaces without having to sacrifice privacy mode.
  */
 class ForceReply extends Type {
-    public function __construct(
-        public bool   $forceReply,
-        public string $inputFieldPlaceholder,
-        public bool   $selective
-    ) {
-    }
+    public bool $forceReply;
+    public string $inputFieldPlaceholder;
+    public bool $selective;
 }

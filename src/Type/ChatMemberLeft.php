@@ -2,7 +2,7 @@
 
 namespace UzDevid\Telegram\Bot\Type;
 
-use UzDevid\Telegram\Bot\Core\Type;
+use uzdevid\telegram\bot\core\Type;
 
 /**
  * Type ChatMemberLeft
@@ -12,9 +12,6 @@ use UzDevid\Telegram\Bot\Core\Type;
  * Represents a chat member that isn't currently a member of the chat, but may join it themselves.
  */
 class ChatMemberLeft extends Type {
-    public function __construct(
-        public string $status,
-        public User   $user
-    ) {
-    }
+    public string $status;
+    public User $user;
 }

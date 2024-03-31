@@ -2,7 +2,7 @@
 
 namespace UzDevid\Telegram\Bot\Type;
 
-use UzDevid\Telegram\Bot\Core\Type;
+use uzdevid\telegram\bot\core\Type;
 
 /**
  * Type Invoice
@@ -12,12 +12,10 @@ use UzDevid\Telegram\Bot\Core\Type;
  * This object contains basic information about an invoice.
  */
 class Invoice extends Type {
-    public function __construct(
-        public string $title,
-        public string $description,
-        public string $startParameter,
-        public string $currency,
-        public int    $totalAmount
-    ) {
-    }
+
+    public string $title;
+    public string $description;
+    public string $startParameter;
+    public string $currency;
+    public int $totalAmount;
 }

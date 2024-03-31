@@ -2,7 +2,7 @@
 
 namespace UzDevid\Telegram\Bot\Type;
 
-use UzDevid\Telegram\Bot\Core\Type;
+use uzdevid\telegram\bot\core\Type;
 
 /**
  * Type PollOption
@@ -12,9 +12,7 @@ use UzDevid\Telegram\Bot\Core\Type;
  * This object contains information about one answer option in a poll.
  */
 class PollOption extends Type {
-    public function __construct(
-        public string $text,
-        public int    $voterCount
-    ) {
-    }
+
+    public string $text;
+    public int $voterCount;
 }

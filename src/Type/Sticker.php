@@ -2,7 +2,7 @@
 
 namespace UzDevid\Telegram\Bot\Type;
 
-use UzDevid\Telegram\Bot\Core\Type;
+use uzdevid\telegram\bot\core\Type;
 
 /**
  * Type Sticker
@@ -12,21 +12,18 @@ use UzDevid\Telegram\Bot\Core\Type;
  * This object represents a sticker.
  */
 class Sticker extends Type {
-    public function __construct(
-        public string       $fileId,
-        public string       $fileUniqueId,
-        public int          $width,
-        public int          $height,
-        public bool         $isAnimated,
-        public bool         $isVideo,
-        public PhotoSize    $thumbnail,
-        public string       $emoji,
-        public string       $setName,
-        public File         $premiumAnimation,
-        public MaskPosition $maskPosition,
-        public string       $customEmojiId,
-        public bool         $needsRepainting,
-        public int          $fileSize
-    ) {
-    }
+    public string $fileId;
+    public string $fileUniqueId;
+    public int $width;
+    public int $height;
+    public bool $isAnimated;
+    public bool $isVideo;
+    public PhotoSize $thumbnail;
+    public string $emoji;
+    public string $setName;
+    public File $premiumAnimation;
+    public MaskPosition $maskPosition;
+    public string $customEmojiId;
+    public bool $needsRepainting;
+    public int $fileSize;
 }

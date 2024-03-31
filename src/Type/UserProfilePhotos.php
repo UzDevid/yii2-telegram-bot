@@ -2,7 +2,7 @@
 
 namespace UzDevid\Telegram\Bot\Type;
 
-use UzDevid\Telegram\Bot\Core\Type;
+use uzdevid\telegram\bot\core\Type;
 
 /**
  * Type UserProfilePhotos
@@ -12,9 +12,6 @@ use UzDevid\Telegram\Bot\Core\Type;
  * This object represent a user's profile pictures.
  */
 class UserProfilePhotos extends Type {
-    public function __construct(
-        public int       $totalCount,
-        public PhotoSize $photoSize
-    ) {
-    }
+    public int $totalCount;
+    public PhotoSize $photoSize;
 }

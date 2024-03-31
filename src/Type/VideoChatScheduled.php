@@ -2,7 +2,7 @@
 
 namespace UzDevid\Telegram\Bot\Type;
 
-use UzDevid\Telegram\Bot\Core\Type;
+use uzdevid\telegram\bot\core\Type;
 
 /**
  * Type VideoChatScheduled
@@ -12,8 +12,5 @@ use UzDevid\Telegram\Bot\Core\Type;
  * This object represents a service message about a video chat scheduled in the chat.
  */
 class VideoChatScheduled extends Type {
-    public function __construct(
-        public int $startDate
-    ) {
-    }
+    public int $startDate;
 }

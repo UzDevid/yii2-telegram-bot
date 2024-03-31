@@ -2,7 +2,7 @@
 
 namespace UzDevid\Telegram\Bot\Type;
 
-use UzDevid\Telegram\Bot\Core\Type;
+use uzdevid\telegram\bot\core\Type;
 
 /**
  * Type LoginUrl
@@ -14,11 +14,9 @@ use UzDevid\Telegram\Bot\Core\Type;
  * All the user needs to do is tap/click a button and confirm that they want to log in:
  */
 class LoginUrl extends Type {
-    public function __construct(
-        public string $url,
-        public string $forwardText,
-        public string $botUsername,
-        public bool   $requestWriteAccess
-    ) {
-    }
+
+    public string $url;
+    public string $forwardText;
+    public string $botUsername;
+    public bool $requestWriteAccess;
 }

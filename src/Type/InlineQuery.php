@@ -2,20 +2,17 @@
 
 namespace UzDevid\Telegram\Bot\Type;
 
-use UzDevid\Telegram\Bot\Core\Type;
+use uzdevid\telegram\bot\core\Type;
 
 /**
  * Class InlineQuery
  *
- * @package UzDevid\Telegram\Bot\objects
+ * @package uzdevid\telegram\bot\objects
  */
 class InlineQuery extends Type {
-    public function __construct(
-        public int    $updateId,
-        public string $id,
-        public User   $from,
-        public string $query,
-        public string $offset
-    ) {
-    }
+    public int $updateId;
+    public string $id;
+    public User $from;
+    public string $query;
+    public string $offset;
 }

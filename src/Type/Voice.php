@@ -2,7 +2,7 @@
 
 namespace UzDevid\Telegram\Bot\Type;
 
-use UzDevid\Telegram\Bot\Core\Type;
+use uzdevid\telegram\bot\core\Type;
 
 /**
  * Type Voice
@@ -12,12 +12,11 @@ use UzDevid\Telegram\Bot\Core\Type;
  * This object represents a voice note.
  */
 class Voice extends Type {
-    public function __construct(
-        public string $fileId,
-        public string $fileUniqueId,
-        public int    $duration,
-        public string $mimeType,
-        public int    $fileSize
-    ) {
-    }
+
+
+    public string $fileId;
+    public string $fileUniqueId;
+    public int $duration;
+    public string $mimeType;
+    public int $fileSize;
 }

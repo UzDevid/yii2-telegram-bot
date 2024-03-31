@@ -2,7 +2,7 @@
 
 namespace UzDevid\Telegram\Bot\Type;
 
-use UzDevid\Telegram\Bot\Core\Type;
+use uzdevid\telegram\bot\core\Type;
 
 /**
  * Type PhotoSize
@@ -12,12 +12,11 @@ use UzDevid\Telegram\Bot\Core\Type;
  * This object represents one size of a photo or a file / sticker thumbnail.
  */
 class PhotoSize extends Type {
-    public function __construct(
-        public string $fileId,
-        public string $fileUniqueId,
-        public int    $width,
-        public int    $height,
-        public int    $fileSize
-    ) {
-    }
+
+
+    public string $fileId;
+    public string $fileUniqueId;
+    public int $width;
+    public int $height;
+    public int $fileSize;
 }

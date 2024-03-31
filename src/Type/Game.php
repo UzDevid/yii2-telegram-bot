@@ -2,7 +2,7 @@
 
 namespace UzDevid\Telegram\Bot\Type;
 
-use UzDevid\Telegram\Bot\Core\Type;
+use uzdevid\telegram\bot\core\Type;
 
 /**
  * Type Game
@@ -12,13 +12,10 @@ use UzDevid\Telegram\Bot\Core\Type;
  * This object represents a game. Use BotFather to create and edit games, their short names will act as unique identifiers.
  */
 class Game extends Type {
-    public function __construct(
-        public string        $title,
-        public string        $description,
-        public PhotoSize     $photoSize,
-        public string        $text,
-        public MessageEntity $textEntities,
-        public Animation     $animation
-    ) {
-    }
+    public string $title;
+    public string $description;
+    public PhotoSize $photoSize;
+    public string $text;
+    public MessageEntity $textEntities;
+    public Animation $animation;
 }

@@ -2,7 +2,7 @@
 
 namespace UzDevid\Telegram\Bot\Type;
 
-use UzDevid\Telegram\Bot\Core\Type;
+use uzdevid\telegram\bot\core\Type;
 
 /**
  * Type WebAppData
@@ -12,9 +12,6 @@ use UzDevid\Telegram\Bot\Core\Type;
  * Describes data sent from a Web App to the bot.
  */
 class WebAppData extends Type {
-    public function __construct(
-        public string $data,
-        public string $buttonText
-    ) {
-    }
+    public string $data;
+    public string $buttonText;
 }

@@ -2,7 +2,7 @@
 
 namespace UzDevid\Telegram\Bot\Type;
 
-use UzDevid\Telegram\Bot\Core\Type;
+use uzdevid\telegram\bot\core\Type;
 
 /**
  * Type VideoNote
@@ -12,13 +12,10 @@ use UzDevid\Telegram\Bot\Core\Type;
  * This object represents a video message (https://telegram.org/blog/video-messages-and-telescope) (available in Telegram apps as of v.4.0).
  */
 class VideoNote extends Type {
-    public function __construct(
-        public string    $fileId,
-        public string    $fileUniqueId,
-        public int       $length,
-        public int       $duration,
-        public PhotoSize $thumbnail,
-        public int       $fileSize
-    ) {
-    }
+    public string $fileId;
+    public string $fileUniqueId;
+    public int $length;
+    public int $duration;
+    public PhotoSize $thumbnail;
+    public int $fileSize;
 }

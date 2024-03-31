@@ -2,7 +2,7 @@
 
 namespace UzDevid\Telegram\Bot\Type;
 
-use UzDevid\Telegram\Bot\Core\Type;
+use uzdevid\telegram\bot\core\Type;
 
 /**
  * Type SwitchInlineQueryChosenChat
@@ -12,12 +12,9 @@ use UzDevid\Telegram\Bot\Core\Type;
  * This object represents an inline button that switches the current user to inline mode in a chosen chat, with an optional default inline query.
  */
 class SwitchInlineQueryChosenChat extends Type {
-    public function __construct(
-        public string $query,
-        public bool   $allowUserChats,
-        public bool   $allowBotChats,
-        public bool   $allowGroupChats,
-        public bool   $allowChannelChats
-    ) {
-    }
+    public string $query;
+    public bool $allowUserChats;
+    public bool $allowBotChats;
+    public bool $allowGroupChats;
+    public bool $allowChannelChats;
 }

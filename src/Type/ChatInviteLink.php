@@ -2,7 +2,7 @@
 
 namespace UzDevid\Telegram\Bot\Type;
 
-use UzDevid\Telegram\Bot\Core\Type;
+use uzdevid\telegram\bot\core\Type;
 
 /**
  * Type ChatInviteLink
@@ -12,16 +12,13 @@ use UzDevid\Telegram\Bot\Core\Type;
  * Represents an invite link for a chat.
  */
 class ChatInviteLink extends Type {
-    public function __construct(
-        public string $inviteLink,
-        public User   $creator,
-        public bool   $createsJoinRequest,
-        public bool   $isPrimary,
-        public bool   $isRevoked,
-        public string $name,
-        public int    $expireDate,
-        public int    $memberLimit,
-        public int    $pendingJoinRequestsCount
-    ) {
-    }
+    public string $inviteLink;
+    public User $creator;
+    public bool $createsJoinRequest;
+    public bool $isPrimary;
+    public bool $isRevoked;
+    public string $name;
+    public int $expireDate;
+    public int $memberLimit;
+    public int $pendingJoinRequestsCount;
 }

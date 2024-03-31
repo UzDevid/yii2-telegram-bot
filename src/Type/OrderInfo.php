@@ -2,7 +2,7 @@
 
 namespace UzDevid\Telegram\Bot\Type;
 
-use UzDevid\Telegram\Bot\Core\Type;
+use uzdevid\telegram\bot\core\Type;
 
 /**
  * Type OrderInfo
@@ -12,11 +12,9 @@ use UzDevid\Telegram\Bot\Core\Type;
  * This object represents information about an order.
  */
 class OrderInfo extends Type {
-    public function __construct(
-        public string          $name,
-        public string          $phoneNumber,
-        public string          $email,
-        public ShippingAddress $shippingAddress
-    ) {
-    }
+
+    public string $name;
+    public string $phoneNumber;
+    public string $email;
+    public ShippingAddress $shippingAddress;
 }

@@ -2,7 +2,7 @@
 
 namespace UzDevid\Telegram\Bot\Type;
 
-use UzDevid\Telegram\Bot\Core\Type;
+use uzdevid\telegram\bot\core\Type;
 
 /**
  * Type WebAppInfo
@@ -14,8 +14,5 @@ use UzDevid\Telegram\Bot\Core\Type;
  * @property string $url
  */
 class WebAppInfo extends Type {
-    public function __construct(
-        public string $url
-    ) {
-    }
+    public string $url;
 }

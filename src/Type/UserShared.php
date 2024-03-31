@@ -2,7 +2,7 @@
 
 namespace UzDevid\Telegram\Bot\Type;
 
-use UzDevid\Telegram\Bot\Core\Type;
+use uzdevid\telegram\bot\core\Type;
 
 /**
  * Type UserShared
@@ -12,9 +12,6 @@ use UzDevid\Telegram\Bot\Core\Type;
  * This object contains information about the user whose identifier was shared with the bot using a KeyboardButtonRequestUser button.
  */
 class UserShared extends Type {
-    public function __construct(
-        public int $requestId,
-        public int $userId
-    ) {
-    }
+    public int $requestId;
+    public int $userId;
 }

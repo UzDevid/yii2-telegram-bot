@@ -2,7 +2,7 @@
 
 namespace UzDevid\Telegram\Bot\Type;
 
-use UzDevid\Telegram\Bot\Core\Type;
+use uzdevid\telegram\bot\core\Type;
 
 /**
  * Type BotCommandScopeAllChatAdministrators
@@ -12,8 +12,5 @@ use UzDevid\Telegram\Bot\Core\Type;
  * This object represents a bot command.
  */
 class BotCommandScopeAllChatAdministrators extends Type {
-    public function __construct(
-        public string $type
-    ) {
-    }
+    public string $type;
 }

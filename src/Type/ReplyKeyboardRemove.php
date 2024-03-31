@@ -2,7 +2,7 @@
 
 namespace UzDevid\Telegram\Bot\Type;
 
-use UzDevid\Telegram\Bot\Core\Type;
+use uzdevid\telegram\bot\core\Type;
 
 /**
  * Type ReplyKeyboardRemove
@@ -14,9 +14,7 @@ use UzDevid\Telegram\Bot\Core\Type;
  * An exception is made for one-time keyboards that are hidden immediately after the user presses a button (see ReplyKeyboardMarkup).
  */
 class ReplyKeyboardRemove extends Type {
-    public function __construct(
-        public bool $removeKeyboard,
-        public bool $selective
-    ) {
-    }
+
+    public bool $removeKeyboard;
+    public bool $selective;
 }

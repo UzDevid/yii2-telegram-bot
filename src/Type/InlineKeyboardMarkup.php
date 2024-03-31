@@ -2,7 +2,7 @@
 
 namespace UzDevid\Telegram\Bot\Type;
 
-use UzDevid\Telegram\Bot\Core\Type;
+use uzdevid\telegram\bot\core\Type;
 
 /**
  * Type InlineKeyboardMarkup
@@ -12,8 +12,5 @@ use UzDevid\Telegram\Bot\Core\Type;
  * This object represents a service message about a video chat ended in the chat.
  */
 class InlineKeyboardMarkup extends Type {
-    public function __construct(
-        public InlineKeyboardButton $inlineKeyboardButton
-    ) {
-    }
+    public InlineKeyboardButton $inlineKeyboardButton;
 }

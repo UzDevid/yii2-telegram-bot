@@ -2,7 +2,7 @@
 
 namespace UzDevid\Telegram\Bot\Type;
 
-use UzDevid\Telegram\Bot\Core\Type;
+use uzdevid\telegram\bot\core\Type;
 
 /**
  * Type ChatPhoto
@@ -12,11 +12,8 @@ use UzDevid\Telegram\Bot\Core\Type;
  * This object represents a chat photo.
  */
 class ChatPhoto extends Type {
-    public function __construct(
-        public string $smallFileId,
-        public string $smallFileUniqueId,
-        public string $bigFileId,
-        public string $bigFileUniqueId
-    ) {
-    }
+    public string $smallFileId;
+    public string $smallFileUniqueId;
+    public string $bigFileId;
+    public string $bigFileUniqueId;
 }

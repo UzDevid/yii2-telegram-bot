@@ -2,7 +2,7 @@
 
 namespace UzDevid\Telegram\Bot\Type;
 
-use UzDevid\Telegram\Bot\Core\Type;
+use uzdevid\telegram\bot\core\Type;
 
 /**
  * Type MaskPosition
@@ -12,11 +12,8 @@ use UzDevid\Telegram\Bot\Core\Type;
  * This object describes the position on faces where a mask should be placed by default.
  */
 class MaskPosition extends Type {
-    public function __construct(
-        public string $point,
-        public float  $xShift,
-        public float  $yShift,
-        public float  $scale
-    ) {
-    }
+    public string $point;
+    public float $xShift;
+    public float $yShift;
+    public float $scale;
 }

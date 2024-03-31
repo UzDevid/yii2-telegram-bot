@@ -2,7 +2,7 @@
 
 namespace UzDevid\Telegram\Bot\Type;
 
-use UzDevid\Telegram\Bot\Core\Type;
+use uzdevid\telegram\bot\core\Type;
 
 /**
  * Type Location
@@ -12,13 +12,11 @@ use UzDevid\Telegram\Bot\Core\Type;
  * This object represents a point on the map.
  */
 class Location extends Type {
-    public function __construct(
-        public float $longitude,
-        public float $latitude,
-        public float $horizontalAccuracy,
-        public int   $livePeriod,
-        public int   $heading,
-        public int   $proximityAlertRadius
-    ) {
-    }
+
+    public float $longitude;
+    public float $latitude;
+    public float $horizontalAccuracy;
+    public int $livePeriod;
+    public int $heading;
+    public int $proximityAlertRadius;
 }

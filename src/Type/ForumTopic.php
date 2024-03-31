@@ -2,7 +2,7 @@
 
 namespace UzDevid\Telegram\Bot\Type;
 
-use UzDevid\Telegram\Bot\Core\Type;
+use uzdevid\telegram\bot\core\Type;
 
 /**
  * Type ForumTopic
@@ -12,11 +12,9 @@ use UzDevid\Telegram\Bot\Core\Type;
  * This object represents a forum topic.
  */
 class ForumTopic extends Type {
-    public function __construct(
-        public int    $messageThreadId,
-        public string $name,
-        public int    $iconColor,
-        public string $iconCustomEmojiId
-    ) {
-    }
+
+    public int $messageThreadId;
+    public string $name;
+    public int $iconColor;
+    public string $iconCustomEmojiId;
 }

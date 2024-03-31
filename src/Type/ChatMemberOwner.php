@@ -2,7 +2,7 @@
 
 namespace UzDevid\Telegram\Bot\Type;
 
-use UzDevid\Telegram\Bot\Core\Type;
+use uzdevid\telegram\bot\core\Type;
 
 /**
  * Type ChatMemberOwner
@@ -12,11 +12,8 @@ use UzDevid\Telegram\Bot\Core\Type;
  * Represents a chat member that owns the chat and has all administrator privileges.
  */
 class ChatMemberOwner extends Type {
-    public function __construct(
-        public string $status,
-        public User   $user,
-        public bool   $isAnonymous,
-        public string $customTitle
-    ) {
-    }
+    public string $status;
+    public User $user;
+    public bool $isAnonymous;
+    public string $customTitle;
 }

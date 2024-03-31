@@ -2,7 +2,7 @@
 
 namespace UzDevid\Telegram\Bot\Type;
 
-use UzDevid\Telegram\Bot\Core\Type;
+use uzdevid\telegram\bot\core\Type;
 
 /**
  * Type EncryptedPassportElement
@@ -12,17 +12,14 @@ use UzDevid\Telegram\Bot\Core\Type;
  * Describes documents or other Telegram Passport elements shared with the bot by the user.
  */
 class EncryptedPassportElement extends Type {
-    public function __construct(
-        public string       $type,
-        public string       $data,
-        public string       $phoneNumber,
-        public string       $email,
-        public array        $files,
-        public PassportFile $frontSide,
-        public PassportFile $reverseSide,
-        public PassportFile $selfie,
-        public array        $translation,
-        public string       $hash
-    ) {
-    }
+    public string $type;
+    public string $data;
+    public string $phoneNumber;
+    public string $email;
+    public array $files;
+    public PassportFile $frontSide;
+    public PassportFile $reverseSide;
+    public PassportFile $selfie;
+    public array $translation;
+    public string $hash;
 }

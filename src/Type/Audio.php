@@ -1,8 +1,8 @@
 <?php
 
-namespace UzDevid\Telegram\Bot\Type;
+namespace uzdevid\telegram\bot\Type;
 
-use UzDevid\Telegram\Bot\Core\Type;
+use uzdevid\telegram\bot\core\Type;
 
 /**
  * Type Audio
@@ -12,16 +12,13 @@ use UzDevid\Telegram\Bot\Core\Type;
  * This object represents an audio file to be treated as music by the Telegram clients.
  */
 class Audio extends Type {
-    public function __construct(
-        public string    $fileId,
-        public string    $fileUniqueId,
-        public int       $duration,
-        public string    $performer,
-        public string    $title,
-        public string    $fileName,
-        public string    $mimeType,
-        public int       $fileSize,
-        public PhotoSize $thumbnail
-    ) {
-    }
+    public string $fileId;
+    public string $fileUniqueId;
+    public int $duration;
+    public string $performer;
+    public string $title;
+    public string $fileName;
+    public string $mimeType;
+    public int $fileSize;
+    public PhotoSize $thumbnail;
 }

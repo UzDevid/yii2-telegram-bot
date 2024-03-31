@@ -2,7 +2,7 @@
 
 namespace UzDevid\Telegram\Bot\Type;
 
-use UzDevid\Telegram\Bot\Core\Type;
+use uzdevid\telegram\bot\core\Type;
 
 /**
  * Type MessageEntity
@@ -12,14 +12,11 @@ use UzDevid\Telegram\Bot\Core\Type;
  * This object represents one special entity in a text message. For example, hashtags, usernames, URLs, etc.
  */
 class MessageEntity extends Type {
-    public function __construct(
-        public string $type,
-        public int    $offset,
-        public int    $length,
-        public string $url,
-        public User   $user,
-        public string $language,
-        public string $customEmojiId
-    ) {
-    }
+    public string $type;
+    public int $offset;
+    public int $length;
+    public string $url;
+    public User $user;
+    public string $language;
+    public string $customEmojiId;
 }

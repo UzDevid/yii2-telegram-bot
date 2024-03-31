@@ -2,7 +2,7 @@
 
 namespace UzDevid\Telegram\Bot\Type;
 
-use UzDevid\Telegram\Bot\Core\Type;
+use uzdevid\telegram\bot\core\Type;
 
 /**
  * Type ChatLocation
@@ -12,9 +12,6 @@ use UzDevid\Telegram\Bot\Core\Type;
  * Represents a location to which a chat is connected.
  */
 class ChatLocation extends Type {
-    public function __construct(
-        public Location $location,
-        public string   $address
-    ) {
-    }
+    public Location $location;
+    public string $address;
 }

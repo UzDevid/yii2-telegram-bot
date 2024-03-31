@@ -2,7 +2,7 @@
 
 namespace UzDevid\Telegram\Bot\Type;
 
-use UzDevid\Telegram\Bot\Core\Type;
+use uzdevid\telegram\bot\core\Type;
 
 /**
  * Type PassportData
@@ -12,9 +12,6 @@ use UzDevid\Telegram\Bot\Core\Type;
  * Describes Telegram Passport data shared with the bot by the user.
  */
 class PassportData extends Type {
-    public function __construct(
-        public EncryptedPassportElement $data,
-        public EncryptedCredentials     $credentials
-    ) {
-    }
+    public EncryptedPassportElement $data;
+    public EncryptedCredentials $credentials;
 }

@@ -2,7 +2,7 @@
 
 namespace UzDevid\Telegram\Bot\Type;
 
-use UzDevid\Telegram\Bot\Core\Type;
+use uzdevid\telegram\bot\core\Type;
 
 /**
  * Type ChatMemberMember
@@ -15,9 +15,6 @@ use UzDevid\Telegram\Bot\Core\Type;
  * @property User $user
  */
 class ChatMemberMember extends Type {
-    public function __construct(
-        public string $status,
-        public User   $user
-    ) {
-    }
+    public string $status;
+    public User $user;
 }

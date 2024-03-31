@@ -2,7 +2,7 @@
 
 namespace UzDevid\Telegram\Bot\Type;
 
-use UzDevid\Telegram\Bot\Core\Type;
+use uzdevid\telegram\bot\core\Type;
 
 /**
  * Type EncryptedCredentials
@@ -13,10 +13,7 @@ use UzDevid\Telegram\Bot\Core\Type;
  * See the Telegram Passport Documentation for a complete description of the data decryption and authentication processes.
  */
 class EncryptedCredentials extends Type {
-    public function __construct(
-        public string $data,
-        public string $hash,
-        public string $secret
-    ) {
-    }
+    public string $data;
+    public string $hash;
+    public string $secret;
 }
