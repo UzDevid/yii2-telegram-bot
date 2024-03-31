@@ -2,8 +2,7 @@
 
 namespace UzDevid\Telegram\Bot\Type;
 
-use uzdevid\telegram\bot\core\Type;
-use uzdevid\telegram\bot\message\message\keyboard\ReplyMarkupInterface;
+use UzDevid\Telegram\Bot\Core\Type;
 
 /**
  * Type Message

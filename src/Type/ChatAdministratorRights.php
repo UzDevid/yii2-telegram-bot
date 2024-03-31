@@ -2,7 +2,7 @@
 
 namespace UzDevid\Telegram\Bot\Type;
 
-use uzdevid\telegram\bot\core\Type;
+use UzDevid\Telegram\Bot\Core\Type;
 
 /**
  * Type ChatAdministratorRights

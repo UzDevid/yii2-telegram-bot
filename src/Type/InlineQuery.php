@@ -2,12 +2,12 @@
 
 namespace UzDevid\Telegram\Bot\Type;
 
-use uzdevid\telegram\bot\core\Type;
+use UzDevid\Telegram\Bot\Core\Type;
 
 /**
  * Class InlineQuery
  *
- * @package uzdevid\telegram\bot\objects
+ * @package UzDevid\Telegram\Bot\objects
  */
 class InlineQuery extends Type {
     public int $updateId;

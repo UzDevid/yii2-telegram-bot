@@ -1,8 +1,8 @@
 <?php
 
-namespace uzdevid\telegram\bot\Type;
+namespace UzDevid\Telegram\Bot\Type;
 
-use uzdevid\telegram\bot\core\Type;
+use UzDevid\Telegram\Bot\Core\Type;
 
 /**
  * Type Audio
