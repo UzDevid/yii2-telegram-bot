@@ -2,7 +2,6 @@
 
 namespace UzDevid\Telegram\Bot\Handler;
 
-use uzdevid\telegram\Bot\Bot;
 use UzDevid\Telegram\Bot\Handler\Update\Callback\CallbackQueryUpdate;
 use uzdevid\telegram\Bot\Handler\Update\Callback\CallbackQueryUpdateInterface;
 use UzDevid\Telegram\Bot\Handler\Update\Inline\InlineQueryUpdate;
@@ -22,7 +21,6 @@ use Yiisoft\Hydrator\Hydrator;
  * @property-read string $handlersString
  */
 class Handler extends BaseObject {
-    protected Bot $botInstance;
     protected Scenario|null $scenario;
 
     protected array $data = [];
@@ -30,12 +28,10 @@ class Handler extends BaseObject {
     private bool $isHandled = false;
 
     /**
-     * @param Bot $botInstance
      * @param array $data
      * @param Scenario|null $scenario
      */
-    public function __construct(Bot $botInstance, array $data, Scenario|null $scenario = null) {
-        $this->botInstance = $botInstance;
+    public function __construct(array $data, Scenario|null $scenario = null) {
         $this->scenario = $scenario;
 
         $this->data = $this->reformatData($data);
