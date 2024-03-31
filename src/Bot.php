@@ -23,8 +23,6 @@ class Bot extends Component {
     use Credentials;
 
     public ClientInterface $httpClient;
-
-    public string|array $handler = Handler::class;
     public string|array $sender = Sender::class;
     public string|array $editor = Editor::class;
 
@@ -34,10 +32,9 @@ class Bot extends Component {
      * @param array $data
      *
      * @return Handler
-     * @throws InvalidConfigException
      */
     public function handler(array $data): Handler {
-        return Yii::createObject($this->handler, [$this, $data]);
+        return new Handler($data);
     }
 
     /**
