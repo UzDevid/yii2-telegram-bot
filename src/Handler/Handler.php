@@ -7,8 +7,8 @@ use uzdevid\telegram\Bot\Handler\Update\Callback\CallbackQueryUpdateInterface;
 use UzDevid\Telegram\Bot\Handler\Update\Inline\InlineQueryUpdate;
 use uzdevid\telegram\Bot\Handler\Update\Inline\InlineQueryUpdateInterface;
 use UzDevid\Telegram\Bot\Handler\Update\Message\MessageUpdate;
-use uzdevid\telegram\Bot\Handler\Update\Message\MessageUpdateInterface;
-use uzdevid\telegram\Bot\Service;
+use UzDevid\Telegram\Bot\Handler\Update\Message\MessageUpdateInterface;
+use UzDevid\Telegram\Bot\Service;
 use yii\base\BaseObject;
 use Yiisoft\Hydrator\Hydrator;
 
