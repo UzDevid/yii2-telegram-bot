@@ -1,14 +1,14 @@
 <?php
 
-namespace uzdevid\telegram\bot;
+namespace UzDevid\Telegram\Bot;
 
 use Psr\Http\Client\ClientInterface;
-use uzdevid\telegram\bot\core\Credentials;
-use uzdevid\telegram\bot\handler\Handler;
-use uzdevid\telegram\bot\handler\Scenario;
-use uzdevid\telegram\bot\message\manager\Editor;
-use uzdevid\telegram\bot\message\manager\Sender;
-use uzdevid\telegram\bot\message\ManagerInterface;
+use UzDevid\Telegram\Bot\Core\Credentials;
+use UzDevid\Telegram\Bot\Handler\Handler;
+use UzDevid\Telegram\Bot\Handler\Scenario;
+use UzDevid\Telegram\Bot\Message\Manager\Editor;
+use UzDevid\Telegram\Bot\Message\Manager\Sender;
+use UzDevid\Telegram\Bot\Message\ManagerInterface;
 use Yii;
 use yii\base\Component;
 use yii\base\InvalidArgumentException;
@@ -17,7 +17,7 @@ use yii\base\InvalidConfigException;
 /**
  * Class Bot
  *
- * @package uzdevid\telegram\bot
+ * @package UzDevid\Telegram\Bot
  */
 class Bot extends Component {
     use Credentials;

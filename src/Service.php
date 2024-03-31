@@ -1,8 +1,8 @@
 <?php
 
-namespace uzdevid\telegram\bot;
+namespace UzDevid\Telegram\Bot;
 
-use uzdevid\telegram\bot\message\message\MethodInterface;
+use UzDevid\Telegram\Bot\Message\Message\MethodInterface;
 
 class Service {
     /**
