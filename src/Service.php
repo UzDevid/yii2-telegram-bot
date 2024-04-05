@@ -3,6 +3,7 @@
 namespace UzDevid\Telegram\Bot;
 
 use UzDevid\Telegram\Bot\Message\Message\MethodInterface;
+use Yiisoft\Hydrator\Hydrator;
 
 class Service {
     /**
@@ -40,7 +41,8 @@ class Service {
             $data['result'] = $responseBody['result'];
         }
 
-        $response = $method->response();
-        return new $response($data);
+        $responseClass = $method->response();
+
+        return (new Hydrator())->create($responseClass, $data);
     }
 }
